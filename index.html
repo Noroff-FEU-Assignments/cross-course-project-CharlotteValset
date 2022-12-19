@@ -1,21 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My first website</title>
-  </head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="desciption" content="Watch high quality films on SquareEyes"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>SquareEyes | Home</title>
+        <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
+    </head>
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
-    <h2>Web Security</h2>
-    <p id="web-security-question">How would you advise a potential client to secure his/her website from web security attacks? Note: the word count for your answer should not be greater than 250 words</p>
-    <p id="web-security-answer">
-        I would advise a potential client to:
-        <li>use a well known third-party solution that ensures that the data the system accepts is in the right format.</li>
-        <li>use an open-standard authorisation protocol to make sure that the authorisation and authentication are difficult to crack.</li>
-        <li>use a well-known third-party application that you have done research about and checked how many downloads the application has, to make sure it is trusted and tested. </li>
-        <li>use a CI/CD tool like e.g. Github</li>
-        <li>make sure that one uses a trusted network and a reliable hosting platform. </li>
-        <li>if the users have left their credentials for too long in the browser, the back-end team should always implement an automatic user timeout and the front-end team should ensure that the API they are using has taken this into consideration.</li>
-    </p>
+    <header>
+      <a href="index.html">SquareEyes</a>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href=films.html>Films</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="checkout.html">My Cart</a></li>
+              <i class="fa-solid fa-cart-shopping"></i>
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="highlight">
+        <img src="images/black-adam.jpeg" alt="Filmcover of Black Adam">
+        <div>
+        <h1>Enjoy our selection of high-quality films and support small filmmakers!</h1>
+        <a href="films.html"class= cta>Get started!</a>
+        </div>
+      </section>
+      <section>
+        <h3>Most watched</h3>
+        <div>
+         <img src="images/batman.jpeg" alt="Filmcover of Batman">
+         <img src="images/kubo.jpeg" alt="Filmcover of Kubo and the two strings">
+         <img src="images/intouchables.jpeg" alt="Filmcover of Intouchables">
+         <img src="images/pinocchio.jpeg" alt="Filmcover of Pinocchio">
+        </div>
+        <h3>Newly added</h3>
+        <div>
+         <img src="images/black-adam.jpeg" alt="Filmcover of Black Adam">
+         <img src="images/the-addams-family.jpeg" alt="Filmcover of The Addams Family">
+         <img src="images/hobbsandshaw.jpeg" alt="Filmcover of Hobbs and Shaw">
+         <img src="images/toy-story-4.jpeg" alt="Filmcover of Toy Story 4">
+        </div>
+      </section>
+      <section class="highlight">
+        <div>
+          <h2>Kubo and the two strings</h2>
+          <p>Animation (2016)</p>
+          <p>A young boy named Kubo must locate a magical suit of armour worn by his late father in order to defeat a vengeful spirit from the past.</p>
+          <a href="checkout.html" class="cta">Add to cart</a>
+        </div>
+        <img src="images/kubo.jpeg" alt="">
+      </section>
+    </main>
+    <footer>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <p>Copyright &copy; 2022 SquareEyes</p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,40 @@
+body {
+    background-color: #fff
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav {
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-block
+}
+
+.highlight {
+    background-color: #EBEBEB;
+}
+
+.cta {
+    background-color: #A71515;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cta-second {
+    background-color: #706F6F;
+}
+
+.back-button {
+    text-decoration: none;
+}
+
+.signin-link {
+    color: #000;
