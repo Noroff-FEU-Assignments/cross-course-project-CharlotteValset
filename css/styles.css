@@ -37,6 +37,10 @@ nav li {
     display: inline-block
 }
 
+.mycart-icon fa-solid {
+    color: #000;
+}
+
 .highlight {
     background-color: #EBEBEB;
 }
