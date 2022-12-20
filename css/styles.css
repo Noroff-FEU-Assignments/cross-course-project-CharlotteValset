@@ -1,17 +1,36 @@
 body {
     background-color: #fff
-    color: black;
+    color #000;
     font-family: Helvetica, Arial, sans-serif;
 }
 
-nav {
-    color: #000;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 24px;
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1.125rem;
 }
 
 nav a {
     text-decoration: none;
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 45px
 }
 
 nav li {
@@ -25,7 +44,14 @@ nav li {
 .cta {
     background-color: #A71515;
     color: #fff;
+    font-size: 1.25rem;
     text-decoration: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+
 }
 
 .cta-second {
@@ -37,4 +63,23 @@ nav li {
 }
 
 .signin-link {
-    color: #000;
+    color: #A71515;
+}
+
+.category {
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    color: #545454;
+    padding-top: 20px;
+}
+
+.footer-text {
+    font-size: 0.825rem;
+}
+
+.fa-brands {
+    color: #949494;
+}
