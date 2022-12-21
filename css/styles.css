@@ -4,6 +4,18 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+.logo {
+    filter: none;
+    width: 377px;
+    padding-left: 535px;
+    padding-top: 36px;
+    padding-bottom: 30px;
+}
+
+header {
+    background-color: #fff;
+}
+
 h1 {
     font-size: 2rem;
 }
@@ -22,6 +34,10 @@ h4 {
 
 p {
     font-size: 1.125rem;
+}
+
+.text-700 {
+    font-weight: 700;
 }
 
 nav a {
@@ -66,12 +82,54 @@ nav li {
     text-decoration: none;
 }
 
+.filmcover-small {
+    width: 200px;
+
+}
+
+.filmcover-large {
+    width: 360px;
+    height: 477px;
+}
+
+.filmcover-product {
+    width: 313px;
+    height: 494px;
+}
+
+.list-films-row {
+
+}
+
+.about-image {
+    filter: none;
+    width: 310px;
+    height: 452px;
+}
+
+.contact-map {
+    filter: none;
+    border: 2px solid #fff;
+    width: 421px;
+    height: 458px
+}
+
+img {
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.50));
+    border-radius: 30px;
+}
+
 .signin-link {
     color: #A71515;
 }
 
 .category {
     font-size: 1rem;
+}
+
+.form__input {
+    display: block;
+    border-radius: 5px;
 }
 
 footer {
