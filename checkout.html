@@ -47,27 +47,32 @@
                     </div>
                  </section>
                  <section class="highlight">
+                    
                     <p>Already have an account?</p>
                     <a href="signin.html" class=signin-link>Sign in!</a>
-                    <h3>Create a new account</h3>
-                    <h4>Email*</h4>
-                    <h4>Create password*</h4>
-                    <p>Must contain at least 6 letters and 1 number</p>
-                    <h4>Confirm password*</h4>
-                    <div>
-                        <i class="fa-regular fa-square-check"></i>
-                        <p>I agree to terms and conditions</p>
-                    </div>
-                    <h3>Payment details</h3>
-                        <div><i class="fa-regular fa-circle-dot"></i>
-                            <i class="fa-brands fa-cc-paypal"></i>
-                        </div>
-                        <div>
-                            <i class="fa-regular fa-circle-dot"></i>
-                            <i class="fa-brands fa-cc-visa"></i>
-                            <i class="fa-brands fa-cc-mastercard"></i>
-                            <i class="fa-brands fa-cc-amex"></i>
-                        </div>
+                   
+                    <form action="form-success.php" method="POST">
+                        <fieldset>
+                            <legend>Create a new account</legend>
+                                <label for="email">Email*</label>
+                                <input type="email" name="email" id="email" class="form__input" required>
+                                <label for="password">Create password*</label>
+                                <p class="input-label-">Must contain at least 8 characters and 1 number</p>
+                                <input type="password" name="password" id="password" class="form__input" required>
+                                <label for="password">Confirm password*</label>
+                                <input type="password" name="password" id="password" class="form__input" required>
+                                <input type="checkbox" name="checkbox" id="checkbox" class="form__input"
+                                <label for="checkbox">I agree to terms and conditions</label>
+                            <legend>Payment details</legend>
+                                <input type="radio" name="radio" id="radio-one" class="radio-button">
+                                <label for="radio-one"><i class="fa-brands fa-cc-paypal"></i></label>
+                                <input type="radio" name="radio" id="radio-two" class="radio-button">
+                                <label for="radio-one">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                    <i class="fa-brands fa-cc-amex"></i>
+                                </label>
+                            </form>
                     <div>
                         <h4>Card number*</h4>
                         <h4>Expiry date*</h4>
