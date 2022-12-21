@@ -10,7 +10,7 @@
     </head>
   <body>
     <header>
-      <a href="index.html">SquareEyes</a>
+      <a href="index.html"><img src="images/square-eyes-logo.png" class="logo"  alt="Logo of SquareEyes"></a>
       <nav>
           <ul>
               <li><a href="index.html">Home</a></li>
@@ -27,18 +27,24 @@
         <section class="highlight">
             <div>
                 <p>If you have any questions or inquiries, please feel free to contact us at any time and we will get back to you as soon as possible!</p> 
-                <img src="images/map.jpg" alt="Map of SquareEyes address">
+                <img src="images/map.jpg" class="contact-map" alt="Map of SquareEyes address">
             </div>
             <div>
-                <h4>Name</h4>
-                <h4>E-mail</h4>
-                <h4>Your message</h4>
-                <a href="contact.html" class="cta">Send message</a>
+            <form action="form-success.php" method="POST">
+                <fieldset>
+                    <label for="name">Name*</label>
+                    <input type="text" name="name" id="name" class="form__input" required>
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" id="email" class="form__input" required>
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" rows="5" cols="30"></textarea>
+                <input type="submit" value="Send message" class="cta">
+            </form>
             </div>
             <div>
-                <p>Call us</p>
+                <p class="text-700">Call us</p>
                 <p>+44 12 3456 7890</p>
-                <p>Visit us</p>
+                <p class="text-700">Visit us</p>
                 <p>123 Filmstreet</p>
                 <p>London 456 7SE</p>
                 <p>United Kingdom</p>
