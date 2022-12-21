@@ -84,6 +84,7 @@ nav li {
 
 .filmcover-small {
     width: 200px;
+    height: 320px
 
 }
 
@@ -98,7 +99,12 @@ nav li {
 }
 
 .list-films-row {
+}
 
+a {
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000;
 }
 
 .about-image {
@@ -130,6 +136,10 @@ img {
 .form__input {
     display: block;
     border-radius: 5px;
+}
+
+.radio-button {
+    display: list-item;
 }
 
 footer {
