@@ -1,3 +1,4 @@
+/* || GENERAL STYLES */
 body {
     background-color: #fff
     color #000;
@@ -7,9 +8,12 @@ body {
 .logo {
     filter: none;
     width: 377px;
-    padding-left: 535px;
-    padding-top: 36px;
-    padding-bottom: 30px;
+    border-radius: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 36px;
+    margin-bottom: 36px;
 }
 
 header {
@@ -45,21 +49,31 @@ nav a {
     color: #000;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
-    text-align: justify;
-    padding: 45px
-}
-
-nav li {
-    display: inline-block
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mycart-icon fa-solid {
     color: #000;
 }
 
+a {
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+.active {
+    text-decoration: 3px underline; 
+    text-decoration-color: #A71515;
+}
+
 .highlight {
     background-color: #EBEBEB;
 }
+
+/* || BUTTONS */
 
 .cta {
     background-color: #A71515;
@@ -71,21 +85,28 @@ nav li {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-
 }
 
 .cta-second {
     background-color: #706F6F;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.pay-button {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .back-button {
     text-decoration: none;
 }
 
+/* || IMAGES */
+
 .filmcover-small {
     width: 200px;
     height: 320px
-
 }
 
 .filmcover-large {
@@ -99,12 +120,6 @@ nav li {
 }
 
 .list-films-row {
-}
-
-a {
-    text-decoration: none;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #000;
 }
 
 .about-image {
@@ -125,22 +140,53 @@ img {
     border-radius: 30px;
 }
 
+/* || DIV TEXT AND LINKS */
+
 .signin-link {
     color: #A71515;
 }
 
-.category {
+.film-category {
     font-size: 1rem;
 }
 
-.form__input {
+/* || FORMS */
+
+input,
+textarea {
     display: block;
-    border-radius: 5px;
+    border: 1px solid #4D4D4D;
+    border-radius: 10px;
 }
+
+.input-label {
+    font-size: 1.063rem;
+    color: #4D4D4D;
+}
+
+legend {
+    color: #4D4D4D;
+    font-size: 1.25rem;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 15%;
+  }
+  input[type="email"] {
+    padding: 10px;
+    width: 15%;
+  }
+  input[type="password"] {
+    padding: 10px;
+    width: 15%;
+  }
 
 .radio-button {
     display: list-item;
 }
+
+/* || FOOTER */
 
 footer {
     text-align: center;

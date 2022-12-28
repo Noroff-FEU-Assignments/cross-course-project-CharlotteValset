@@ -12,15 +12,12 @@
     <header>
       <a href="index.html"><img src="images/square-eyes-logo.png" class="logo"  alt="Logo of SquareEyes"></a>
       <nav>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href=films.html>Films</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-
-          </ul>
-      </nav>
+        <a href="index.html">Home</a>
+        <a href=films.html>Films</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+    </nav>
     </header>
     <main>
         <h1>Contact us</h1>
@@ -32,12 +29,12 @@
             <div>
             <form action="form-success.php" method="POST">
                 <fieldset>
-                    <label for="name">Name*</label>
+                    <label for="name" class="input-label">Name*</label>
                     <input type="text" name="name" id="name" class="form__input" required>
-                    <label for="email">Email*</label>
+                    <label for="email" class="input-label">Email*</label>
                     <input type="email" name="email" id="email" class="form__input" required>
-                    <label for="message">Your message</label>
-                    <textarea id="message" name="message" rows="5" cols="30"></textarea>
+                    <label for="message" class="input-label">Your message</label>
+                    <textarea id="message" name="message"></textarea>
                 <input type="submit" value="Send message" class="cta">
             </form>
             </div>

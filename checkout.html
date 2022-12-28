@@ -12,14 +12,11 @@
     <header>
       <a href="index.html"><img src="images/square-eyes-logo.png" class="logo"  alt="Logo of SquareEyes"></a>
       <nav>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href=films.html>Films</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-
-          </ul>
+              <a href="index.html">Home</a>
+              <a href=films.html>Films</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+              <a href="checkout.html" class="active"><i class="fa-solid fa-cart-shopping"></i></a>
       </nav>
     </header>
     <main>
@@ -54,34 +51,37 @@
                     <form action="form-success.php" method="POST">
                         <fieldset>
                             <legend>Create a new account</legend>
-                                <label for="email">Email*</label>
+                                <label for="email" class="input-label">Email*</label>
                                 <input type="email" name="email" id="email" class="form__input" required>
-                                <label for="password">Create password*</label>
-                                <p class="input-label-">Must contain at least 8 characters and 1 number</p>
+                                <label for="password" class="input-label">Create password*</label>
+                                <p class="">Must contain at least 8 characters and 1 number</p>
                                 <input type="password" name="password" id="password" class="form__input" required>
-                                <label for="password">Confirm password*</label>
+                                <label for="password" class="input-label">Confirm password*</label>
                                 <input type="password" name="password" id="password" class="form__input" required>
                                 <input type="checkbox" name="checkbox" id="checkbox" class="form__input"
                                 <label for="checkbox">I agree to terms and conditions</label>
+                        </fieldset>
+                        <fieldset>
                             <legend>Payment details</legend>
-                                <input type="radio" name="radio" id="radio-one" class="radio-button">
-                                <label for="radio-one"><i class="fa-brands fa-cc-paypal"></i></label>
-                                <input type="radio" name="radio" id="radio-two" class="radio-button">
-                                <label for="radio-one">
+                                <input type="radio" name="payment" id="paypal" value="paypal" class="radio-button">
+                                <label for="paypal"><i class="fa-brands fa-cc-paypal"></i></label>
+                                <input type="radio" name="payment" id="visa-mc-amex" value="visa-mc-amex" class="radio-button">
+                                <label for="visa-mc-amex">
                                     <i class="fa-brands fa-cc-visa"></i>
                                     <i class="fa-brands fa-cc-mastercard"></i>
                                     <i class="fa-brands fa-cc-amex"></i>
                                 </label>
-                            </form>
-                    <div>
-                        <h4>Card number*</h4>
-                        <h4>Expiry date*</h4>
-                        <h4>CVV/CVC*</h4>
-                    </div>
-                    <div>
-                        <a href="empty-cart.html" class="cta cta-second">Empty cart</a>
-                        <a href="checkout_success.html" class="cta">Pay</a>
-                    </div>
+                                <label for="card-number" class="input-label">Card number*</label>
+                                <input type="text" name="card-number" id="card-number" class="form__input" required>
+                                <label for="expiry-date" class="input-label">Expiry date*</label>
+                                <input type="text" name="expiry-date" id="expiry-date" class="form__input" required>
+                                <label for="ccv-cvc" class="input-label">CCV/CVC*</label>
+                                <input type="text" name="ccv-cvc" id="ccv-cvc" class="form__input" required>
+                            
+                        </fieldset>
+                        <a href="empty-cart.html" class="cta cta-second" <button>Empty cart</button></a>
+                        <a href="checkout_success.html" class="cta" <button>Empty cart</button></a>
+                    </form>
                  </section>
         </main>
     <footer>
