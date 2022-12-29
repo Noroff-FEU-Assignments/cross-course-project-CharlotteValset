@@ -1,8 +1,17 @@
 /* || GENERAL STYLES */
+
+html {
+    background-color: #000;
+}
+
 body {
-    background-color: #fff
-    color #000;
     font-family: Helvetica, Arial, sans-serif;
+    background-color: #fff
+}
+
+
+main {
+    background-color: #fff;
 }
 
 .logo {
@@ -12,12 +21,21 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 36px;
-    margin-bottom: 36px;
+    margin-top: 0px;
+    margin-bottom: 25px;
 }
 
 header {
+    margin-top: 0px;
     background-color: #fff;
+    z-index: 1;
+}
+
+.sticky-position {
+    position: sticky;
+    top: 0px;
+    background: #fff;
+    padding: 10px;
 }
 
 h1 {
@@ -44,14 +62,15 @@ p {
     font-weight: 700;
 }
 
-nav a {
+.page-title {
+    margin-left: 300px;
+}
+
+nav {
     text-decoration: none;
     color: #000;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .mycart-icon fa-solid {
@@ -71,6 +90,10 @@ a {
 
 .highlight {
     background-color: #EBEBEB;
+    display: block;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 /* || BUTTONS */
@@ -119,9 +142,6 @@ a {
     height: 494px;
 }
 
-.list-films-row {
-}
-
 .about-image {
     filter: none;
     width: 310px;
@@ -139,6 +159,37 @@ img {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.50));
     border-radius: 30px;
 }
+
+/* || HOMEPAGE */
+
+.container {
+    display: flex;
+    padding: 0px 150px; 
+}
+
+.position-right {
+    position: absolute;
+    text-align: center;
+    top: 400px;
+    left: 400px;
+}
+
+/* || FILMS PAGE */
+
+.film-title {
+    font-size: 1.25rem;
+}
+
+.list-films-row {
+    max-width: 900px;
+    display: flex;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.list-films-row > * {
+    flex: 1;
+} 
 
 /* || DIV TEXT AND LINKS */
 
@@ -200,4 +251,5 @@ footer {
 
 .fa-brands {
     color: #949494;
+    size: 30px 30px;
 }
