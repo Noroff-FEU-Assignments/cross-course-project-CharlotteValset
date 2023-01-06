@@ -5,6 +5,8 @@ html {
 }
 
 body {
+    width: 1120px;
+    margin: auto;
     font-family: Helvetica, Arial, sans-serif;
     background-color: #fff
 }
@@ -22,7 +24,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 
 header {
@@ -30,9 +32,9 @@ header {
     background-color: #fff;
     z-index: 1;
 }
-
+/* yes or n0 to sticky? */
 .sticky-position {
-    position: sticky;
+    position:?????
     top: 0px;
     background: #fff;
     padding: 10px;
@@ -63,7 +65,9 @@ p {
 }
 
 .page-title {
-    margin-left: 300px;
+    font-size: 1.5rem;
+    margin-left: 170px;
+    margin-top: 30px;
 }
 
 nav {
@@ -76,8 +80,9 @@ nav {
 .menu {
     display: flex;
     justify-content: space-between;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 200px;
+    margin-right: 200px;
+
 }
 
 .mycart-icon fa-solid {
@@ -105,17 +110,10 @@ a:hover {
     background-color: #A71515;
     width: 29px;
     height: 3px;
-    margin-top: 3px;
+    margin-top: 2px;
     display: block;
 }
 
-.highlight {
-    background-color: #EBEBEB;
-    display: block;
-    position: relative;
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
 
 /* || BUTTONS */
 
@@ -135,6 +133,15 @@ a:hover {
     background-color: #706F6F;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.cta:hover {
+    background-color: #E40B0B;
+    font-weight: 400;
+}
+
+.cta-second:hover {
+    background-color: #989898;
 }
 
 .pay-button {
@@ -167,6 +174,7 @@ a:hover {
     filter: none;
     width: 310px;
     height: 452px;
+    z-index: 2;
 }
 
 .contact-map {
@@ -183,34 +191,68 @@ img {
 
 /* || HOMEPAGE */
 
-.container {
+.selling-point_container{
+    background-color: #EBEBEB;
+    width: fit-content;
     display: flex;
-    padding: 0px 150px; 
+    margin: auto;
+    text-align: center;
 }
 
-.position-right {
-    position: absolute;
+.selling-point_right {
     text-align: center;
-    top: 400px;
-    left: 400px;
+    display: block;
+    margin: 150px 110px 150px 200px;
+}
+
+.selling-point_left {
+    text-align: center;
+    display: block;
+    margin: 150px 100px 150px 90px;
+}
+.sub-heading-homepage {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 30px 0px 0px 130px;
+}
+
+.list-films-row_homepage {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 /* || FILMS PAGE */
 
-.film-title {
-    font-size: 1.25rem;
-}
-
 .list-films-row {
     max-width: 900px;
-    display: flex;
-    margin: 50px auto;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 60px;
     text-align: center;
 }
 
-.list-films-row > * {
-    flex: 1;
-} 
+.list-films-row div {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap:5px;
+}
+
+.list-films-row a {
+    padding: 0px
+}
+
+.film-title {
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+.text-wrap {
+    display: block;
+}
 
 /* || DIV TEXT AND LINKS */
 
@@ -220,6 +262,23 @@ img {
 
 .film-category {
     font-size: 1rem;
+}
+
+/* || ABOUT PAGE */
+
+.about_content {
+    background-color: #EBEBEB;
+    width: fit-content;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.w3-theme {
+color: #fff !important;
+background-color: #73AD21 !important;
+z-index: 1;
 }
 
 /* || FORMS */
@@ -264,6 +323,7 @@ footer {
     text-align: center;
     color: #545454;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .footer-text {
