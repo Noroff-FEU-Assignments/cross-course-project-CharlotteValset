@@ -67,8 +67,8 @@ p {
 
 .page-title {
     font-size: 1.5rem;
-    margin-left: 170px;
-    margin-top: 30px;
+    margin-left: 130px;
+    margin-top: 40px;
 }
 
 nav {
@@ -114,6 +114,11 @@ a:hover {
     margin-top: 2px;
     display: block;
 }
+
+.highlight {
+    background-color: #EBEBEB !important;
+    z-index: 1;
+    }
 
 
 /* BUTTONS */
@@ -165,20 +170,15 @@ a:hover {
 }
 
 .filmcover-large {
+    position: relative;
     width: 360px;
     height: 477px;
+    z-index: 4;
 }
 
 .filmcover-product {
     width: 313px;
     height: 494px;
-}
-
-.about-image {
-    filter: none;
-    width: 310px;
-    height: 452px;
-    z-index: 2;
 }
 
 .contact-map {
@@ -196,23 +196,25 @@ img {
 /* HOMEPAGE */
 
 .selling-point_container{
-    background-color: #EBEBEB;
     width: fit-content;
     display: flex;
     margin: auto;
     text-align: center;
 }
 
-.selling-point_right {
+.selling-point-text_right {
     text-align: center;
     display: block;
     margin: 150px 110px 150px 200px;
+    z-index: 5;
 }
 
-.selling-point_left {
+.selling-point-text_left {
+    max-width: 300px;
     text-align: center;
     display: block;
     margin: 150px 100px 150px 90px;
+    z-index: 6;
 }
 .sub-heading-homepage {
     font-size: 1.25rem;
@@ -254,6 +256,10 @@ img {
     padding: 5px;
 }
 
+.bold-on-hover:hover {
+    font-weight: 700;
+}
+
 .text-wrap {
     display: block;
 }
@@ -262,21 +268,33 @@ img {
 
 .film-category {
     font-size: 1rem;
+    margin: 0px;
 }
 
 /* ABOUT PAGE */
 
-.about_content {
-    width: fit-content;
+.items-container_aboutpage {
+    max-width: 900px;
     display: flex;
     margin: auto;
     text-align: center;
+}
+
+.content_about {
+    flex: 1;
+}
+
+.text_aboutpage {
+    margin: 30px 0px 0px 40px;
     z-index: 2;
 }
 
-.highlight {
-background-color: #EBEBEB !important;
-z-index: 1;
+.about-image {
+    position: relative;
+    filter: none;
+    width: 310px;
+    height: 452px;
+    z-index: 3
 }
 
 /* FORMS */
@@ -293,13 +311,19 @@ input {
     padding: 10px 0px;
 }
 
-legend {
-    color: #4D4D4D;
-    font-size: 1.25rem;
-}
+input[type=text] {
+    width: 270px;
+  }
+  input[type=email] {
+    width: 270px;
+  }
+  input[type=password] {
+    width: 270px;
+  }
 
 textarea {
     height: 100px;
+    width: 265px;
 }
 
 .radio-button {
@@ -331,8 +355,9 @@ textarea {
 .items-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
+
 
 .items-in-cart {
     display: flex;
@@ -370,8 +395,9 @@ textarea {
 }
 
 legend {
+    font-weight: 700;
     font-size: 1.25rem;
-    color: #4D4D4D;
+    color: #6c6c6c;
     margin: 10px 0px;
 }
 
@@ -381,12 +407,13 @@ label {
 }
 
 .password-requirement {
-    color: #4D4D4D;
+    color: #6F6F6F;
     font-size: 0.813rem;
     margin: 0px;
 }
 
 .terms {
+    color: #4D4D4D;
     display: flex;
     align-items: baseline;
     gap: 10px;
@@ -394,10 +421,47 @@ label {
 
 .buttons-cart {
     display: flex;
-    justify-content: center;
     gap: 20px;
     margin-top: 40px;
+    margin-left: 10px;
     
+}
+
+/* CONTACT PAGE */
+.items-container_contact {
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.content_contact {
+    flex-direction: column;
+    flex: 1;
+}
+
+.text_contactpage{
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 420px;
+}
+
+.contact-form {
+    margin: 30px 0px 30px 50px;
+}
+
+input[type=submit] {
+    margin-top: 20px;
+}
+
+.contact-phone p, 
+.contact-address p {
+    margin: 5px 0px 0px 0px
+}
+
+.contact-phone,
+.contact-address {
+    margin-top: 30px;
 }
 
 /* FOOTER */
@@ -414,6 +478,7 @@ footer {
 }
 
 .fa-brands {
+    font-size: 2rem;
     color: #949494;
-    size: 30px 30px;
+    padding: 5px 10px;
 }
