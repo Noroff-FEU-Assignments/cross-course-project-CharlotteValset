@@ -1,4 +1,16 @@
-/* || GENERAL STYLES */
+/* GENERAL STYLES */
+/* BUTTONS */
+/* HOMEPAGE */
+/* FILMS PAGE */
+/* PRODUCT PAGE */
+/* ABOUT PAGE */
+/* CONTACT PAGE */
+/* CHECKOUT PAGE */
+/* CHECKOUT SUCCESS PAGE */
+
+
+
+/* GENERAL STYLES */
 
 html {
     background-color: #000;
@@ -66,9 +78,11 @@ p {
 }
 
 .page-title {
+    position: relative;
     font-size: 1.5rem;
     margin-left: 130px;
     margin-top: 40px;
+    z-index: 8;
 }
 
 nav {
@@ -157,12 +171,23 @@ a:hover {
 }
 
 .back-button {
+    display: block;
     text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 10px 0px 30px 175px;
 }
 
-
+.fa-chevron-left {
+    margin-right: 20px;
+}
 
 /* IMAGES */
+
+img {
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.50));
+    border-radius: 30px;
+}
 
 .filmcover-small {
     width: 200px;
@@ -176,21 +201,11 @@ a:hover {
     z-index: 4;
 }
 
+/* PRODUCT PAGE */
+
 .filmcover-product {
     width: 313px;
     height: 494px;
-}
-
-.contact-map {
-    filter: none;
-    border: 2px solid #fff;
-    width: 421px;
-    height: 458px
-}
-
-img {
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.50));
-    border-radius: 30px;
 }
 
 /* HOMEPAGE */
@@ -279,6 +294,34 @@ img {
     display: block;
 }
 
+/* PRODUCT PAGE */
+
+.content-container_product {
+    position: relative;
+    max-width: 800px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    text-align: left;
+    gap: 60px;
+    z-index: 10;
+}
+
+.price-cta p {
+    font-size: 2rem;
+    margin: 0px;
+}
+
+.price-cta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-text {
+    margin-top: 75px;
+
+}
+
 /* DIV TEXT AND LINKS */
 
 .film-category {
@@ -289,7 +332,7 @@ img {
 /* ABOUT PAGE */
 
 .items-container_aboutpage {
-    max-width: 900px;
+    max-width: 800px;
     display: flex;
     margin: auto;
     text-align: left;
@@ -298,20 +341,21 @@ img {
 .content_about {
     flex: 1;
 }
-
-.content_about p {
-    margin: 0px 0px 0px 62px;
+.image-text_about {
+    font-size: 1rem;
+    margin: 0px 0px 0px 100px;
 }
 
 .text_aboutpage {
-    margin: 150px 0px 0px 40px;
+    max-width: 450px;
+    margin: 150px 0px 0px 20px;
     z-index: 2;
 }
 
 .about-image {
     position: relative;
     filter: none;
-    margin: 0px 0px 0px 60px;
+    margin: 0px 0px 0px 80px;
     width: 310px;
     height: 452px;
     z-index: 3
@@ -352,6 +396,19 @@ textarea {
 
 /* SHOPPING CART */
 
+.page-title_cart {
+    position: relative;
+    font-size: 1.5rem;
+    margin-left: 170px;
+    margin-top: 50px;
+    z-index: 8;
+}
+
+.filmcover-cart {
+    width: 144px;
+    height: 232px;
+}
+
 .remove-button {
     font-size: 0.875rem;
     margin: 0px;
@@ -373,15 +430,16 @@ textarea {
 }
 
 .items-container {
+    position: relative;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 60px;
+    z-index: 7;
 }
-
 
 .items-in-cart {
     display: flex;
-    margin: 30px 0px;
+    margin: 10px 0px 20px 0px;
 }
 
 .items-cart-text {
@@ -391,8 +449,12 @@ textarea {
     max-width: 200px;
 }
 
+.total-price {
+    font-size: 2rem;
+}
+
 .signin {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
@@ -448,10 +510,20 @@ label {
 }
 
 /* CONTACT PAGE */
+
+.contact-map {
+    filter: none;
+    border: 2px solid #fff;
+    width: 421px;
+    height: 458px
+}
+
 .items-container_contact {
-    max-width: 900px;
+    position: relative;
+    max-width: 800px;
     margin: 50px auto;
     display: flex;
+    z-index: 9;
 }
 
 .content_contact {
@@ -469,6 +541,13 @@ label {
 .contact-form {
     margin: 30px 0px 30px 50px;
 }
+
+.items-container_contact input[type=text],
+.items-container_contact input[type=email],
+textarea {
+    width: 310px;
+}
+
 
 input[type=submit] {
     margin-top: 20px;
