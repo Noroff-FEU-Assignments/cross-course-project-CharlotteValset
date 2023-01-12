@@ -82,7 +82,6 @@ p {
 
 .page-title {
     position: relative;
-    font-size: 1.5rem;
     margin-left: 130px;
     margin-top: 40px;
     z-index: 8;
@@ -329,8 +328,12 @@ img {
 
 /* ABOUT PAGE */
 
+.page-title_about {
+    margin-left: 160px;
+}
+
 .items-container_aboutpage {
-    max-width: 800px;
+    max-width: 850px;
     display: flex;
     margin: auto;
     text-align: left;
@@ -341,12 +344,12 @@ img {
 }
 .image-text_about {
     font-size: 1rem;
-    margin: 0px 0px 0px 100px;
+    margin: 0px 0px 30px 100px;
 }
 
 .text_aboutpage {
     max-width: 450px;
-    margin: 150px 0px 0px 20px;
+    margin: 160px 0px 0px 20px;
     z-index: 2;
 }
 
@@ -360,6 +363,10 @@ img {
 }
 
 /* CONTACT PAGE */
+
+.page-title_contact {
+    margin-left: 160px;
+}
 
 .contact-map {
     filter: none;
@@ -450,7 +457,6 @@ textarea {
 
 .page-title_cart {
     position: relative;
-    font-size: 1.5rem;
     margin-left: 170px;
     margin-top: 50px;
     z-index: 8;
@@ -504,7 +510,7 @@ textarea {
 .total-price {
     font-weight: 600;
     font-size: 2rem;
-    text-align: center;
+    margin: 10px 10px 50px 190px;
 }
 
 .signin {
@@ -580,10 +586,8 @@ label {
 .purchased-container {
     position: relative;
     max-width: 800px;
-    margin: 30px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
     text-align: center;
     z-index: 11;
 }
@@ -592,9 +596,30 @@ label {
     font-weight: 400;
 }
 
+.fa-circle-play {
+    font-size: 4rem;
+    color: #fff;
+}
 
-.purchased-item {
-    
+.product-container { 
+    position: relative;
+}
+
+.img-container { 
+    display: block; 
+}
+.product-container .fa-circle-play { 
+    position: absolute; 
+    bottom: 150px; 
+    left: 40px; 
+}
+
+.fa-circle-play:hover {
+    font-size: 5rem;
+}
+
+.product-container p {
+    text-align: center;
 }
 
 
