@@ -910,10 +910,6 @@ footer {
         flex-direction: column;
     }
 
-    .content_about {
-    flex: 1;
-    }
-
     .image-text_about {
         font-size: 0.75rem;
         margin: 5px auto;
@@ -964,10 +960,9 @@ footer {
 
     .text_contactpage{
         color: #000;
-        margin-top: 23px;
-        margin-bottom: 26px;
-        max-width: 300px;
+        max-width: 288px;
         text-align: center;
+        margin: 20px auto;
     }
 
     .contact-form {
