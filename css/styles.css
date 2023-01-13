@@ -719,9 +719,9 @@ footer {
     
     .page-title {
         position: relative;
-        margin-left: 130px;
-        margin-top: 40px;
         z-index: 8;
+        margin: auto;
+        text-align: center;
     }
     
     nav {
@@ -833,8 +833,9 @@ footer {
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin: 20px;
+        margin: auto;
         z-index: 6;
+        max-width: 200px;
     }
 
     .selling-point-text_left p {
@@ -853,9 +854,7 @@ footer {
     .cta-add {
         display: none;
     }
-    .mobileview_showcased-filmcover {
-
-    }
+  
     .showcased-filmcover-right {
         width: 183px;
         height: 295px;
