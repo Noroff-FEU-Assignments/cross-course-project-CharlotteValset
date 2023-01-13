@@ -767,6 +767,8 @@ footer {
 
 .cta {
     font-size: 1.15rem;
+    width: 122px;
+    align-self: center;
 }
 
 .cta:active {
@@ -813,14 +815,17 @@ footer {
     .selling-point-text_right {
         position: relative;
         text-align: center;
-        display: block;
+        display: flex;
         margin: auto;
         z-index: 5;
+        flex-direction: column;
+        width: 250px;
     }
 
     .selling-point-text_right h1 {
-        width: 250px;
-        margin: 10px 0px 30px 60px;
+        width: 266px;
+        margin: 20px 0px;
+        align-self: center;
     }
     
     
