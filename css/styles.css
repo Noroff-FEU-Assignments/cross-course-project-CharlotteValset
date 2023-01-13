@@ -864,7 +864,8 @@ footer {
     .sub-heading-homepage {
         font-size: 1.25rem;
         font-weight: 400;
-        margin: 50px 0px 10px 125px;
+        margin: 30px 0px 5px 0px;
+        text-align: center;
     }
     
     .list-films-row_homepage {
