@@ -745,6 +745,11 @@ footer {
         font-weight: 700;
     }
     
+    .active {
+        text-decoration: 10px underline; 
+        text-decoration-color: #A71515;
+    }
+
     .active-cart::after {
         width: 20px;
     }
