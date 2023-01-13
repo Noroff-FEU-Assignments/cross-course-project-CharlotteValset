@@ -744,9 +744,10 @@ footer {
     a:active {
         font-weight: 700;
     }
-    
+
+    /* Hvorfor funker ikke denne .active på mobil?*/ 
     .active {
-        text-decoration: 10px underline; 
+        text-decoration: 3px underline; 
         text-decoration-color: #A71515;
     }
 
@@ -902,7 +903,7 @@ footer {
     }
 
     .items-container_aboutpage {
-        max-width: 300px;
+        max-width: 250px;
         display: flex;
         margin: auto;
         text-align: center;
