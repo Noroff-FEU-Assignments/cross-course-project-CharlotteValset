@@ -979,9 +979,9 @@ footer {
 
     .cta-send {
         font-size: 1rem;
-        font-family: Helvetica, Arial, sans-serif;
         width: 150px;
         height: 40px;
+        border-radius: 10px;
     }
 
     input[type=submit] {
