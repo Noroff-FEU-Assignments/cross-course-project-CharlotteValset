@@ -869,8 +869,8 @@ footer {
     }
     
     .list-films-row_homepage {
-        max-width: 208px;
-        margin: auto 110px;
+        max-width: 150px;
+        margin: auto;
         display: grid;
         grid-template-columns: 1fr;
     }
