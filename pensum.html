@@ -5,25 +5,111 @@
         <meta name="desciption" content="Watch high quality films on SquareEyes"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/styles.css">
-        <title>SquareEyes | Home</title>
+        <title>SquareEyes | Checkout</title>
         <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
     </head>
   <body>
     <header class="sticky-position">
-        <a href="index.html"><img src="images/square-eyes-logo.png" class="logo" alt="Logo of SquareEyes"></a>
-        <nav>
-          <div class="menu">
-            <a href="index.html" class="active">Home</a>
-            <a href="films.html">Films</a>
+      <a href="index.html"><img src="images/square-eyes-logo.png" class="logo"  alt="Logo of SquareEyes"></a>
+      <nav>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href=films.html>Films</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
-        </nav>
+            <a href="checkout.html"><i class="active-cart fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </nav>
     </header>
     <main>
-    
-      </main>
-      <footer>&copy; Copyright</footer>
+      <div class="highlight testbox">
+        <div class="checkout-text">
+          <h1>Checkout complete, enjoy watching!</h1>
+          <p>Confirmation has been sent to your e-mail.</p>
+        </div>
+        <section class="purchased-container">
+          <div class="product-container">
+              <a href="https://www.youtube.com/watch?v=7w-pnrC81Sg"><img src="images/kubo.jpeg" class="filmcover-cart img-container" alt="Filmcover of Kubo and the two strings"></a>
+              <a href="https://www.youtube.com/watch?v=7w-pnrC81Sg"><i class="fa-regular fa-circle-play"></i></a>
+              <p>Kubo and the two strings</p>
+          </div>
+          <div class="product-container">
+            <a href="https://www.youtube.com/watch?v=7w-pnrC81Sg"><img src="images/kubo.jpeg" class="filmcover-cart img-container" alt="Filmcover of Kubo and the two strings"></a>
+            <a href="https://www.youtube.com/watch?v=7w-pnrC81Sg"><i class="fa-regular fa-circle-play"></i></a>
+            <p>Kubo and the two strings</p>
+        </div>
+        <div class="product-container">
+          <a href="https://www.youtube.com/watch?v=7w-pnrC81Sg"><img src="images/kubo.jpeg" class="filmcover-cart img-container" alt="Filmcover of Kubo and the two strings"></a>
+          <a href="https://www.youtube.com/watch?v=7w-pnrC81Sg"><i class="fa-regular fa-circle-play"></i></a>
+          <p>Kubo and the two strings</p>
+      </div>
+        </section>
+      </div>
+    </main>
+        <footer>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=nb>"><i class="fa-brands fa-twitter"></i></a>
+            <p>Copyright &copy; 2022 SquareEyes</p>
+          </footer>
   </body>
 </html>
+
+/* CHECKOUT SUCCESS PAGE
+
+.testbox {
+}
+
+.checkout-text h1 {
+    position: relative;
+    margin-top: 80px;
+    text-align: center;
+    z-index: 13;
+}
+.checkout-text p {
+    position: relative;
+    margin-bottom: 60px;
+    text-align: center;
+    z-index: 14;
+}
+
+.purchased-container {
+    position: relative;
+    margin: auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    z-index: 11;
+}
+
+.purchased-container a {
+    font-weight: 400;
+}
+
+.fa-circle-play {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.product-container { 
+    position: relative;
+}
+
+.img-container { 
+ 
+}
+.product-container .fa-circle-play { 
+    position: absolute; 
+    bottom: 140px; 
+    left: 90px; 
+}
+
+.fa-circle-play:hover {
+    font-size: 5rem;
+}
+
+figcaption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+*/
