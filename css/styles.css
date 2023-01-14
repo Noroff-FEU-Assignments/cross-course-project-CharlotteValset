@@ -651,7 +651,7 @@ footer {
     color: #949494;
     padding: 5px 10px;
 }
-/* MOBILE SCREEN*/
+/* ----------------   MOBILE SCREEN*/
 @media only screen and (max-width:480px) {
     /* GENERAL STYLES */
     html {
@@ -773,7 +773,6 @@ footer {
 
 .cta {
     font-size: 1.15rem;
-    width: 122px;
     align-self: center;
 }
 
@@ -977,11 +976,11 @@ footer {
         width: 250px;
     }
 
+    /*send knappen ser rar ut*/
     .cta-send {
         font-size: 1rem;
         width: 150px;
         height: 40px;
-        border-radius: 10px;
     }
 
     input[type=submit] {
@@ -1015,6 +1014,128 @@ footer {
         display: list-item;
     }
 
+    /* CHECKOUT PAGE */
+
+.page-title_cart {
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 8;
+}
+
+.one-line-heading {
+    margin-bottom: 30px;
+}
+
+.filmcover-cart {
+    width: 96px;
+    height: 155px;
+}
+
+.remove-button {
+    width: 120px;
+    height: 14px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #4B4B4B;
+    font-size: 0.75rem;
+    color: #4B4B4B;
+}
+
+.fa-light, 
+.fa-circle-xmark {
+    padding-right: 10px;
+}
+
+.price_cart {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+}
+
+.items-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 7;
+}
+
+.items-in-cart {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+}
+
+.items-cart-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 130px;
+}
+
+.items-cart-text h2 {
+    margin-top: 18px;
+}
+
+.total-price {
+    font-weight: 600;
+    font-size: 1.375rem;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.total-price::after {
+    content: '';
+    background-color: #000;
+    width: 177px;
+    height: 1px;
+    margin-top: 2px;
+    display: block;
+    margin: auto;
+}
+
+.signin {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.checkout-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form {
+    align-self: center;
+    width: 280px;
+}
+
+legend {
+    margin-top: 20px;
+}
+
+.fa-cc-paypal,
+.fa-cc-visa,
+.fa-cc-mastercard,
+.fa-cc-amex {
+    font-size: 1.75rem;
+    color: #545454;
+}
+
+.terms {
+    font-size: 0.9rem;
+}
+
+.buttons-cart {
+    display: flex;
+    gap: 20px;
+    flex-direction: column-reverse;
+    margin: auto;
+}
+
+.pay-button {
+    padding-left: 37px;
+    padding-right: 37px;
+}
 
 }
 
