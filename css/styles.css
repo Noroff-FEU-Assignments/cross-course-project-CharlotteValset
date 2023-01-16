@@ -120,7 +120,7 @@ a:hover {
     font-weight: 700;
 }
 
-menu > a:hover {
+.menu > a:hover {
     background-color: #EBEBEB;
     border-radius: 10px;
 }
