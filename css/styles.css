@@ -21,10 +21,10 @@ html {
 }
 
 body {
-    width: 1120px;
+    max-width: 1280px;
     margin: auto;
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #fff
+    background-color: #fff;
 }
 
 main {
@@ -806,7 +806,7 @@ footer {
         height: 208px;
     }
     /* HOME PAGE */
-    .selling-point_container {;
+    .selling-point_container {
         width: auto;
         display: block;
         margin: auto;
