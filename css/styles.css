@@ -638,10 +638,8 @@ label {
 }
 
 .checkout-text p {
-    /* position: relative; */
     margin-bottom: 40px;
     text-align: center;
-    /* z-index: 14; */
 }
 
 .purchased-container {
@@ -1204,6 +1202,13 @@ footer {
         flex-direction: column;
         justify-content: center;
         margin: auto;
+    }
+    .checkout-text h1 {
+        padding-top: 10px;
+    }
+
+    .checkout-text p {
+        margin-bottom: 30px;
     }
 
     .fa-circle-check {
