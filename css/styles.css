@@ -817,8 +817,7 @@ footer {
     }
     
     .highlight {
-        background-color: #EBEBEB !important;
-        z-index: 1;
+        background-color: #EBEBEB
     }
     
     .remove {
@@ -832,27 +831,27 @@ footer {
 
     /* BUTTONS */
 
-.cta {
-    font-size: 1.15rem;
-    align-self: center;
-}
+    .cta {
+        font-size: 1.15rem;
+        align-self: center;
+    }
 
-.cta:active {
-    background-color: #E40B0B;
-    font-weight: 400;
-}
+    .cta:active {
+        background-color: #E40B0B;
+        font-weight: 400;
+    }
 
-.cta-second:active {
-    background-color: #989898;
-}
+    .cta-second:active {
+        background-color: #989898;
+    }
 
-.back-button {
-    display: block;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: auto;
-}
+    .back-button {
+        display: block;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: auto;
+    }
 
     /* IMAGES */
     .filmcover-large {
