@@ -197,7 +197,7 @@ a:hover {
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 600;
-    margin: 10px 0px 30px 175px;
+    margin: 10px 0px 30px 194px;
 }
 
 .fa-chevron-left {
@@ -507,10 +507,8 @@ textarea {
 /* CHECKOUT PAGE */
 
 .page-title_cart {
-    position: relative;
-    margin-left: 170px;
+    margin-left: 208px;
     margin-top: 50px;
-    z-index: 8;
 }
 
 .filmcover-cart {
@@ -542,7 +540,7 @@ textarea {
     position: relative;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 150px;
     z-index: 7;
 }
 
@@ -894,6 +892,13 @@ footer {
         display: flex;
         margin: auto;
         text-align: center;
+        flex-direction: column;
+    }
+
+    .selling-point_container_2 {
+        display: flex;
+        margin: auto;
+        text-align: center;
         flex-direction: column-reverse;
     }
     
@@ -902,11 +907,9 @@ footer {
     }
     
     .selling-point-text_right {
-        position: relative;
         text-align: center;
         display: flex;
         margin: auto;
-        z-index: 5;
         flex-direction: column;
         width: 250px;
     }
@@ -926,24 +929,19 @@ footer {
         max-width: 200px;
     }
 
-    .box-1 {
-        order: -113;
-    }
-
-    .box-2 {
-        order: -12;
-    }
-    .box-3 {
-        order: 1;
-    }
-
-    .selling-point-text_left > p {
+    .film-description,
+    .film-category_home {
         display: none;
     }
 
-    /* .selling-point_container div:first-child {
-        order: -1;
-    } */
+    .film-price_home {
+        font-size: 1.2rem;
+        margin: 15px auto;
+    }
+
+    .selling-point-text_left > h2 {
+        margin-bottom: 0px;
+    }
 
     .cta-readmore {
         width: 100px;
@@ -957,6 +955,7 @@ footer {
     .showcased-filmcover-right {
         width: 183px;
         height: 295px;
+        margin: 20px auto 0px auto;
     }
     
     .sub-heading-homepage {
