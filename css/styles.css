@@ -434,12 +434,16 @@ img {
     margin-bottom: 50px;
 }
 
-.items-container_contact {
-    margin: auto;
+.items-container_contact{
     display: flex;
     justify-content: space-evenly;
+    margin: 0;
+    width: 100%;
 }
 
+.content_contact_form{
+    display: flex;
+}
 .content_contact {
     flex: 1;
     max-width: 400px;
@@ -1077,12 +1081,14 @@ footer {
         height: 270px;
         margin: 10px;
     }
-
-    .items-container_contact {
+    .items-container_contact{
         width: auto;
-        margin: 0px auto;
+        margin: 0 auto;
+        flex-flow: column;
+     }
+     .content_contact_form{
         flex-flow: column-reverse;
-    }
+     }
 
     .content_contact {
         flex-direction: column;
