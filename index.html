@@ -2,91 +2,77 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="desciption" content="Watch high quality films on SquareEyes" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/styles.css" />
-        <title>SquareEyes | Contact Us</title>
-        <script
-            src="https://kit.fontawesome.com/a2e18a1d66.js"
-            crossorigin="anonymous"
-        ></script>
+        <meta name="desciption" content="Watch high quality films on SquareEyes"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>SquareEyes | Home</title>
+        <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <header class="sticky-position">
-            <a href="index.html"
-                ><img
-                    src="images/square-eyes-logo.png"
-                    class="logo"
-                    alt="Logo of SquareEyes"
-            /></a>
-            <nav>
-                <ul class="no-bullets menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="films.html">Films</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                    <li>
-                        <a href="checkout.html"
-                            ><i class="fa-solid fa-cart-shopping"></i
-                        ></a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1 class="page-title_contact">Contact us</h1>
-            <div class="items-container_contact highlight">
-                <div class="content_contact">
-                    <p class="text_contactpage">
-                        If you have any questions or inquiries, please feel free to contact
-                        us at any time and we will get back to you as soon as possible!
-                    </p>
-                </div>
-                <div>
-                    <img
-                        src="images/map.jpg"
-                        class="contact-map"
-                        alt="Map of SquareEyes address"
-                    />
-                </div>
-                <div class="content_contact">
-                    <div class="contact-form">
-                        <form action="form-success.php" method="POST">
-                            <label for="name">Name*</label>
-                            <input type="text" name="name" id="name" class="" required />
-                            <label for="email">Email*</label>
-                            <input type="email" name="email" id="email" class="" required />
-                            <label for="message">Your message*</label>
-                            <textarea id="message" name="message"></textarea>
-                            <input type="submit" value="Send message" class="cta cta-send" />
-                        </form>
-                        <div>
-                            <div class="contact-phone">
-                                <p class="text-700">Call us</p>
-                                <p>+44 12 3456 7890</p>
-                            </div>
-                            <div class="contact-address">
-                                <p class="text-700">Visit us</p>
-                                <p>123 Filmstreet</p>
-                                <p>London 456 7SE</p>
-                                <p>United Kingdom</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <a href="https://www.facebook.com/"
-                ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a href="https://www.instagram.com/"
-                ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://twitter.com/?lang=nb>"
-                ><i class="fa-brands fa-twitter"></i
-            ></a>
-            <p>Copyright &copy; 2022 SquareEyes</p>
-        </footer>
-    </body>
+  <body>
+    <header class="sticky-position">
+        <a href="index.html"><img src="images/square-eyes-logo.png" class="logo" alt="Logo of SquareEyes"></a>
+        <nav>
+          <ul class="no-bullets menu">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href=films.html>Films</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+      <div class="highlight">
+        <section class="selling-point_container">
+          <div>
+            <a href="product.html"><img src="images/black-adam.jpeg"  class="filmcover-large selling-point_image" alt="Filmcover of Black Adam"></a>
+          </div>
+          <div class="selling-point-text_right">
+            <h1>Welcome to SquareEyes</h1>
+            <p class="selling-point-text_mobile">Enjoy our selection of high-quality films and support small filmmakers!</p>
+            <a href="films.html" class= cta>Get started!<i class="fa-regular fa-circle-right"></i></a>
+          </div>
+        </section>  
+      </div>
+      <section>
+        <h2 class="sub-heading-homepage">Most watched</h2>
+        <div class="list-films-row_homepage">
+         <a href="product.html"><img src="images/batman.jpeg" class="filmcover-small" alt="Filmcover of Batman"></a>
+         <a href="product.html"><img src="images/kubo.jpeg" class="filmcover-small" alt="Filmcover of Kubo and the two strings"></a>
+         <a href="product.html"><img src="images/intouchables.jpeg" class="filmcover-small" alt="Filmcover of Intouchables"></a>
+         <a href="product.html"><img src="images/pinocchio.jpeg" class="filmcover-small" alt="Filmcover of Pinocchio"></a>
+        </div>
+        <h2 class="sub-heading-homepage">Newly added</h2>
+        <div class="list-films-row_homepage">
+          <a href="product.html"><img src="images/black-adam.jpeg" class="filmcover-small" alt="Filmcover of Black Adam"></a>
+          <a href="product.html"><img src="images/the-addams-family.jpeg" class="filmcover-small" alt="Filmcover of The Addams Family"></a>
+          <a href="product.html"><img src="images/hobbsandshaw.jpeg" class="filmcover-small" alt="Filmcover of Hobbs and Shaw"></a>
+          <a href="product.html"><img src="images/toy-story-4.jpeg" class="filmcover-small" alt="Filmcover of Toy Story 4"></a>
+        </div>
+      </section>
+      <div class="highlight">
+        <section class="selling-point_container_2">
+          <div class="selling-point-text_left">
+            <h2>Kubo and the two strings</h2>
+            <p class="film-category_home">Animation (2016)</p>
+            <p class="film-description">A young boy named Kubo must locate a magical suit of armour worn by his late father in order to defeat a vengeful spirit from the past.</p>
+            <p class="film-price_home">$ 5.95</p>
+            <a href="checkout.html" class="cta cta-add">Add to cart</a>
+            <a href="checkout.html" class="cta cta-readmore">Read more</a>
+          </div>
+          <div>
+            <a href="product.html"><img src="images/kubo.jpeg" class="filmcover-large showcased-filmcover-right" alt="Filmcover of Kubo and the two strings"></a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="social-media">
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/?lang=nb>"><i class="fa-brands fa-twitter"></i></a>  
+      </div>
+      <p>Copyright &copy; 2022 SquareEyes</p>
+    </footer>
+  </body>
 </html>
