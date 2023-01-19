@@ -25,20 +25,21 @@
         <a href="films.html" class="back-button"><i class="fa-solid fa-chevron-left"></i>BACK</a>
         <h1 class="page-title_cart">Shopping cart</h1>
                 <div class="items-container highlight">
-                    <section>
+                    <div>
                         <div class="items-in-cart">
                             <a href="product.html"><img src="images/kubo.jpeg" class="filmcover-cart" alt="Filmcover of Kubo and the two strings"></a>                            <div class="items-cart-text">
-                                <h2>Kubo and the two strings</h2>
-                                <p class="price_cart">$ 5.95</p>
-                                <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
-                            </div>
+                            <h2>Kubo and the two strings</h2>
+                            <p class="price_cart">$ 5.95</p>
+                            <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
+                        </div>
+                        <!-- Hvorfor er det 2 </div> her?? Fucker opp layout om jeg tar vekk en.. -->
                         </div>
                         <div class="items-in-cart">
                             <a href="product.html"><img src="images/black-adam.jpeg" class="filmcover-cart" alt="Filmcover of Black Adam"></a>
                             <div class="items-cart-text">
                                 <h2 class="one-line-heading">Black Adam</h2>
                                 <p class="price_cart">$ 5.95</p>
-                                 <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
+                                <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
                             </div>
                         </div>
                         <div class="items-in-cart">
@@ -49,9 +50,9 @@
                                 <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
                             </div>
                         </div>
-                        <p class="total-price">Total    $ 17.85</p>
-                    </section> 
-                    <section class="checkout-content remove-highlight">
+                        <p class="total-price">Total $ 17.85</p>
+                    </div> 
+                    <div class="checkout-content remove-highlight">
                         <div class="signin">
                             <p class="signin-text">Already have an account?</p>
                             <a href="signin.html" class=signin-link>Sign in!</a>
@@ -89,13 +90,13 @@
                                     <input type="text" name="expiry-date" id="expiry-date" class="" required>
                                     <label for="ccv-cvc">CCV/CVC*</label>
                                     <input type="text" name="ccv-cvc" id="ccv-cvc" class="" required>
-                        <div class="buttons-cart">
-                            <a href="empty-cart.html" class="cta cta-second" <button>Empty cart</button></a>
-                            <a href="checkout_success.html" class="cta pay-button" <button>Pay</button></a>
+                                <div class="buttons-cart">
+                                    <a href="empty-cart.html" class="cta cta-second" <button>Empty cart</button></a>
+                                    <a href="checkout_success.html" class="cta pay-button" <button>Pay</button></a>
+                                </div>
+                            </form>
                         </div>
-                        </form>
-                        </div>
-                    
+                    </div>
                 </div>
         </main>
         <footer>
