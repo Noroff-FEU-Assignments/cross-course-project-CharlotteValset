@@ -759,13 +759,13 @@ footer {
         /* z-index: 1; */
     }
     
-    /* yes or n0 to sticky? */
+    /* yes or n0 to sticky?
     .sticky-position {
         position:sticky
         top: 0px;
         background: #fff;
         padding: 10px;
-    }
+    } */
     
     h1 {
         font-size: 1.25rem;
