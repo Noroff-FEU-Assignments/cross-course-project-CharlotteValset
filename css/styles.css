@@ -125,14 +125,14 @@ a {
     padding: 15px;
 }
 
-a:hover {
-    font-weight: 700;
-}
-
-.menu > a:hover {
+ul > li:hover {
     text-decoration: 3px underline; 
     text-decoration-color: #A71515;
     font-weight: 400;
+}
+
+a:hover {
+    font-weight: 700;
 }
 
 .active {
@@ -337,7 +337,7 @@ img {
 
 .film-title {
     font-size: 1.25rem;
-    padding: 5px;
+    margin-top: 15px;
 }
 
 .bold-on-hover:hover {
