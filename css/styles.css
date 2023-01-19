@@ -130,7 +130,7 @@ ul > li:hover {
     font-weight: 400;
 }
 
-.menu > a:hover {
+.menu a:hover {
     text-decoration: 3px underline;
     text-decoration-color: #A71515;
     font-weight: 400;
