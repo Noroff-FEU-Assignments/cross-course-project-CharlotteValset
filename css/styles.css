@@ -120,16 +120,18 @@ a {
     padding: 15px;
 }
 
-ul > li a:hover {
-    font-weight: 400;
-}
-
 a:hover {
     font-weight: 700;
 }
 
 ul > li:hover {
     text-decoration: 3px underline; 
+    text-decoration-color: #A71515;
+    font-weight: 400;
+}
+
+.menu > ul > li > a:hover {
+    text-decoration: 3px underline;
     text-decoration-color: #A71515;
     font-weight: 400;
 }
