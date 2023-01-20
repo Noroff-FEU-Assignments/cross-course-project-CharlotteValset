@@ -124,12 +124,6 @@ a:hover {
     font-weight: 700;
 }
 
-/* ul > li:hover {
-    text-decoration: 3px underline; 
-    text-decoration-color: #A71515;
-    font-weight: 400;
-} */
-
 .menu a:hover {
     text-decoration: 3px underline;
     text-decoration-color: #A71515;
@@ -165,6 +159,7 @@ a:hover {
     background-color: #A71515;
     color: #fff;
     font-size: 1.25rem;
+    font-weight: 400;
     text-decoration: none;
     padding-left: 25px;
     padding-right: 25px;
@@ -229,70 +224,13 @@ img {
 
 /* HOMEPAGE */
 
-.selling-point_container{
-    max-width: 1200px;
-    display: flex;
-    margin: auto;
-    text-align: center;
-}
-
-.selling-point_container_2 {
-    max-width: 900px;
-    display: flex;
-    margin: auto;
-    text-align: center;
-}
-
-.selling-point_image {
-    margin: 30px 0px 0px 100px;
-}
-
-.selling-point-text_right {
-    text-align: center;
-    display: block;
-    max-width: 400px;
-}
-
-.selling-point-text_right > p {
-    font-size: 1.6rem;
-    margin-bottom: 40px;
-
-}
-
-.selling-point-text_left {
-    max-width: 300px;
-    text-align: center;
-    display: block;
-    margin: 120px 100px 150px 90px;
-}
-
-.showcased-filmcover-right {
-    margin: 40px 0px;
-}
-
-.film-description {
-    margin-bottom: 50px;
-}
-
-.sub-heading-homepage {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin: 30px 0px 0px 210px;
-}
-
-.list-films-row_homepage {
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
+/* HOME - Selling point 1 */
 #sellingpoint1-outer-wrapper {
     width: 100%;
     display: flex;
     height: 391px;
     background-color: #EBEBEB;
-    margin-bottom: 194px;
+    margin-bottom: 90px;
     margin-top: 79px;
 }
 .sellingpoint1-card-wrapper {
@@ -314,13 +252,49 @@ img {
     width: 70%;
 }
 
+.selling-point_image {
+    margin: 30px 0px 0px 100px;
+}
+
+.selling-point-text_right {
+    text-align: center;
+    display: block;
+    max-width: 400px;
+}
+
+.selling-point-text_right > p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
+
+.fa-circle-right {
+    padding-left: 10px;
+}
+
+/* HOME - Most watched - Newly added */
+
+.sub-heading-homepage {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 30px 0px 0px 210px;
+}
+
+.list-films-row_homepage {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* HOME - Selling point 2 */
+
 #sellingpoint2-outer-wrapper {
     width: 100%;
     display: flex;
-    height: 405px;
+    height: 448px;
     background-color: #EBEBEB;
     margin-bottom: 81px;
-    margin-top: 93px;
+    margin-top: 91px;
 }
 .sellingpoint2-card-wrapper {
     width: 50%;
@@ -331,17 +305,31 @@ img {
 
 .sellingpoint2-card {
     width: 367px;
-    height: 535px;
+    height: 487px;
 }
 
 .sellingpoint2-other-content {
     margin: auto;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    /* width: 92%; */
-    /* max-width: 808px; */
-    gap: 113px;
+    gap: 85px;
+}
+
+.selling-point-text_left {
+    max-width: 300px;
+    text-align: center;
+}
+
+.film-category_home {
+    font-size: 0.9rem;
+}
+
+.film-description {
+    margin-bottom: 30px;
+}
+
+.film-price_home {
+    font-size: 1.8rem;
 }
 
 /* FILMS PAGE */
@@ -381,39 +369,6 @@ img {
 
 /* PRODUCT PAGE */
 
-.desktop-remove {
-    display: none;
-}
-
-.filmcover-product {
-    width: 313px;
-    height: 494px;
-}
-
-.content-container_product {
-    max-width: 800px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    text-align: left;
-    gap: 60px;
-}
-
-.price-cta p {
-    font-size: 2rem;
-    margin: 0px;
-}
-
-.price-cta {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* .product-text {
-    margin-top: 75px;
-
-} */
-
 #product-page-outer-wrapper {
     width: 100%;
     display: flex;
@@ -441,6 +396,21 @@ img {
     width: 33%;
 }
 
+.filmcover-product {
+    width: 313px;
+    height: 494px;
+}
+
+.price-product {
+    font-size: 2rem;
+    margin: 0px;
+}
+
+.price-cta-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* ABOUT PAGE */
 
@@ -449,22 +419,33 @@ img {
     margin-top: 0px;
 }
 
-/* .items-container_aboutpage {
+#about-outer-wrapper {
+    width: 100%;
     display: flex;
-    /* margin: auto; */
-    /* text-align: left; */
-    /* flex-direction: row;
-    justify-content: center;
-    gap: 92px;
+    height: 400px;
+    background-color: #EBEBEB;
+    margin-bottom: 70px;
+    margin-top: 35px;
+}
+.about-card-wrapper {
+    width: 50%;
+    display: flex;
     align-items: center;
-} */
+    justify-content: center;
+    margin-right: 175px;
+}
 
-/* .content_about {
-    flex: 1;
-} */
-.image-text_about {
-    font-size: 1rem;
-    margin: 0px 0px 30px 100px;
+.about-card {
+    width: 367px;
+    height: 454px;
+}
+
+.about-other-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-left: 90px;
 }
 
 .text_aboutpage {
@@ -478,33 +459,10 @@ img {
     height: 452px;
 }
 
-#about-outer-wrapper {
-    width: 100%;
-    display: flex;
-    height: 391px;
-    background-color: #EBEBEB;
-    margin-bottom: 194px;
-    margin-top: 79px;
+.image-text_about {
+    font-size: 1rem;
+    margin: 0px 0px 30px 100px;
 }
-.about-card-wrapper {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-card {
-    width: 367px;
-    height: 535px;
-}
-
-.about-other-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-}
-
 
 /* CONTACT PAGE */
 
@@ -521,7 +479,7 @@ img {
     margin-bottom: 50px;
 }
 
-.items-container_contact{
+.items-container_contact {
     width: 100%;
 }
 
@@ -603,7 +561,7 @@ textarea {
 
 .page-title_cart {
     margin-left: 208px;
-    margin-top: 50px;
+    margin-top: 24px;
 }
 
 .filmcover-cart {
@@ -780,15 +738,9 @@ label {
     margin-bottom: 60px;
 }
 
-.img-container { 
- 
-}
-
 .fa-circle-play:hover {
     font-size: 6rem;
 }
-
-
 
 /* FOOTER */
 
@@ -813,6 +765,7 @@ footer {
     color: #949494;
     padding: 5px 10px;
 }
+
 /* ----------------   MOBILE SCREEN*/
 @media only screen and (max-width:480px) {
     /* GENERAL STYLES */
@@ -978,7 +931,10 @@ footer {
         width: 129px;
         height: 208px;
     }
+
     /* HOME PAGE */
+
+     /* Selling point 1 */   
     .selling-point_container {
         display: flex;
         margin: auto;
@@ -997,6 +953,37 @@ footer {
         margin: 10px auto;
     }
     
+    #sellingpoint1-outer-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 406px;
+        background-color: #EBEBEB;
+        margin-bottom: 84px;
+        margin-top: 42px;
+    }
+    .sellingpoint1-card-wrapper {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .sellingpoint1-card {
+        /* width: 324; */
+        width: 367px;
+        height: 305px;
+    }
+    
+    .sellingpoint1-other-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }    
+
     .selling-point-text_right {
         text-align: center;
         display: flex;
@@ -1007,11 +994,32 @@ footer {
 
     .selling-point-text_right h1 {
         width: 266px;
-        margin: 20px 0px;
+        margin: auto;
         align-self: center;
     }
+
+    .selling-point-text_right > p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Most wathed - Newly added */  
+    .sub-heading-homepage {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin: 30px 0px 5px 0px;
+        text-align: center;
+    }
     
-    
+    .list-films-row_homepage {
+        max-width: 150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+     /* Selling point 2 */   
     .selling-point-text_left {
         text-align: center;
         display: flex;
@@ -1047,20 +1055,6 @@ footer {
         width: 183px;
         height: 295px;
         margin: 20px auto 0px auto;
-    }
-    
-    .sub-heading-homepage {
-        font-size: 1.25rem;
-        font-weight: 400;
-        margin: 30px 0px 5px 0px;
-        text-align: center;
-    }
-    
-    .list-films-row_homepage {
-        max-width: 150px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr;
     }
     
 
