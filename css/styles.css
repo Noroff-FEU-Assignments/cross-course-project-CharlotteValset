@@ -782,7 +782,8 @@ footer {
     }
     
     main {
-        background-color: #fff
+        background-color: #fff;
+        padding-bottom: 50px;
     }
     
     .logo {
@@ -852,7 +853,7 @@ footer {
         justify-content: space-evenly;
         align-items: center;
         margin: auto;
-        bottom: 24px;
+        bottom: 0px;
         left: 0px;
         overflow: hidden;
         position: fixed;
@@ -943,7 +944,7 @@ footer {
 
     /* HOME PAGE */
 
-     /* Selling point 1 */   
+     /* HOME - Selling point 1 */   
     .selling-point_container {
         display: flex;
         margin: auto;
@@ -1012,7 +1013,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    /* Most wathed - Newly added */  
+    /* HOME - Most watched - Newly added */  
     .sub-heading-homepage {
         font-size: 1.25rem;
         font-weight: 400;
@@ -1028,7 +1029,36 @@ footer {
     }
 
 
-     /* Selling point 2 */   
+     /* HOME - Selling point 2 */   
+
+     #sellingpoint2-outer-wrapper {
+        width: 100%;
+        display: flex;
+        height: 470px;
+        background-color: #EBEBEB;
+        margin-bottom: 23px;
+        margin-top: 69px;
+    }
+    .sellingpoint2-card-wrapper {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .sellingpoint2-card {
+        width: 367px;
+        height: 304px;
+    }
+    
+    .sellingpoint2-other-content {
+        /* margin: auto; */
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5px;
+    }
+    
     .selling-point-text_left {
         text-align: center;
         display: flex;
@@ -1063,10 +1093,8 @@ footer {
     .showcased-filmcover-right {
         width: 183px;
         height: 295px;
-        margin: 20px auto 0px auto;
+        /* margin: 20px auto 0px auto; */
     }
-    
-
 
     /* FILMS PAGE */
 
@@ -1410,6 +1438,7 @@ footer {
     /* FOOTER */
 
     footer {
+        display: none;
         padding-top: 20px;
         padding-bottom: 20px;
     }
