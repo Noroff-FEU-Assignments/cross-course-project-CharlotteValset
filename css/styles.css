@@ -313,6 +313,7 @@ img {
     width: 367px;
     height: 487px;
 }
+
 .sellingpoint2-other-content {
     margin: 0 auto;
     display: flex;
@@ -798,7 +799,7 @@ footer {
     }
 
     body {
-        width: 100%;
+        width: 102%;
         margin: auto;
         font-family: Helvetica, Arial, sans-serif;
         background-color: #fff;
@@ -999,7 +1000,7 @@ footer {
     .sellingpoint1-card {
         all: none;
         width: 202px;
-        height: 258px;
+        height: 350px;
     }
     
     .sellingpoint1-other-content {
@@ -1044,28 +1045,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .sellingpoint1-card {
-        width: 367px;
-        height: 535px;
-        position: relative;
-        top: 10px;
-    }
-    
-    .sellingpoint2-card {
-        width: 367px;
-        height: 487px;
-        position: relative;
-        bottom: 10px;
-    }
-
      /* HOME - Selling point 2 */   
 
      #sellingpoint2-outer-wrapper {
         width: 100%;
         display: flex;
-        height: 470px;
+        height: 474px;
         background-color: #EBEBEB;
-        margin-bottom: 23px;
+        margin-bottom: 9px;
         margin-top: 69px;
     }
     .sellingpoint2-card-wrapper {
@@ -1077,15 +1064,16 @@ footer {
     
     .sellingpoint2-card {
         width: 367px;
-        height: 304px;
+        height: 267px;
+        position: relative;
+        top: -29px;
     }
     
     .sellingpoint2-other-content {
-        /* margin: auto; */
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        gap: 5px;
+        gap: 0px;
     }
     
     .selling-point-text_left {
