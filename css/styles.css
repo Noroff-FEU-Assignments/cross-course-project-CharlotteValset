@@ -299,8 +299,9 @@ img {
     height: 448px;
     background-color: #EBEBEB;
     margin-bottom: 81px;
-    margin-top: 91px; */
-}
+    margin-top: 91px; 
+} */
+
 .sellingpoint2-card-wrapper {
     width: 50%;
     display: flex;
@@ -958,7 +959,7 @@ footer {
     /* HOME PAGE */
 
      /* HOME - Selling point 1 */   
-    .selling-point_container {
+    /* .selling-point_container {
         display: flex;
         margin: auto;
         text-align: center;
@@ -970,7 +971,7 @@ footer {
         margin: auto;
         text-align: center;
         flex-direction: column-reverse;
-    }
+    } */
     
     .selling-point_image {
         margin: 10px auto;
@@ -980,15 +981,16 @@ footer {
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
-        height: 464px;
+        height: 468px;
         background-color: #EBEBEB;
-        margin-bottom: 31px;
-        margin-top: 63px;
+        margin-bottom: 15px;
+        margin-top: 57px;
     }
     .sellingpoint1-card-wrapper {
         width: 50%;
+        height: 57%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -996,16 +998,17 @@ footer {
     
     .sellingpoint1-card {
         /* width: 324; */
-        width: 367px;
-        height: 236px;
+        width: 202px;
+        height: 258px;
         position: relative;
-        top: -77px;
+        top: 92px;
     }
     
     .sellingpoint1-other-content {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
         width: 70%;
     }    
 
