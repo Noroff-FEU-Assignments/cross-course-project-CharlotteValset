@@ -49,7 +49,6 @@ header {
     z-index: 1;
 }
 
-/* yes or n0 to sticky? */
 .sticky-position {
     position: static;
     top: 0px;
@@ -293,15 +292,6 @@ img {
     margin-top: 91px;
 }
 
-/* #sellingpoint2-outer-wrapper {
-    width: 100%;
-    display: flex;
-    height: 448px;
-    background-color: #EBEBEB;
-    margin-bottom: 81px;
-    margin-top: 91px; 
-} */
-
 .sellingpoint2-card-wrapper {
     width: 50%;
     display: flex;
@@ -320,12 +310,6 @@ img {
     align-items: center;
     gap: 85px;
 }
-/* .sellingpoint2-other-content {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 85px;
-} */
 
 .selling-point-text_left {
     max-width: 300px;
@@ -795,10 +779,11 @@ footer {
 @media only screen and (max-width:480px) {
     /* GENERAL STYLES */
     html {
-        background-color: rgb(183, 150, 150);
+        background-color: #000;
     }
 
     body {
+        height: 100vh;
         width: 102%;
         margin: auto;
         font-family: Helvetica, Arial, sans-serif;
