@@ -997,11 +997,9 @@ footer {
     }
     
     .sellingpoint1-card {
-        /* width: 324; */
+        all: none;
         width: 202px;
         height: 258px;
-        position: relative;
-        top: 92px;
     }
     
     .sellingpoint1-other-content {
