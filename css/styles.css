@@ -776,7 +776,7 @@ footer {
 }
 
 /* ----------------   MOBILE SCREEN*/
-@media only screen and (max-width:440px) {
+@media only screen and (max-width:480px) {
     /* GENERAL STYLES */
     html {
         background-color: #000;
@@ -793,6 +793,7 @@ footer {
     main {
         background-color: #fff;
         padding-bottom: 50px;
+        padding-top: 90px;
     }
     
     .logo {
@@ -811,7 +812,8 @@ footer {
     }
     
     .sticky-position {
-        position: sticky;
+        width: 100%;
+        position: fixed;
         top: 0px;
         background: #fff;
         padding: 0px;
@@ -929,6 +931,7 @@ footer {
         font-size: 1rem;
         font-weight: 600;
         margin: auto;
+        margin-top: 10px;
     }
 
     /* IMAGES */
@@ -1489,11 +1492,9 @@ footer {
     }    
 }
 
+
 /* TABLET VIEW*/
-@media only screen and (min-width:441px)and (max-width:614px) {
-}
-/* TABLET VIEW*/
-@media only screen and (min-width:615px)and (max-width:1024px) {
+@media only screen and (min-width:481px)and (max-width:768px) {
    
     /* GENERAL STYLES*/
 
@@ -1505,6 +1506,11 @@ footer {
     }
 
     /* IMAGES */
+
+    .filmcover-small {
+        width: 145px;
+        height: 232px;
+    }
 
     .filmcover-large {
         width: 275px;
@@ -1550,14 +1556,24 @@ footer {
         text-align: center;
     }
 
-    .list-films-row_homepage {
+    /* .list-films-row_homepage {
         width: 570px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 20px;
+    } */
+
+    .list-films-row_homepage {
+        width: 450px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px 10px;
     }
+
 
     #sellingpoint2-outer-wrapper {
         width: 100%;
