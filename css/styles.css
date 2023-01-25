@@ -873,12 +873,12 @@ footer {
         font-weight: 700;
     }
 
-    .active {
+    /* .active {
         text-decoration: none; 
         text-decoration-color: none;
         background-color: #EBEBEB;
         border-radius: 10px;
-    }
+    } */
 
     /* .fa-cart-shopping:active::after {
         content: '';
