@@ -783,19 +783,16 @@ footer {
 @media only screen and (max-width:614px) {
 
     /* GENERAL STYLES */
-    html {
+    /* html {
         background-color: #000;
-    }
+    } */
 
     body {
         height: 100vh;
-        margin: auto;
-        font-family: Helvetica, Arial, sans-serif;
-        background-color: #fff;
     }
     
     main {
-        background-color: #fff;
+        /* background-color: #fff; */
         padding-bottom: 50px;
         padding-top: 90px;
     }
@@ -809,11 +806,11 @@ footer {
         align-items: center;
     }
     
-    header {
+    /* header {
         margin-top: 0px;
         background-color: #fff;
         /* z-index: 1; */
-    }
+    /* } */
     
     .position {
         width: 100%;
@@ -840,15 +837,15 @@ footer {
         font-size: 0.9rem;
     }
     
-    .text-700 {
+    /* .text-700 {
         font-weight: 700;
-    }
+    } */
     
     
     nav {
-        text-decoration: none;
+        /* text-decoration: none;
         color: #000;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: Helvetica, Arial, sans-serif; */
         font-size: 1rem;
     }
     
@@ -875,20 +872,20 @@ footer {
         font-weight: 700;
     }
 
-    /* Hvorfor funker ikke denne .active på mobil?*/ 
+    /* Why isnt this .active work on mobile?*/ 
     .active {
         text-decoration: 3px underline; 
         text-decoration-color: #A71515;
     }
 
-    .fa-cart-shopping:active::after {
+    /* .fa-cart-shopping:active::after {
         content: '';
         background-color: #A71515;
         width: 20px;
         height: 3px;
         margin-top: 2px;
         display: block;
-    }
+    } */
     
 
     .active-cart::after {
@@ -900,9 +897,9 @@ footer {
         display: block;
     }
     
-    .highlight {
+    /* .highlight {
         background-color: #EBEBEB
-    }
+    } */
     
     .remove {
         display: none;
@@ -910,7 +907,7 @@ footer {
 
     .film-category {
         font-size: 0.8rem;
-        margin: 0px;
+        /* margin: 0px; */
     }
 
     /* BUTTONS */
@@ -930,50 +927,46 @@ footer {
     }
 
     .back-button {
-        display: block;
-        text-decoration: none;
+        /* display: block;
+        text-decoration: none; */
         font-size: 1rem;
-        font-weight: 600;
+        /* font-weight: 600; */
         margin: auto;
         margin-top: 10px;
     }
 
     /* IMAGES */
-    .filmcover-large {
-        width: 183px;
-        height: 275px;
-    }
     
     .filmcover-small {
         width: 129px;
         height: 208px;
     }
 
+    .filmcover-large {
+        width: 183px;
+        height: 275px;
+    }
+
     /* HOME PAGE */
 
      /* HOME - Selling point 1 */   
-    
-    .selling-point_image {
-        margin: 10px auto;
-    }
-    
     #sellingpoint1-outer-wrapper {
-        width: 100%;
-        display: flex;
+        /* width: 100%;
+        display: flex; */
         flex-direction: column;
         /* justify-content: center; */
         align-items: center;
         height: 468px;
-        background-color: #EBEBEB;
+        /* background-color: #EBEBEB; */
         margin-bottom: 15px;
         margin-top: 57px;
     }
     .sellingpoint1-card-wrapper {
-        width: 50%;
+        /* width: 50%; */
         height: 57%;
-        display: flex;
+        /* display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
     }
     
     .sellingpoint1-card {
@@ -989,6 +982,10 @@ footer {
         /* justify-content: center; */
         width: 70%;
     }    
+
+    .selling-point_image {
+        margin: 10px auto;
+    }
 
     .selling-point-text_right {
         text-align: center;
@@ -1186,7 +1183,7 @@ footer {
         display: flex;
         height: 380px;
         background-color: #EBEBEB;
-        margin-bottom: 83px;
+        margin-bottom: 105px;
         margin-top: 17px;
         flex-direction: column;
         align-items: center;
