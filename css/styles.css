@@ -1042,10 +1042,10 @@ footer {
     }
     
     .sellingpoint2-card {
-        width: 367px;
+        width: 211px;
         height: 267px;
-        position: relative;
-        top: -29px;
+        position: none;
+        top: 0px;
     }
     
     .sellingpoint2-other-content {
