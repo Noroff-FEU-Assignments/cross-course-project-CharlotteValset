@@ -783,9 +783,6 @@ footer {
 @media only screen and (max-width:614px) {
 
     /* GENERAL STYLES */
-    /* html {
-        background-color: #000;
-    } */
 
     body {
         height: 100vh;
@@ -866,6 +863,10 @@ footer {
     
     a {
         padding: 12px;
+    }
+
+    ul a {
+        padding: 15px 4px;
     }
     
     a:active {
@@ -976,11 +977,11 @@ footer {
     }
     
     .sellingpoint1-other-content {
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         /* justify-content: center; */
-        width: 70%;
+        width: 241px;
     }    
 
     .selling-point_image {
@@ -988,15 +989,15 @@ footer {
     }
 
     .selling-point-text_right {
-        text-align: center;
+        /* text-align: center; */
         display: flex;
         margin: auto;
         flex-direction: column;
-        width: 250px;
+        width: 232px;
     }
 
     .selling-point-text_right h1 {
-        width: 266px;
+        /* width: 266px; */
         margin: auto;
         align-self: center;
     }
@@ -1008,16 +1009,16 @@ footer {
 
     /* HOME - Most watched - Newly added */  
     .sub-heading-homepage {
-        font-size: 1.25rem;
-        font-weight: 400;
+        /* font-size: 1.25rem;
+        font-weight: 400; */
         margin: 30px 0px 5px 0px;
-        text-align: center;
+        /* text-align: center; */
     }
     
     .list-films-row_homepage {
         max-width: 150px;
-        margin: auto;
-        display: grid;
+        /* margin: auto;
+        display: grid; */
         grid-template-columns: 1fr;
     }
 
@@ -1050,6 +1051,7 @@ footer {
         flex-direction: column-reverse;
         align-items: center;
         gap: 0px;
+        width: 100%;
     }
     
     .selling-point-text_left {
