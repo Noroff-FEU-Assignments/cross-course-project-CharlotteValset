@@ -875,8 +875,10 @@ footer {
 
     /* Why isnt this .active work on mobile?*/ 
     .active {
-        text-decoration: 3px underline; 
-        text-decoration-color: #A71515;
+        text-decoration: none; 
+        text-decoration-color: none;
+        background-color: #EBEBEB;
+        border-radius: 10px;
     }
 
     /* .fa-cart-shopping:active::after {
