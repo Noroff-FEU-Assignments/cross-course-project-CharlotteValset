@@ -270,7 +270,7 @@ img {
 .sub-heading-homepage {
     font-size: 1.25rem;
     font-weight: 400;
-    margin: auto;
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -531,6 +531,10 @@ input[type=submit] {
 .contact-phone,
 .contact-address {
     margin-top: 30px;
+}
+
+.social-small-screen_contactpage {
+    display: none;
 }
 
 /* FORMS */
@@ -1278,6 +1282,18 @@ footer {
     .contact-phone,
     .contact-address {
         margin: 30px auto;
+        text-align: center;
+    }
+
+    .social-small-screen_contactpage {
+        display: block;
+        margin: 20px auto 30px auto;
+        text-align: center;
+    }
+
+    .social-small-screen-text {
+        font-size: 1rem;
+        color: #6F6F6F;
         text-align: center;
     }
 
