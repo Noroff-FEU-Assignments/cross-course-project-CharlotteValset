@@ -678,6 +678,14 @@ label {
     margin: 0px;
 }
 
+.fa-cc-paypal,
+.fa-cc-visa,
+.fa-cc-mastercard,
+.fa-cc-amex {
+        font-size: 1.75rem;
+        color: #6d6d6d;
+    }
+
 .terms {
     display: flex;
     align-items: baseline;
@@ -685,13 +693,10 @@ label {
 }
 
 .payment-choice {
-    color: #4D4D4D;
     display: flex;
-    align-items: baseline;
     gap: 10px;
     align-items: end;
 }
-
 
 .buttons-cart {
     display: flex;
@@ -789,7 +794,9 @@ footer {
     justify-content: center;
 }
 
-.fa-brands {
+.fa-facebook,
+.fa-instagram,
+.fa-twitter {
     font-size: 2rem;
     color: #949494;
     padding: 5px 10px;
@@ -1435,16 +1442,19 @@ footer {
         margin-top: 20px;
     }
 
+    .terms {
+        font-size: 0.9rem;
+    }
+
+    .payment-choice {
+        align-items: flex-start;
+    }
+
     .fa-cc-paypal,
     .fa-cc-visa,
     .fa-cc-mastercard,
     .fa-cc-amex {
-        font-size: 1.75rem;
-        color: #545454;
-    }
-
-    .terms {
-        font-size: 0.9rem;
+            color: #949494;
     }
 
     .buttons-cart {
@@ -1519,9 +1529,10 @@ footer {
         justify-content: center;
     }
 
-    .fa-brands {
+    .fa-facebook,
+    .fa-instagram,
+    .fa-twitter {
         font-size: 1.5rem;
-        color: #949494;
         padding: 5px 0px;
     }    
 }
@@ -1965,7 +1976,7 @@ footer {
     .fa-cc-mastercard,
     .fa-cc-amex {
         font-size: 1.75rem;
-        color: #545454;
+        color: #6d6d6d;
     }
 
     .terms {
@@ -2355,7 +2366,7 @@ footer {
     .fa-cc-mastercard,
     .fa-cc-amex {
         font-size: 1.75rem;
-        color: #545454;
+        color: #6d6d6d;
     }
 
     .terms {
