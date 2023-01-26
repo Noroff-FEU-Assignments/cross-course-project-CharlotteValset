@@ -1975,8 +1975,7 @@ footer {
     .fa-cc-visa,
     .fa-cc-mastercard,
     .fa-cc-amex {
-        font-size: 1.75rem;
-        color: #6d6d6d;
+            color: #949494;
     }
 
     .terms {
