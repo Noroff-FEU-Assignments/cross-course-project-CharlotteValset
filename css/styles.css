@@ -14,6 +14,11 @@
 
 /* GENERAL STYLES */
 
+:root {
+    --red: #A71515;
+    --font-family: Helvetica, Arial, sans-serif;
+}
+
 html {
     background-color: #000;
 }
@@ -21,7 +26,7 @@ html {
 body {
     max-width: 1280px;
     margin: auto;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--font-family);
     background-color: #fff;
 }
 
@@ -76,7 +81,7 @@ p {
 nav {
     text-decoration: none;
     color: #000;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--font-family);
     font-size: 1.5rem;
 }
 
@@ -107,7 +112,7 @@ ul.no-bullets {
 
 a {
     text-decoration: none;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--font-family);
     color: #000;
     padding: 15px;
 }
@@ -148,7 +153,7 @@ a:hover {
 /* BUTTONS */
 
 .cta {
-    background-color: #A71515;
+    background-color: var(--red);
     color: #fff;
     font-size: 1.25rem;
     font-weight: 400;
@@ -219,6 +224,31 @@ img {
 /* HOMEPAGE */
     
 /* HOME - Selling point 1 */
+.selling-point-wrapper {
+    display: flex;
+    height: 390px;
+    background-color: #EBEBEB;
+    margin-top: 90px;
+    margin-bottom: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.selling-point-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.content-container {
+    width: 250px;
+    text-align: center;
+}
+
+
+
+
 #sellingpoint1-outer-wrapper {
     width: 100%;
     display: flex;
@@ -899,6 +929,11 @@ footer {
     .fa-cart-shopping:hover::after {
         width: 20px;
     }
+
+    .active-cart::after {
+        width: 20px;
+    }
+
     .fa-cart-shopping:active::after {
         content: '';
         background-color: #A71515;
@@ -907,17 +942,6 @@ footer {
         margin-top: 2px;
         display: block;
     }
-    
-    
-
-    /* .active-cart::after {
-        content: '';
-        background-color: #A71515;
-        width: 20px;
-        height: 3px;
-        margin-top: 2px;
-        display: block;
-    } */
     
     /* .highlight {
         background-color: #EBEBEB
@@ -2031,6 +2055,27 @@ footer {
     }
     
     /* HOMEPAGE */
+    .selling-point-wrapper {
+        display: flex;
+        height: 390px;
+        background-color: #EBEBEB;
+        margin-top: 90px;
+        margin-bottom: 80px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .selling-point-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+    }
+    
+    .content-container {
+        width: 250px;
+        text-align: center;
+    }
 
     #sellingpoint1-outer-wrapper {
         width: 100%;
