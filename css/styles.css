@@ -60,10 +60,12 @@ header {
 
 h1 {
     font-size: 2rem;
+    margin: auto;
 }
 
 h2 {
     font-size: 1.5rem;
+    margin: auto;
 }
 
 h3 {
@@ -197,7 +199,7 @@ a:hover {
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 600;
-    margin: 10px 0px 30px 194px;
+    margin: 10px 0px 30px 130px;
 }
 
 .fa-chevron-left {
@@ -224,7 +226,9 @@ img {
 /* HOMEPAGE */
     
 /* HOME - Selling point 1 */
-.selling-point-wrapper {
+
+
+.selling-point1-wrapper {
     display: flex;
     height: 390px;
     background-color: #EBEBEB;
@@ -234,61 +238,24 @@ img {
     justify-content: center;
 }
 
-.selling-point-card {
+.selling-point1-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 100px;
 }
 
-.content-container {
+.content1-container {
+    width: 372px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.content1-container p {
     width: 250px;
-    text-align: center;
-}
-
-
-
-
-#sellingpoint1-outer-wrapper {
-    width: 100%;
-    display: flex;
-    height: 391px;
-    background-color: #EBEBEB;
-    margin-bottom: 90px;
-    margin-top: 79px;
-}
-.sellingpoint1-card-wrapper {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sellingpoint1-card {
-    width: 367px;
-    height: 535px;
-}
-
-.sellingpoint1-other-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-}
-
-.selling-point_image {
-    margin: 30px 0px 0px 100px;
-}
-
-.selling-point-text_right {
-    text-align: center;
-    display: block;
-    max-width: 400px;
-}
-
-.selling-point-text_right > p {
-    font-size: 1.6rem;
-    margin-bottom: 40px;
 }
 
 .fa-circle-right {
@@ -312,54 +279,45 @@ img {
 }
 
 /* HOME - Selling point 2 */
-
-#sellingpoint2-outer-wrapper {
-    width: 100%;
+.selling-point2-wrapper {
     display: flex;
-    height: 420px;
+    height: 390px;
     background-color: #EBEBEB;
-    margin-bottom: 81px;
-    margin-top: 91px;
-}
-
-.sellingpoint2-card-wrapper {
-    width: 50%;
-    display: flex;
+    margin-top: 90px;
+    margin-bottom: 80px;
     align-items: center;
     justify-content: center;
 }
 
-.sellingpoint2-card {
-    width: 367px;
-    height: 487px;
-}
-
-.sellingpoint2-other-content {
-    margin: 0 auto;
+.selling-point2-card {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 85px;
+    gap: 100px;
 }
 
-.selling-point-text_left {
-    max-width: 300px;
+.content2-container {
+    width: 290px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
-.selling-point-text_left h2 {
-    margin-top: 0px;
-}
 
 .film-category_home {
     font-size: 0.9rem;
+    margin: auto;
 }
 
 .film-description {
-    margin-bottom: 30px;
+    margin: auto;
 }
 
 .film-price_home {
     font-size: 1.8rem;
+    margin: auto;
 }
 
 /* FILMS PAGE */
@@ -408,31 +366,28 @@ img {
     display: none;
 }
 
-#product-page-outer-wrapper {
-    width: 100%;
+.product-wrapper {
     display: flex;
-    height: 417px;
+    height: 390px;
     background-color: #EBEBEB;
-    margin-bottom: 65px;
-    margin-top: 60px;
-}
-.product-page-card-wrapper {
-    width: 50%;
-    display: flex;
+    margin-top: 75px;
+    margin-bottom: 80px;
     align-items: center;
     justify-content: center;
 }
 
-.product-page-card {
-    width: 367px;
-    height: 500px;
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 160px;
 }
 
-.product-page-other-content {
+.product-content-container {
+    width: 391px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 33%;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .filmcover-product {
@@ -448,59 +403,52 @@ img {
 .price-cta-container {
     display: flex;
     justify-content: space-between;
+    gap: 130px;
+    width: 391px;
 }
-
 
 /* ABOUT PAGE */
 
 .page-title_about {
-    margin-left: 160px;
+    margin-left: 228px;
     margin-top: 0px;
 }
 
-#about-outer-wrapper {
-    width: 100%;
+.about-wrapper {
     display: flex;
-    height: 400px;
+    height: 394px;
     background-color: #EBEBEB;
-    margin-bottom: 70px;
-    margin-top: 35px;
-}
-.about-card-wrapper {
-    width: 50%;
-    display: flex;
+    margin-top: 40px;
+    margin-bottom: 85px;
     align-items: center;
     justify-content: center;
-    margin-right: 175px;
 }
 
 .about-card {
-    width: 367px;
-    height: 454px;
-}
-
-.about-other-content {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    width: 70%;
-    margin-left: 90px;
+    gap: 79px;
+    padding-top: 55px;
 }
 
-.text_aboutpage {
-    max-width: 450px;
+.about-content-container {
+    width: 425px;
+    text-align: left;
+    padding-bottom: 75px;
 }
 
 .about-image {
     filter: none;
-    margin: 0px 0px 0px 80px;
+    margin: auto;
     width: 310px;
     height: 452px;
 }
 
 .image-text_about {
     font-size: 1rem;
-    margin: 0px 0px 30px 100px;
+    text-align: center;
 }
 
 /* CONTACT PAGE */
@@ -834,7 +782,6 @@ footer {
 
 /* SMALL SCREENS*/
 @media only screen and (max-width:614px) {
-
     /* GENERAL STYLES */
 
     body {
@@ -943,10 +890,6 @@ footer {
         display: block;
     }
     
-    /* .highlight {
-        background-color: #EBEBEB
-    } */
-    
     .remove {
         display: none;
     }
@@ -993,152 +936,81 @@ footer {
         height: 275px;
     }
 
-    /* HOME PAGE */
-
-     /* HOME - Selling point 1 */   
-    #sellingpoint1-outer-wrapper {
-        /* width: 100%;
-        display: flex; */
-        flex-direction: column;
-        /* justify-content: center; */
-        align-items: center;
-        height: 468px;
-        /* background-color: #EBEBEB; */
-        margin-bottom: 15px;
-        margin-top: 57px;
-    }
-    .sellingpoint1-card-wrapper {
-        /* width: 50%; */
-        height: 57%;
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
-    }
+    /* HOMEPAGE */
     
-    .sellingpoint1-card {
-        all: none;
-        width: 202px;
-        height: 350px;
+    /* HOME - Selling point 1 */
+    .selling-point1-wrapper {
+        margin-top: 61px;
+        margin-bottom: 22px;
+        padding-bottom: 50px;
     }
-    
-    .sellingpoint1-other-content {
-        /* display: flex; */
+
+    .selling-point1-card {
         flex-direction: column;
-        /* align-items: center; */
-        /* justify-content: center; */
-        width: 241px;
-    }    
-
-    .selling-point_image {
-        margin: 10px auto;
+        gap: 21px;
     }
 
-    .selling-point-text_right {
-        /* text-align: center; */
-        display: flex;
-        margin: auto;
-        flex-direction: column;
-        width: 232px;
+    .content1-container {
+        width: 250px;
+        gap: 5px;
     }
 
-    .selling-point-text_right h1 {
-        /* width: 266px; */
-        margin: auto;
-        align-self: center;
-    }
-
-    .selling-point-text_right > p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+    .content1-container p {
+        width: 250px;
     }
 
     /* HOME - Most watched - Newly added */  
     .sub-heading-homepage {
-        /* font-size: 1.25rem;
-        font-weight: 400; */
         margin: 30px 0px 5px 0px;
-        /* text-align: center; */
     }
     
     .list-films-row_homepage {
         max-width: 150px;
-        /* margin: auto;
-        display: grid; */
         grid-template-columns: 1fr;
     }
 
-     /* HOME - Selling point 2 */   
+    /* HOME - Selling point 2 */
+.selling-point2-wrapper {
+    height: 345px;
+    margin-top: 64px;
+    margin-bottom: 7px;
+    padding-bottom: 60px;
+}
 
-     #sellingpoint2-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 474px;
-        background-color: #EBEBEB;
-        margin-bottom: 9px;
-        margin-top: 69px;
-    }
-    .sellingpoint2-card-wrapper {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .sellingpoint2-card {
-        width: 211px;
-        height: 267px;
-        position: none;
-        top: 0px;
-    }
-    
-    .sellingpoint2-other-content {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 0px;
-        width: 100%;
-    }
-    
-    .selling-point-text_left {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        max-width: 200px;
-    }
+.selling-point2-card {
+    flex-direction: column;
+    gap: 21px;
+}
 
-    .film-description,
-    .film-category_home {
-        display: none;
-    }
+.content2-container {
+    width: 250px;
+    gap: 16px;
+}
 
-    .film-price_home {
-        font-size: 1.2rem;
-        margin: 15px auto;
-    }
+.film-category_home {
+    display: none;
+}
 
-    .selling-point-text_left > h2 {
-        margin-bottom: 0px;
-    }
+.film-description {
+    display: none;
+}
 
-    .cta-readmore {
-        width: 100px;
-        display: block;
-        margin: auto;
-    }
-    .cta-add {
-        display: none;
-    }
-  
-    .showcased-filmcover-right {
-        width: 183px;
-        height: 295px;
-        /* margin: 20px auto 0px auto; */
-    }
+.film-price_home {
+    font-size: 1.2rem;
+}
 
-    /* FILMS PAGE */
+.cta-add {
+    display: none;
+}
 
-    .list-films-row {
+.cta-readmore {
+    display: initial;
+}
+
+
+     /* FILMS PAGE */
+
+     .list-films-row {
         max-width: 900px;
         margin: 30px auto;
         display: grid;
@@ -1158,59 +1030,44 @@ footer {
     .film-title-product-mobile {
         text-align: center;
         display: block;
+        margin-top: 10px;
     }
 
     .film-title-product-desktop {
         display: none;
     }
 
-    #product-page-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 402px;
-        background-color: #fff;
-        margin-bottom: 160px;
-        margin-top: 135px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .product-page-card-wrapper {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .product-page-card {
-        width: 258px;
-        height: 500px;
-    }
-    
-    .product-page-other-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 62%;
-    }
-
-    .product-text {
-        margin-top: -109px;
-        text-align: center;
-    }
-    
-
     .filmcover-product {
         width: 235px;
         height: 377px;
     }
-        
+    
+    .product-wrapper {
+        background-color: #fff;
+        margin-top: 164px;
+        margin-bottom: 123px;
+    }
+    
+    .product-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .product-content-container {
+        width: 250px;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .product-content-container > p {
+        margin: auto;
+    }
         
     .price-cta-container {
-        display: flex;
+        width: 250px;
         flex-direction: column;
-        margin-bottom: 0px;
-        gap: 0px;
+        margin-bottom: 60px;
+        gap: 1px;
     }
 
     .price-product {
@@ -1225,54 +1082,32 @@ footer {
         margin-top: 20px;
     }
     
-    #about-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 380px;
-        background-color: #EBEBEB;
-        margin-bottom: 105px;
-        margin-top: 17px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-card-wrapper {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
+    .about-wrapper {
+    height: 426px;
+    margin-top: 15px;
+    margin-bottom: 99px;
     }
     
     .about-card {
-        width: 190px;
-        height: 283px;
+        flex-direction: column-reverse;
+        gap: 0px;
+        padding-top: 72px;
     }
     
-    .about-other-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 75%;
-        margin-left: 0px;
-    }
-    
-    .text_aboutpage {
-        max-width: 280px;
-        margin: 1px 0px 0px 0px;
+    .about-content-container {
+        width: 229px;
         text-align: center;
-}
+        padding-bottom: 5px;
+    }
 
     .about-image {
-        filter: none;
-        margin: auto;
         width: 190px;
         height: 290px;
+        margin-left: 10px;
     }
 
     .image-text_about {
-        font-size: 0.75rem;
-        margin: 5px auto;
-        text-align: center;
+        font-size: 0.8rem;
     }
 
     /* CONTACT PAGE */
@@ -1559,10 +1394,12 @@ footer {
         font-size: 1.5rem;
         padding: 5px 0px;
     }    
+
+
 }
 
 /* MEDIUM SCREENS*/
-@media only screen and (min-width:615px)and (max-width:739px) {
+@media only screen and (min-width:615px)and (max-width:799px) {
    
     /* GENERAL STYLES*/
 
@@ -1597,87 +1434,58 @@ footer {
     
     /* HOMEPAGE */
 
-    #sellingpoint1-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 342px;
-        background-color: #EBEBEB;
-        margin-bottom: 69px;
-        margin-top: 68px;
+     /*HOME - selling point 1*/
+
+     .selling-point1-wrapper {
+        height: 355px;
+        margin-top: 44px;
+        margin-bottom: 68px;
     }
 
-    .sellingpoint1-card-wrapper {
-        width: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .selling-point1-card {
+        gap: 45px;
     }
 
-    .sellingpoint1-card {
-        width: 322px;
-        height: 467px;
+    .content1-container {
+        width: 250px;
     }
 
-    .sellingpoint1-other-content {
-        display: flex;
-        /* align-items: center; */
-        /* justify-content: unset; */
-        width: 218px;
-        margin-left: 170px;
-        margin-bottom: 35px;
-    }
+   /*HOME - Most watched & newly added*/
 
-    .sub-heading-homepage {
-        font-size: 1.25rem;
-        font-weight: 400;
-        margin: auto;
-        text-align: center;
+   .sub-heading-homepage {
+    margin: auto;
     }
-
-    /* .list-films-row_homepage {
-        width: 570px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding: 20px;
-    } */
 
     .list-films-row_homepage {
-        width: 450px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding: 20px 10px;
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px 10px;
     }
 
-
-    #sellingpoint2-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 334px;
-        background-color: #EBEBEB;
-        margin-bottom: 61px;
-        margin-top: 68px;
+   /*HOME - selling point 2*/
+    .selling-point2-wrapper {
+        height: 344px;
+        margin-top: 58px;
+        margin-bottom: 48px;
     }
 
-    .sellingpoint2-other-content {
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 0px;
-        justify-content: space-around;
+    .selling-point2-card {
+        gap: 45px;
     }
 
-    .selling-point-text_left {
-        padding-left: 20px;
-        max-width: 177px;
-        text-align: center;
+    .content2-container {
+        width: 196px;
+        gap: 20px;
     }
+
 
     .film-description {
-        /* margin-bottom: 30px; */
+        display: none;
+    }
+
+    .cta-add {
         display: none;
     }
 
@@ -1687,18 +1495,6 @@ footer {
 
     .cta-readmore {
         display: initial;
-    }
-
-    .sellingpoint2-card-wrapper {
-        width: 44%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sellingpoint2-card {
-        width: 423px;
-        height: 401px;
     }
 
         /* FILMS PAGE */
@@ -1730,35 +1526,23 @@ footer {
         display: none;
     }
 
-    #product-page-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 402px;
-        background-color: #fff;
-        margin-bottom: 176px;
-        margin-top: 186px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .product-wrapper {
+        background-color: #ffffff;
+        margin-top: 200px;
+        margin-bottom: 197px;
     }
 
-    .product-page-card-wrapper {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .product-card {
+        gap: 23px;
+        flex-direction: column;
     }
-    
-    .product-page-card {
-        width: 318px;
-        height: 520px;
+
+    .product-content-container {
+        gap: 0px;
     }
-    
-    .product-page-other-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 62%;
+
+    .price-cta-container {
+        gap: 0px;
     }
 
     .film-category {
@@ -1779,40 +1563,22 @@ footer {
         text-align: center;
     }
 
-    #about-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 561px;
-        background-color: #EBEBEB;
-        margin-bottom: 85px;
-        margin-top: 17px;
-        flex-direction: column;
-        align-items: center;
+    .about-wrapper {
+        height: 559px;
+        margin-top: 25px;
     }
-
-    .about-other-content {
-        display: flex;
-        width: 413px;
-        margin: 10px auto;
-    }
-
-    .text_aboutpage {
-        max-width: 450px;
-        text-align: center;
-    }
-
-    .about-card-wrapper {
-        width: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-    }
-
+    
     .about-card {
-        width: 460px;
-        height: 405px;
+        flex-direction: column-reverse;
+        gap: 0px;
+        padding-top: 105px;
     }
+    
+    .about-content-container {
+        text-align: center;
+        padding-bottom: 18px;
+    }
+    
 
     /* CONTACT PAGE */
 
@@ -2019,12 +1785,10 @@ footer {
         padding-left: 38px;
         padding-right: 38px;
     }
-
-
 }
 
 /* LARGE  SCREENS*/
-@media only screen and (min-width:740px)and (max-width:1024px) {
+@media only screen and (min-width:800px) and (max-width:1024px) {
     /* GENERAL STYLES*/
 
     .menu {
@@ -2055,58 +1819,23 @@ footer {
     }
     
     /* HOMEPAGE */
-    .selling-point-wrapper {
-        display: flex;
-        height: 390px;
-        background-color: #EBEBEB;
-        margin-top: 90px;
-        margin-bottom: 80px;
-        align-items: center;
-        justify-content: center;
+    /*selling point 1*/
+
+    .selling-point1-wrapper {
+        height: 355px;
+        margin-top: 44px;
+        margin-bottom: 68px;
     }
-    
-    .selling-point-card {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 100px;
+
+    .selling-point1-card {
+        gap: 45px;
     }
-    
-    .content-container {
+
+    .content1-container {
         width: 250px;
-        text-align: center;
     }
 
-    #sellingpoint1-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 342px;
-        background-color: #EBEBEB;
-        margin-bottom: 69px;
-        margin-top: 68px;
-    }
-
-    .sellingpoint1-card-wrapper {
-        width: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sellingpoint1-card {
-        width: 322px;
-        height: 467px;
-    }
-
-    .sellingpoint1-other-content {
-        display: flex;
-        /* align-items: center; */
-        /* justify-content: unset; */
-        width: 218px;
-        margin-left: 170px;
-        margin-bottom: 35px;
-    }
-
+   /*Most watched & newly added*/
     .sub-heading-homepage {
         font-size: 1.25rem;
         font-weight: 400;
@@ -2116,48 +1845,29 @@ footer {
 
     .list-films-row_homepage {
         width: 450px;
-        margin: auto;
         display: flex;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap; 
         justify-content: space-evenly;
         padding: 20px 10px;
     }
 
-
-    #sellingpoint2-outer-wrapper {
-        width: 100%;
-        display: flex;
-        height: 334px;
-        background-color: #EBEBEB;
-        margin-bottom: 61px;
-        margin-top: 68px;
+   /*selling point 2*/
+    .selling-point2-wrapper {
+        height: 344px;
+        margin-top: 58px;
+        margin-bottom: 48px;
     }
 
-    .sellingpoint2-other-content {
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 0px;
-        justify-content: space-around;
-    }
-
-    .selling-point-text_left {
-        padding-left: 20px;
-        max-width: 177px;
-        text-align: center;
-    }
-
-    .film-description {
-        /* margin-bottom: 30px; */
-        display: none;
+    .selling-point2-card {
+        gap: 45px;
     }
 
     .cta-add {
-        display: none;
+        
     }
 
     .cta-readmore {
-        display: initial;
+        display: none;
     }
 
     .sellingpoint2-card-wrapper {
@@ -2191,37 +1901,22 @@ footer {
     }
 
      /* PRODUCT PAGE */
-    .product-page-other-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 46%;
+    
+    .product-card {
+        gap: 36px;
     }
 
     /* ABOUT PAGE */
 
-    
-    .about-card-wrapper {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 80px;
+    about-card {
+        gap: 64px;
+    }
+
+    .about-content-container {
+        width: 353px;
+        text-align: center;
     }
     
-    .about-other-content {
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        width: 600px;
-        margin: auto;
-    }
-    
-    .text_aboutpage {
-        max-width: 370px;
-        padding-left: 88px;
-        line-height: 1.3;
-    }
     
     /* CONTACT PAGE */
 
@@ -2345,7 +2040,7 @@ footer {
         flex-direction: row;
         gap: 65px;
         justify-content: center;
-}
+    }
 
     .items-in-cart {
         display: flex;
