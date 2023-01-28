@@ -255,7 +255,8 @@ img {
 }
 
 .content1-container p {
-    width: 250px;
+    width: 259px;
+    font-size: 1.4rem;
 }
 
 .fa-circle-right {
@@ -410,8 +411,9 @@ img {
 /* ABOUT PAGE */
 
 .page-title_about {
-    margin-left: 228px;
-    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    width: 813px;
 }
 
 .about-wrapper {
@@ -554,13 +556,21 @@ textarea {
 /* CHECKOUT PAGE */
 
 .page-title_cart {
-    margin-left: 208px;
-    margin-top: 24px;
+    margin-bottom: 22px;
+    text-align: center;
 }
 
 .filmcover-cart {
     width: 144px;
     height: 232px;
+}
+
+.two-line-heading {
+    margin: 20px auto;
+}
+
+.one-line-heading {
+    margin: 30px auto;
 }
 
 .remove-button {
@@ -703,6 +713,7 @@ label {
     color: #4C8A27;
     display: flex;
     justify-content: center;
+    margin: 15px auto;
 }
 
 .checkout-text p {
@@ -942,7 +953,7 @@ footer {
     .selling-point1-wrapper {
         margin-top: 61px;
         margin-bottom: 22px;
-        padding-bottom: 50px;
+        padding-bottom: 70px;
     }
 
     .selling-point1-card {
@@ -957,6 +968,7 @@ footer {
 
     .content1-container p {
         width: 250px;
+        font-size: 1.2rem;
     }
 
     /* HOME - Most watched - Newly added */  
@@ -1077,9 +1089,10 @@ footer {
 
     /* ABOUT PAGE */
     .page-title_about {
+        display: block;
         text-align: center;
-        margin-left: 0px;
         margin-top: 20px;
+        width: 200px;
     }
     
     .about-wrapper {
@@ -1559,8 +1572,10 @@ footer {
     /* ABOUT PAGE */
 
     .page-title_about {
+        display: block;
         margin: auto;
         text-align: center;
+        width: 560px;
     }
 
     .about-wrapper {
@@ -1907,6 +1922,10 @@ footer {
     }
 
     /* ABOUT PAGE */
+
+    .page-title_about {
+        width: 744px;
+    }
 
     about-card {
         gap: 64px;
