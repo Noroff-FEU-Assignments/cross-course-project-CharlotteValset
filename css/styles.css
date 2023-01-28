@@ -12,86 +12,14 @@
 /* CHECKOUT SUCCESS PAGE */
 /* FOOTER */
 
-.modalDialog {
-    position: static;
-    font-family: var(--font-family);
-    z-index: 99999;
-    opacity: 0;
-}
-
-.modalDialog:target {
-    opacity:1;
-}
-
-.modalDialog > div {
-    width: 157px;
-    position: relative;
-    right: 219px;
-    bottom: 423px;
-    padding: auto;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #000;
-    gap: 15px;
-    padding: 10px;
-    align-items: center;
-    box-shadow: 4px 4px 6px 0px #0000004F;
-}
-
-.modal-text {
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-right: 38px;
-}
-
-
-.close {
-    color: #000000;
-    line-height: 2px;
-    position: absolute;
-    right: 1px;
-    text-align: center;
-    top: 1px;
-    width: 5px;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.close:hover {
-    font-size: 1.2rem;
-}
-
-.cta-small {
-    background-color: var(--red);
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-decoration: none;
-    padding: 11px 8px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px 0px #00000040;
-    transition: 0.5s;
-    width: 130px;
-    text-align: center;
-}
-
-.cta-second {
-    background-color: #706F6F;
-    padding: 10px 8px;
-}
-
-.cta-small:hover {
-    background-color: #E40B0B;
-    font-weight: 400;
-}
-
 /* GENERAL STYLES */
 
 :root {
-    --red: #A71515;
     --font-family: Helvetica, Arial, sans-serif;
+    --red: #A71515;
+    --hover-red: #E40B0B;
     --white: #fff;
+    --grey: #ebebeb; 
 }
 
 html {
@@ -153,9 +81,6 @@ p {
 }
 
 nav {
-    text-decoration: none;
-    color: #000;
-    font-family: var(--font-family);
     font-size: 1.5rem;
 }
 
@@ -177,7 +102,7 @@ ul.no-bullets {
 
 .fa-cart-shopping:hover::after {
     content: '';
-    background-color: #A71515;
+    background-color: var(--red);
     width: 29px;
     height: 3px;
     margin-top: 2px;
@@ -197,18 +122,18 @@ a:hover {
 
 .menu a:hover {
     text-decoration: 3px underline;
-    text-decoration-color: #A71515;
+    text-decoration-color: var(--red);
     font-weight: 400;
 }
 
 .active {
     text-decoration: 3px underline; 
-    text-decoration-color: #A71515;
+    text-decoration-color: var(--red);
 }
 
 .active-cart::after {
     content: '';
-    background-color: #A71515;
+    background-color: var(--red);
     width: 29px;
     height: 3px;
     margin-top: 2px;
@@ -216,7 +141,7 @@ a:hover {
 }
 
 .highlight {
-    background-color: #EBEBEB
+    background-color: var(--grey);
     }
 
 .film-category {
@@ -232,17 +157,24 @@ a:hover {
     font-size: 1.25rem;
     font-weight: 400;
     text-decoration: none;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 25px;
     border-radius: 10px;
     box-shadow: 4px 4px 4px 0px #00000040;
     transition: 0.5s;
 }
 
-.cta-readmore {
-    display: none;
+.cta-small {
+    background-color: var(--red);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 11px 8px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    transition: 0.5s;
+    width: 130px;
+    text-align: center;
 }
 
 .cta-second {
@@ -251,10 +183,23 @@ a:hover {
     padding-right: 8px;
 }
 
-.cta:hover {
-    background-color: #E40B0B;
+.cta-small:hover {
+    background-color: var(--hover-red);
     font-weight: 400;
-    
+}
+
+.cta-readmore {
+    display: none;
+}
+
+.cta:hover {
+    background-color: var(--hover-red);
+    font-weight: 400;
+}
+
+.cta-small:hover {
+    background-color: var(--hover-red);
+    font-weight: 400;
 }
 
 .cta-second:hover {
@@ -298,12 +243,10 @@ img {
 /* HOMEPAGE */
     
 /* HOME - Selling point 1 */
-
-
 .selling-point1-wrapper {
     display: flex;
     height: 390px;
-    background-color: #EBEBEB;
+    background-color: var(--grey);
     margin-top: 90px;
     margin-bottom: 80px;
     align-items: center;
@@ -336,7 +279,6 @@ img {
 }
 
 /* HOME - Most watched - Newly added */
-
 .sub-heading-homepage {
     font-size: 1.25rem;
     font-weight: 400;
@@ -355,7 +297,7 @@ img {
 .selling-point2-wrapper {
     display: flex;
     height: 390px;
-    background-color: #EBEBEB;
+    background-color: var(--grey);
     margin-top: 90px;
     margin-bottom: 80px;
     align-items: center;
@@ -377,7 +319,6 @@ img {
     align-items: center;
     gap: 16px;
 }
-
 
 .film-category_home {
     font-size: 0.9rem;
@@ -442,7 +383,7 @@ img {
 .product-wrapper {
     display: flex;
     height: 390px;
-    background-color: #EBEBEB;
+    background-color: var(--grey);
     margin-top: 75px;
     margin-bottom: 80px;
     align-items: center;
@@ -480,6 +421,55 @@ img {
     width: 391px;
 }
 
+.modal-dialog {
+    position: static;
+    font-family: var(--font-family);
+    z-index: 99999;
+    opacity: 0;
+}
+
+.modal-dialog:target {
+    opacity:1;
+}
+
+.modal-dialog > div {
+    width: 157px;
+    position: relative;
+    right: 219px;
+    bottom: 423px;
+    padding: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 4px 4px 6px 0px #0000004F;
+}
+
+.modal-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 38px;
+}
+
+.close {
+    color: #000000;
+    line-height: 2px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 5px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.close:hover {
+    font-size: 1.2rem;
+}
+
 /* ABOUT PAGE */
 
 .page-title_about {
@@ -491,7 +481,7 @@ img {
 .about-wrapper {
     display: flex;
     height: 394px;
-    background-color: #EBEBEB;
+    background-color: var(--grey);
     margin-top: 40px;
     margin-bottom: 85px;
     align-items: center;
@@ -570,7 +560,6 @@ textarea {
     width: 310px;
 }
 
-
 input[type=submit] {
     margin-top: 20px;
     border: none;
@@ -600,21 +589,27 @@ textarea {
     border-radius: 10px;
 }
 
-
 input {
     margin: 5px 0px 15px 0px;
     padding: 10px 0px;
 }
 
-input[type=text] {
+input[type=text],
+input[type=email],
+input[type=password] {
     width: 270px;
-  }
-  input[type=email] {
-    width: 270px;
-  }
-  input[type=password] {
-    width: 270px;
-  }
+}
+
+label {
+    font-size: 1.063rem;
+    color: #4D4D4D;
+}
+
+.password-requirement {
+    color: #6A6A6A;
+    font-size: 0.813rem;
+    margin: 0px;
+}
 
 textarea {
     height: 100px;
@@ -652,7 +647,8 @@ textarea {
     max-height: 17px;
     border-radius: 10px;
     padding: 5px;
-    border: 1px solid #000
+    border: 1px solid #4B4B4B;
+    color: #4B4B4B;
 }
 
 .fa-light, 
@@ -672,7 +668,7 @@ textarea {
 }
 
 .remove {
-    background-color: none;
+    background-color: var(--white)
 }
 
 .items-in-cart {
@@ -713,7 +709,7 @@ textarea {
     font-size: 1.25rem;
     font-weight:600;
     text-decoration: underline;
-    color: #A71515;
+    color: var(--red);
 }
 
 .signin-link:hover {
@@ -725,17 +721,6 @@ textarea {
     font-size: 1.25rem;
     color: #6c6c6c;
     margin: 10px 0px;
-}
-
-label {
-    font-size: 1.063rem;
-    color: #4D4D4D;
-}
-
-.password-requirement {
-    color: #6A6A6A;
-    font-size: 0.813rem;
-    margin: 0px;
 }
 
 .fa-cc-paypal,
@@ -863,7 +848,7 @@ footer {
     padding: 5px 10px;
 }
 
-/* SMALL SCREENS*/
+/* SMALL */
 @media only screen and (max-width:614px) {
     /* GENERAL STYLES */
 
@@ -872,31 +857,22 @@ footer {
     }
     
     main {
-        /* background-color: #fff; */
         padding-bottom: 50px;
         padding-top: 90px;
     }
     
     .logo {
-        filter: none;
+        
         width: 195px;
-        border-radius: 0;
+        
         display:flex;
         justify-content: center;
         align-items: center;
     }
     
-    /* header {
-        margin-top: 0px;
-        background-color: #fff;
-        /* z-index: 1; */
-    /* } */
-    
     .position {
         width: 100%;
         position: fixed;
-        top: 0px;
-        background: #fff;
         padding: 0px;
         box-shadow: 0px 2px 4px 0px #00000040;
     }
@@ -917,15 +893,10 @@ footer {
         font-size: 0.9rem;
     }
     
-    /* .text-700 {
-        font-weight: 700;
-    } */
+    
     
     
     nav {
-        /* text-decoration: none;
-        color: #000;
-        font-family: Helvetica, Arial, sans-serif; */
         font-size: 1rem;
     }
     
@@ -966,7 +937,7 @@ footer {
 
     .fa-cart-shopping:active::after {
         content: '';
-        background-color: #A71515;
+        background-color: var(--red);
         width: 20px;
         height: 3px;
         margin-top: 2px;
@@ -979,7 +950,6 @@ footer {
 
     .film-category {
         font-size: 0.8rem;
-        /* margin: 0px; */
     }
 
     /* BUTTONS */
@@ -999,10 +969,7 @@ footer {
     }
 
     .back-button {
-        /* display: block;
-        text-decoration: none; */
         font-size: 1rem;
-        /* font-weight: 600; */
         margin: auto;
         margin-top: 10px;
     }
@@ -1054,60 +1021,54 @@ footer {
     }
 
     /* HOME - Selling point 2 */
-.selling-point2-wrapper {
-    height: 345px;
-    margin-top: 64px;
-    margin-bottom: 7px;
-    padding-bottom: 60px;
-}
+    .selling-point2-wrapper {
+        height: 345px;
+        margin-top: 64px;
+        margin-bottom: 7px;
+        padding-bottom: 60px;
+    }
 
-.selling-point2-card {
-    flex-direction: column;
-    gap: 21px;
-}
+    .selling-point2-card {
+        flex-direction: column;
+        gap: 21px;
+    }
 
-.content2-container {
-    width: 250px;
-    gap: 16px;
-}
+    .content2-container {
+        width: 250px;
+        gap: 16px;
+    }
 
-.film-category_home {
-    display: none;
-}
+    .film-category_home {
+        display: none;
+    }
 
-.film-description {
-    display: none;
-}
+    .film-description {
+        display: none;
+    }
 
-.film-price_home {
-    font-size: 1.2rem;
-}
+    .film-price_home {
+        font-size: 1.2rem;
+    }
 
-.cta-add {
-    display: none;
-}
+    .cta-add {
+        display: none;
+    }
 
-.cta-readmore {
-    display: initial;
-}
-
+    .cta-readmore {
+        display: initial;
+    }
 
      /* FILMS PAGE */
 
-     .list-films-row {
-        max-width: 900px;
-        margin: 30px auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-        text-align: center;
-        }
-
-    .page-title_films {
-        text-align: center;
+     .page-title_films {
         margin-left: 0px;
         margin-top: 20px;
     }
+
+     .list-films-row {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        }
 
     /* PRODUCT PAGE */
 
@@ -1160,6 +1121,7 @@ footer {
     }
 
     /* ABOUT PAGE */
+
     .page-title_about {
         display: block;
         text-align: center;
@@ -1204,14 +1166,11 @@ footer {
     }
 
     .contact-map {
-        filter: none;
-        border: 2px solid #fff;
         width: 270px;
         height: 270px;
     }
 
      .content_container-form {
-        display: flex;
         flex-flow: column-reverse;
         gap: 0px;
         align-items: center;
@@ -1232,7 +1191,6 @@ footer {
         width: 250px;
     }
 
-    /*send knappen ser rar ut*/
     .cta-send {
         font-size: 1rem;
         width: 150px;
@@ -1263,30 +1221,14 @@ footer {
 
     /* FORMS */
 
-    input[type=text] {
-        width: 270px;
-    }
-    input[type=email] {
-        width: 270px;
-    }
-    input[type=password] {
-        width: 270px;
-    }
-
     textarea {
-        height: 100px;
         width: 250px;
-    }
-
-    .radio-button {
-        display: list-item;
     }
 
     /* CHECKOUT PAGE */
 
     .page-title_cart {
         margin: 0px 100px 15px 100px;
-        text-align: center;
     }
 
     .one-line-heading {
@@ -1301,16 +1243,7 @@ footer {
     .remove-button {
         width: 120px;
         height: 14px;
-        border-radius: 10px;
-        padding: 5px;
-        border: 1px solid #4B4B4B;
         font-size: 0.75rem;
-        color: #4B4B4B;
-    }
-
-    .fa-light, 
-    .fa-circle-xmark {
-        padding-right: 10px;
     }
 
     .price_cart {
@@ -1319,20 +1252,16 @@ footer {
     }
 
     .items-container {
-        display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
     .items-in-cart {
-        display: flex;
         margin: auto;
         width: fit-content;
     }
 
     .items-cart-text {
-        display: flex;
-        flex-direction: column;
         max-width: 130px;
     }
 
@@ -1341,7 +1270,6 @@ footer {
     }
 
     .total-price {
-        font-weight: 600;
         font-size: 1.375rem;
         margin: 20px auto;
         text-align: center;
@@ -1358,7 +1286,7 @@ footer {
     }
 
     .remove-highlight {
-        background-color: #fff;
+        background-color: var(--white)
     }
 
     .signin {
@@ -1402,8 +1330,6 @@ footer {
     }
 
     .buttons-cart {
-        display: flex;
-        gap: 20px;
         flex-direction: column-reverse;
         margin: auto;
     }
@@ -1412,13 +1338,11 @@ footer {
         padding-left: 36px;
         padding-right: 36px;
     }
+
         /* CHECKOUT SUCCESS PAGE */
 
     .checkout-text {
         max-width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         margin: auto;
     }
     .checkout-text h1 {
@@ -1431,21 +1355,12 @@ footer {
 
     .fa-circle-check {
         font-size: 2.2em;
-        justify-content: center;
         text-align: center;
     }
 
     .purchased-container {
-        position: relative;
-        margin: auto;
         max-width: 300px;
-        display: flex;
         flex-direction: column;
-    }
-    
-    .fa-circle-play {
-        font-size: 4rem;
-        color: #fff;
     }
     
     .product-container > p {
@@ -1460,48 +1375,22 @@ footer {
 
     footer {
         display: none;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    footer > p {
-        font-size: 0.75rem;
-    }
-
-    .social-media {
-        display: flex;
-        justify-content: center;
-    }
-
-    .fa-facebook,
-    .fa-instagram,
-    .fa-twitter {
-        font-size: 1.5rem;
-        padding: 5px 0px;
-    }    
-
+    } 
 
 }
 
-/* MEDIUM SCREENS*/
+/* MEDIUM */
 @media only screen and (min-width:615px)and (max-width:799px) {
    
     /* GENERAL STYLES*/
 
     .menu {
-        display: flex;
-        justify-content: space-between;
         max-width: 570px;
-        margin: 20px auto;
     }
 
     /* BUTTONS */
 
     .back-button {
-        display: block;
-        text-decoration: none;
-        font-size: 1.25rem;
-        font-weight: 600;
         margin: 4px 0px 4px 5px;
     }
 
@@ -1538,15 +1427,15 @@ footer {
    /*HOME - Most watched & newly added*/
 
    .sub-heading-homepage {
-    margin: auto;
+        margin: auto;
     }
 
     .list-films-row_homepage {
-    width: 450px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px 10px;
+        width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px 10px;
     }
 
    /*HOME - selling point 2*/
@@ -1574,10 +1463,6 @@ footer {
         display: none;
     }
 
-    .cta-add {
-        display: none;
-    }
-
     .cta-readmore {
         display: initial;
     }
@@ -1587,17 +1472,12 @@ footer {
     .page-title_films {
         margin-left: 0px;
         margin-top: 0px;
-        text-align: center;
     }
 
     .list-films-row {
         max-width: 540px;
-        margin: 30px auto;
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        /* grid-template-rows: 1fr 1fr 1fr; */
         row-gap: 30px;
-        text-align: center;
     }
 
     /* PRODUCT PAGE */
@@ -1612,7 +1492,7 @@ footer {
     }
 
     .product-wrapper {
-        background-color: #ffffff;
+        background-color: var(--white);
         margin-top: 200px;
         margin-bottom: 197px;
     }
@@ -1676,14 +1556,11 @@ footer {
     }
 
     .contact-map {
-        filter: none;
-        border: 2px solid #fff;
         width: 270px;
         height: 270px;
     }
 
-        .content_container-form {
-        display: flex;
+    .content_container-form {
         flex-flow: column-reverse;
         gap: 0px;
         align-items: center;
@@ -1704,7 +1581,6 @@ footer {
         width: 250px;
     }
 
-    /*send knappen ser rar ut*/
     .cta-send {
         font-size: 1rem;
         width: 150px;
@@ -1723,30 +1599,14 @@ footer {
     
         /* FORMS */
 
-    input[type=text] {
-        width: 270px;
-    }
-    input[type=email] {
-        width: 270px;
-    }
-    input[type=password] {
-        width: 270px;
-    }
-
     textarea {
-        height: 100px;
         width: 250px;
-    }
-
-    .radio-button {
-        display: list-item;
     }
 
     /* CHECKOUT PAGE */
 
     .page-title_cart {
         margin: 0px 100px 20px 100px;
-        text-align: center;
     }
 
     .two-line-heading {
@@ -1755,8 +1615,8 @@ footer {
     }
 
     .one-line-heading {
-    margin-bottom: 15px;
-    width: 200px;
+        margin-bottom: 15px;
+        width: 200px;
     }
 
     .filmcover-cart {
@@ -1767,16 +1627,7 @@ footer {
     .remove-button {
         width: 120px;
         height: 14px;
-        border-radius: 10px;
-        padding: 5px;
-        border: 1px solid #4B4B4B;
         font-size: 0.75rem;
-        color: #4B4B4B;
-    }
-
-    .fa-light, 
-    .fa-circle-xmark {
-        padding-right: 10px;
     }
 
     .price_cart {
@@ -1785,20 +1636,16 @@ footer {
     }
 
     .items-container {
-        display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
     .items-in-cart {
-        display: flex;
         margin: auto;
         width: fit-content;
     }
 
     .items-cart-text {
-        display: flex;
-        flex-direction: column;
         max-width: 130px;
     }
 
@@ -1807,7 +1654,6 @@ footer {
     }
 
     .total-price {
-        font-weight: 600;
         font-size: 1.375rem;
         margin: 20px auto;
         text-align: center;
@@ -1824,7 +1670,7 @@ footer {
     }
 
     .remove-highlight {
-        background-color: #fff;
+        background-color: var(--white)
     }
 
     .signin {
@@ -1860,9 +1706,6 @@ footer {
     }
 
     .buttons-cart {
-        display: flex;
-        gap: 20px;
-        flex-direction: row;
         justify-content: space-evenly;
         margin: auto;
         margin-left: -10px;
@@ -1874,22 +1717,17 @@ footer {
     }
 }
 
-/* LARGE  SCREENS*/
+/* LARGE */
 @media only screen and (min-width:800px) and (max-width:1024px) {
     /* GENERAL STYLES*/
 
     .menu {
-        display: flex;
-        justify-content: space-between;
         max-width: 570px;
-        margin: 20px auto;
     }
 
+     /* BUTTONS */
+
     .back-button {
-        display: block;
-        text-decoration: none;
-        font-size: 1.25rem;
-        font-weight: 600;
         margin: 10px 0px 0px 6px;
     }
 
@@ -1906,8 +1744,8 @@ footer {
     }
     
     /* HOMEPAGE */
-    /*selling point 1*/
 
+    /* HOME - selling point 1*/
     .selling-point1-wrapper {
         height: 355px;
         margin-top: 44px;
@@ -1922,12 +1760,9 @@ footer {
         width: 250px;
     }
 
-   /*Most watched & newly added*/
+   /* HOME - Most watched & newly added*/
     .sub-heading-homepage {
-        font-size: 1.25rem;
-        font-weight: 400;
         margin: auto;
-        text-align: center;
     }
 
     .list-films-row_homepage {
@@ -1938,7 +1773,7 @@ footer {
         padding: 20px 10px;
     }
 
-   /*selling point 2*/
+   /* HOME - selling point 2*/
     .selling-point2-wrapper {
         height: 344px;
         margin-top: 58px;
@@ -1953,34 +1788,17 @@ footer {
         display: none;
     }
 
-    .sellingpoint2-card-wrapper {
-        width: 44%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sellingpoint2-card {
-        width: 423px;
-        height: 401px;
-    }
-
         /* FILMS PAGE */
 
     .page-title_films {
         margin-left: 0px;
         margin-top: 0px;
-        text-align: center;
     }
 
     .list-films-row {
         max-width: 540px;
-        margin: 30px auto;
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        /* grid-template-rows: 1fr 1fr 1fr; */
         row-gap: 30px;
-        text-align: center;
     }
 
      /* PRODUCT PAGE */
@@ -2014,14 +1832,11 @@ footer {
     }
 
     .contact-map {
-        filter: none;
-        border: 2px solid #fff;
         width: 270px;
         height: 270px;
     }
 
-        .content_container-form {
-        display: flex;
+    .content_container-form {
         flex-flow: column-reverse;
         gap: 0px;
         align-items: center;
@@ -2042,7 +1857,6 @@ footer {
         width: 250px;
     }
 
-    /*send knappen ser rar ut*/
     .cta-send {
         font-size: 1rem;
         width: 150px;
@@ -2061,30 +1875,14 @@ footer {
     
         /* FORMS */
 
-    input[type=text] {
-        width: 270px;
-    }
-    input[type=email] {
-        width: 270px;
-    }
-    input[type=password] {
-        width: 270px;
-    }
-
     textarea {
-        height: 100px;
         width: 250px;
-    }
-
-    .radio-button {
-        display: list-item;
     }
 
     /* CHECKOUT PAGE */
 
     .page-title_cart {
         margin: 0px 100px 15px 100px;
-        text-align: center;
     }
 
     .two-line-heading {
@@ -2105,16 +1903,7 @@ footer {
     .remove-button {
         width: 120px;
         height: 14px;
-        border-radius: 10px;
-        padding: 5px;
-        border: 1px solid #4B4B4B;
         font-size: 0.75rem;
-        color: #4B4B4B;
-    }
-
-    .fa-light, 
-    .fa-circle-xmark {
-        padding-right: 10px;
     }
 
     .price_cart {
@@ -2123,21 +1912,15 @@ footer {
     }
 
     .items-container {
-        display: flex;
-        flex-direction: row;
         gap: 65px;
-        justify-content: center;
     }
 
     .items-in-cart {
-        display: flex;
         margin: auto;
         width: fit-content;
     }
 
     .items-cart-text {
-        display: flex;
-        flex-direction: column;
         max-width: 130px;
     }
 
@@ -2146,7 +1929,6 @@ footer {
     }
 
     .total-price {
-        font-weight: 600;
         font-size: 1.375rem;
         margin: 20px auto;
         text-align: center;
@@ -2160,10 +1942,6 @@ footer {
         margin-top: 2px;
         display: block;
         margin: auto;
-    }
-
-    .remove-highlight {
-        background-color: #EBEBEB;
     }
 
     .signin {
@@ -2187,22 +1965,11 @@ footer {
         margin-top: 20px;
     }
 
-    .fa-cc-paypal,
-    .fa-cc-visa,
-    .fa-cc-mastercard,
-    .fa-cc-amex {
-        font-size: 1.75rem;
-        color: #6d6d6d;
-    }
-
     .terms {
         font-size: 0.9rem;
     }
 
     .buttons-cart {
-        display: flex;
-        gap: 20px;
-        flex-direction: row;
         justify-content: space-evenly;
         margin: auto;
         margin-left: -10px;
