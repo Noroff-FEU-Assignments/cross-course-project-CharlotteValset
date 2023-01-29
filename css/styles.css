@@ -12,6 +12,37 @@
 /* CHECKOUT SUCCESS PAGE */
 /* FOOTER */
 
+#popup-checkbox:checked ~ .popup-cart {
+    display: block;
+}
+
+#popup-checkbox {
+    display: none;
+}
+
+.popup-cart {
+    width: 157px;
+    position: absolute;
+    right: 320px;
+    bottom: 390px;
+    padding: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 4px 4px 6px 0px #0000004F;
+}
+
+.popup-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 38px;
+}
+
+
 /* GENERAL STYLES */
 
 :root {
