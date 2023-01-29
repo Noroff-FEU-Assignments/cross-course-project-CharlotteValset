@@ -10,42 +10,8 @@
 /* FORMS */
 /* CHECKOUT PAGE */
 /* CHECKOUT SUCCESS PAGE */
+/* SIGNED-IN PAGE */
 /* FOOTER */
-
-.popup-cart {
-    display: none;
-}
-
-#popup-checkbox:checked ~ .popup-cart {
-    display: block;
-}
-
-#popup-checkbox {
-    display: none;
-}
-
-.popup-cart {
-    width: 157px;
-    position: absolute;
-    right: 320px;
-    bottom: 390px;
-    padding: auto;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #000;
-    gap: 15px;
-    padding: 10px;
-    align-items: center;
-    box-shadow: 4px 4px 6px 0px #0000004F;
-}
-
-.popup-text {
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-right: 38px;
-}
-
 
 /* GENERAL STYLES */
 
@@ -456,55 +422,6 @@ img {
     width: 391px;
 }
 
-.modal-dialog {
-    position: static;
-    font-family: var(--font-family);
-    z-index: 99999;
-    opacity: 0;
-}
-
-.modal-dialog:target {
-    opacity:1;
-}
-
-.modal-dialog > div {
-    width: 157px;
-    position: relative;
-    right: 219px;
-    bottom: 423px;
-    padding: auto;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #000;
-    gap: 15px;
-    padding: 10px;
-    align-items: center;
-    box-shadow: 4px 4px 6px 0px #0000004F;
-}
-
-.modal-text {
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-right: 38px;
-}
-
-.close {
-    color: #000000;
-    line-height: 2px;
-    position: absolute;
-    right: 1px;
-    text-align: center;
-    top: 1px;
-    width: 5px;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.close:hover {
-    font-size: 1.2rem;
-}
-
 /* ABOUT PAGE */
 
 .page-title_about {
@@ -855,6 +772,37 @@ textarea {
 
 .fa-circle-play:hover {
     font-size: 6rem;
+}
+
+/* SIGNED-IN & EMPTY CART PAGE */
+.signedin-wrapper,
+.empty-cart-wrapper {
+    display: block;
+    text-align: center;
+    height: 429px;
+    margin-bottom: 20px;
+}
+
+.assorted-filmcovers {
+    width: 310px;
+    height: 245px;
+    display: block;
+    margin: 30px auto;
+    filter: none;
+}
+
+.signedin-text,
+.empty-cart-text {
+    display: block;
+    padding-top: 20px;
+}
+
+.go-explore {
+    margin-bottom: 50px;
+}
+
+.assorted-filmcovers-opacity {
+    opacity: 0.5;
 }
 
 /* FOOTER */
@@ -1406,6 +1354,25 @@ footer {
         font-size: 6rem;
     }
 
+    /* SIGNED-IN & EMPTY CART PAGE */
+    .signedin-wrapper,
+    .empty-cart-wrapper {
+        height: 100vh;
+        margin-bottom: 0px;
+    }
+
+    .assorted-filmcovers {
+        width: 240px;
+        height: 173px;
+    }
+
+    .signedin-text,
+    .empty-cart-text {
+        font-size: 1.2rem;
+        width: 250px;
+        padding-top: 30px;
+    }
+
     /* FOOTER */
 
     footer {
@@ -1750,6 +1717,21 @@ footer {
         padding-left: 38px;
         padding-right: 38px;
     }
+
+    /* SIGNED-IN & EMPTY CART PAGE */
+
+    .signedin-wrapper,
+    .empty-cart-wrapper {
+        height: 473px;
+        margin-bottom: 20px;
+    }
+
+    .signedin-text,
+    .empty-cart-text {
+        padding-top: 30px;
+    }
+
+
 }
 
 /* LARGE */
