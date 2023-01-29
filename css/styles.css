@@ -12,6 +12,10 @@
 /* CHECKOUT SUCCESS PAGE */
 /* FOOTER */
 
+.popup-cart {
+    display: none;
+}
+
 #popup-checkbox:checked ~ .popup-cart {
     display: block;
 }
