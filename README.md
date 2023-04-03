@@ -1,5 +1,3 @@
-HELLO!
-
 This is a school assignment were I am learning to create a website from Design1-course with HTML & CSS.
 
 _Introduction_
