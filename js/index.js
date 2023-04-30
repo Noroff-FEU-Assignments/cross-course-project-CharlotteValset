@@ -1,78 +1,150 @@
-export const apiUrl = "https://api.noroff.dev/api/v1/square-eyes";
+import { baseApiUrl, endpointApiUrl } from "./variables.js";
+import { loader } from "./variables.js";
+// import { response } from "./variables.js";
+// import { json } from "./variables.js";
 
-const sellingPointContainer = document.querySelector(".selling-point-card-image1");
+// Loader stop
+//skjønner ikke helt hvordan denne funker og hvor den bør stå?
+// Plutselig så dukker den opp når alt innhold er lastet opp på siden og vil ikke gå vekk..
 
-async function fetchFilmImage() {
-  const response = await fetch(apiUrl);
-  const json = await response.json();
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
 
-  const sellingPointImage1 = document.createElement("img");
-  sellingPointImage1.src = json[0].image;
-  sellingPointImage1.className = "filmcover-large";
-  sellingPointContainer.appendChild(sellingPointImage1);
+// prøvde å flytte disse to til variables men da kom loader opp på siden sammen med innhold
+const response = await fetch(baseApiUrl + endpointApiUrl);
+const json = await response.json();
+
+// hvor bør disse stå? Her? egen js-fil?
+const sellingPointContainer = document.querySelector(".selling-point-card-image");
+const showcasedContainer = document.querySelector(".showcased-film-image");
+const showcasedProductContent = document.querySelector(".showcased-film-content-container");
+const mostWatchedContainer = document.querySelector(".most-watched-container");
+const newlyAddedContainer = document.querySelector(".newly-added-container");
+
+// Sellingpoint Film image
+
+async function fetchSellingpointImage() {
+  try {
+    const sellingPointImageContainer = document.createElement("a");
+    sellingPointImageContainer.href = `product.html?id=${json[0].id}`;
+    sellingPointContainer.appendChild(sellingPointImageContainer);
+
+    const sellingPointImage = document.createElement("img");
+    sellingPointImage.src = json[0].image;
+    sellingPointImage.className = "filmcover-large";
+    sellingPointImageContainer.appendChild(sellingPointImage);
+  } catch (error) {
+    //hvorfor funker ikke clg-error?
+    console.log("error", error);
+  }
 }
 
-fetchFilmImage();
+fetchSellingpointImage();
 
 // Showcased Film image
 
-const showcasedContainer = document.querySelector(".showcased-film-image");
-
 async function fetchShowcasedImage() {
-  const response = await fetch(apiUrl);
-  const json = await response.json();
+  try {
+    const showcasedFilmImageContainer = document.createElement("a");
+    showcasedFilmImageContainer.href = `product.html?id=${json[8].id}`;
+    showcasedContainer.appendChild(showcasedFilmImageContainer);
 
-  const showcasedFilmImage = document.createElement("img");
-  showcasedFilmImage.src = json[8].image;
-  showcasedFilmImage.className = "filmcover-large";
-  showcasedContainer.appendChild(showcasedFilmImage);
+    const showcasedFilmImage = document.createElement("img");
+    showcasedFilmImage.src = json[8].image;
+    showcasedFilmImage.className = "filmcover-large";
+    showcasedFilmImageContainer.appendChild(showcasedFilmImage);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 fetchShowcasedImage();
 
 // Showcased content text)
 
-const showcasedProductContent = document.querySelector(".showcased-film-content-container");
-
 async function fetchshowcasedContent() {
-  const response = await fetch(apiUrl);
-  const json = await response.json();
+  try {
+    //                                       <a href="checkout.html" class="cta cta-add">Add to cart</a>
+    //                                       <a href="product.html" class="cta cta-readmore">Read more</a>`;
+    // hvordan få til at knappen endrer seg fra "add to cart" til "read more" når man er i mobil modus? vanskelig å vite hvordan @media funker med js
+    const productTitle = document.createElement("h2");
+    productTitle.innerText = json[8].title;
+    showcasedProductContent.appendChild(productTitle);
 
-  // showcasedProductContent.innerHTML = `<h2>${json.title}</h2>
-  //                                       <p class="film-category_home">${json.genre} ${json.released}</p>
-  //                                       <p class="film-description">${json.description}</p>
-  //                                       <p class="film-price_home">€${json.price}</p>
-  //                                       <a href="checkout.html" class="cta cta-add">Add to cart</a>
-  //                                       <a href="product.html" class="cta cta-readmore">Read more</a>`;
+    const productCategoryAndReleased = document.createElement("p");
+    productCategoryAndReleased.classList = "film-category_home";
+    productCategoryAndReleased.innerText = json[8].genre + ", " + json[8].released;
+    showcasedProductContent.appendChild(productCategoryAndReleased);
 
-  const productTitle = document.createElement("h2");
-  productTitle.innerText = json[8].title;
-  showcasedProductContent.appendChild(productTitle);
+    const productDescription = document.createElement("p");
+    productDescription.classList = "film-description";
+    productDescription.innerText = json[8].description;
+    showcasedProductContent.appendChild(productDescription);
 
-  const productCategoryAndReleased = document.createElement("p");
-  productCategoryAndReleased.classList = "film-category_home";
-  productCategoryAndReleased.innerText = json[8].genre + ", " + json[8].released;
-  showcasedProductContent.appendChild(productCategoryAndReleased);
+    const productPrice = document.createElement("p");
+    productPrice.classList = "film-price_home";
+    productPrice.innerText = "€ " + json[8].price;
+    showcasedProductContent.appendChild(productPrice);
 
-  const productDescription = document.createElement("p");
-  productDescription.classList = "film-description";
-  productDescription.innerText = json[8].description;
-  showcasedProductContent.appendChild(productDescription);
-
-  // const productPriceContainer = document.createElement("div");
-  // productPriceContainer.classList = "price-cta-container";
-  // showcasedProductContent.appendChild(productPriceContainer);
-
-  const productPrice = document.createElement("p");
-  productPrice.classList = "film-price_home";
-  productPrice.innerText = "€ " + json[8].price;
-  showcasedProductContent.appendChild(productPrice);
-
-  const addToCartCta = document.createElement("a");
-  // addToCartCta.src = "././product.html";
-  addToCartCta.classList = "cta";
-  addToCartCta.innerText = "Add to cart";
-  showcasedProductContent.appendChild(addToCartCta);
+    const addToCartCta = document.createElement("a");
+    addToCartCta.classList = "cta";
+    addToCartCta.href = "checkout.html";
+    addToCartCta.innerText = "Add to cart";
+    showcasedProductContent.appendChild(addToCartCta);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 fetchshowcasedContent();
+
+// Most watched films
+
+async function fetchMostWatchedFilms() {
+  try {
+    for (let i = 0; i < json.length; i++) {
+      if (i === 4) {
+        break;
+      }
+
+      const filmCoverContainer = document.createElement("a");
+      filmCoverContainer.href = `product.html?id=${json[i].id}`;
+      filmCoverContainer.classList = "filmcover-hover";
+      mostWatchedContainer.appendChild(filmCoverContainer);
+
+      const filmCoverImage = document.createElement("img");
+      filmCoverImage.classList = "filmcover-small";
+      filmCoverImage.src = `${json[i].image}`;
+      filmCoverContainer.appendChild(filmCoverImage);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchMostWatchedFilms();
+
+// Newly added films
+// vet ikke hva jeg har gjort her men det funka XD 4 nye filmer dukket opp, men finnes nok en bedre måte å gjøre det på;)
+async function fetchNewlyAddedFilms() {
+  try {
+    for (let i = 2; i < json.length; i++) {
+      if (i === 6) {
+        break;
+      }
+
+      const filmCoverContainer = document.createElement("a");
+      filmCoverContainer.href = `product.html?id=${json[i].id}`;
+      filmCoverContainer.classList = "filmcover-hover";
+      newlyAddedContainer.appendChild(filmCoverContainer);
+
+      const filmCoverImage = document.createElement("img");
+      filmCoverImage.classList = "filmcover-small";
+      filmCoverImage.src = `${json[i].image}`;
+      filmCoverContainer.appendChild(filmCoverImage);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchNewlyAddedFilms();

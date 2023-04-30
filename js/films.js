@@ -1,27 +1,33 @@
-import { apiUrl } from "./index.js";
+import { baseApiUrl } from "./variables.js";
+import { endpointApiUrl } from "./variables.js";
+import { loader } from "./variables.js";
 
+// Loader stop
+// her funker loader som den skal
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
 const listFilmsContainer = document.querySelector(".list-films-row");
 
-// const filmsUrl = "https://api.noroff.dev/api/v1/square-eyes";
-
 async function fetchFilmsList() {
-  const response = await fetch(apiUrl);
-  const json = await response.json();
+  try {
+    const response = await fetch(baseApiUrl + endpointApiUrl);
+    const json = await response.json();
 
-  console.log(json);
-
-  json.forEach(function (result) {
-    // const listOfFilms = document.createElement("div");
-    // listOfFilms.background += "${json.image}";
-    // listOfFilms.className = "filmcover-small bold-on-hover";
-    // listFilmsContainer.appendChild(listOfFilms);
-
-    listFilmsContainer.innerHTML += `<a href="product.html" class="bold-on-hover">
-                                       <img class="filmcover-small"
-                                       style="background-image: url('${result.image}')"/>
-                                        <p class="film-title">${result.title}</p>
-                                     </a>`;
-  });
+    json.forEach(function (result) {
+      listFilmsContainer.innerHTML += `<a href="product.html?id=${result.id}" class="bold-on-hover">
+                                         <img class="filmcover-small"
+                                         style="background-image: url('${result.image}')"/>
+                                          <p class="film-title">${result.title}</p>
+                                       </a>`;
+    });
+  } catch (error) {
+    console.log(error);
+    listFilmsContainer.innerHTML = message("error");
+  }
 }
-
 fetchFilmsList();
+
+// window.addEventListener("load", function () {
+//   loader.style.display = "none";
+// });
