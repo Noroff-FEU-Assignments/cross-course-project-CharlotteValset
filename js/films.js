@@ -1,16 +1,13 @@
 import { baseApiUrl } from "./variables.js";
 import { endpointApiUrl } from "./variables.js";
-import { loader } from "./variables.js";
+// import { loader } from "./variables.js";
 
-// Loader stop
-// her funker loader som den skal
-window.addEventListener("load", function () {
-  loader.style.display = "none";
-});
 const listFilmsContainer = document.querySelector(".list-films-row");
 
 async function fetchFilmsList() {
   try {
+    listFilmsContainer.innerHTML = "";
+
     const response = await fetch(baseApiUrl + endpointApiUrl);
     const json = await response.json();
 
@@ -27,7 +24,3 @@ async function fetchFilmsList() {
   }
 }
 fetchFilmsList();
-
-// window.addEventListener("load", function () {
-//   loader.style.display = "none";
-// });

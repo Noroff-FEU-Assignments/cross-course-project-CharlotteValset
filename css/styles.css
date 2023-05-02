@@ -151,8 +151,8 @@ a:hover {
 }
 
 .loader {
-  margin: 40px auto 0px auto;
-  border: 12px solid var(--grey);
+  margin: 20px auto;
+  border: 12px solid #b4b2b2;
   border-top: 12px solid var(--red);
   border-radius: 50%;
   width: 80px;
