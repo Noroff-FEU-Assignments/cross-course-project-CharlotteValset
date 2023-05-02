@@ -1,11 +1,6 @@
-// import { baseApiUrl, endpointApiUrl } from "./variables";
+import { baseApiUrl, endpointApiUrl } from "./variables.js";
 
-import { loader } from "./variables.js";
-
-// Loader stop
-window.addEventListener("load", function () {
-  loader.style.display = "none";
-});
+// import { loader } from "./variables.js";
 
 const productImageContainer = document.querySelector(".product-card-image");
 
@@ -15,23 +10,14 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-// const url = baseApiUrl + endpointApiUrl + id;
-// hvordan kan jeg bruke baseUrl og endpointUrl istedenfor den nye url?
-const url = "https://api.noroff.dev/api/v1/square-eyes/" + id;
-
-// Hvordan endre tittel i head til å matche productet?
-// document.querySelector("title").textContent = "newTitle";
-
-// function changeTitle() {
-//   document.querySelector("title").textContent = `${json.id}`;
-// }
-
-// changeTitle();
+const url = `${baseApiUrl}${endpointApiUrl}/${id}`;
 
 // Product image
 
 async function fetchproductImage() {
   try {
+    productImageContainer.innerHTML = "";
+
     const response = await fetch(url);
     const json = await response.json();
 
@@ -40,7 +26,7 @@ async function fetchproductImage() {
     productImage.className = "filmcover-large";
     productImageContainer.appendChild(productImage);
   } catch (error) {
-    console.log(error);
+    console.log("error");
   }
 }
 
@@ -50,8 +36,12 @@ const productContent = document.querySelector(".product-content-container");
 
 async function fetchProductContent() {
   try {
+    productContent.innerHTML = "";
+
     const response = await fetch(url);
     const json = await response.json();
+
+    document.title = json.title;
 
     const productTitle = document.createElement("h1");
     productTitle.className = "film-title-product-desktop";
@@ -87,9 +77,3 @@ async function fetchProductContent() {
 }
 
 fetchProductContent();
-
-// const loader = document.getElementsById("loader");
-
-// window.addEventListener("load", function () {
-//   loader.style.display = "none";
-// });

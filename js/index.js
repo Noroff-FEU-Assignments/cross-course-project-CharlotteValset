@@ -1,21 +1,11 @@
 import { baseApiUrl, endpointApiUrl } from "./variables.js";
-import { loader } from "./variables.js";
+// import { loader } from "./variables.js";
 // import { response } from "./variables.js";
 // import { json } from "./variables.js";
 
-// Loader stop
-//skjønner ikke helt hvordan denne funker og hvor den bør stå?
-// Plutselig så dukker den opp når alt innhold er lastet opp på siden og vil ikke gå vekk..
-
-window.addEventListener("load", function () {
-  loader.style.display = "none";
-});
-
-// prøvde å flytte disse to til variables men da kom loader opp på siden sammen med innhold
 const response = await fetch(baseApiUrl + endpointApiUrl);
 const json = await response.json();
 
-// hvor bør disse stå? Her? egen js-fil?
 const sellingPointContainer = document.querySelector(".selling-point-card-image");
 const showcasedContainer = document.querySelector(".showcased-film-image");
 const showcasedProductContent = document.querySelector(".showcased-film-content-container");
@@ -26,6 +16,8 @@ const newlyAddedContainer = document.querySelector(".newly-added-container");
 
 async function fetchSellingpointImage() {
   try {
+    sellingPointContainer.innerHTML = "";
+
     const sellingPointImageContainer = document.createElement("a");
     sellingPointImageContainer.href = `product.html?id=${json[0].id}`;
     sellingPointContainer.appendChild(sellingPointImageContainer);
@@ -35,7 +27,6 @@ async function fetchSellingpointImage() {
     sellingPointImage.className = "filmcover-large";
     sellingPointImageContainer.appendChild(sellingPointImage);
   } catch (error) {
-    //hvorfor funker ikke clg-error?
     console.log("error", error);
   }
 }
@@ -46,6 +37,8 @@ fetchSellingpointImage();
 
 async function fetchShowcasedImage() {
   try {
+    showcasedContainer.innerHTML = "";
+
     const showcasedFilmImageContainer = document.createElement("a");
     showcasedFilmImageContainer.href = `product.html?id=${json[8].id}`;
     showcasedContainer.appendChild(showcasedFilmImageContainer);
@@ -67,7 +60,11 @@ async function fetchshowcasedContent() {
   try {
     //                                       <a href="checkout.html" class="cta cta-add">Add to cart</a>
     //                                       <a href="product.html" class="cta cta-readmore">Read more</a>`;
-    // hvordan få til at knappen endrer seg fra "add to cart" til "read more" når man er i mobil modus? vanskelig å vite hvordan @media funker med js
+    // --- hvordan få til at knappen endrer seg fra "add to cart" til "read more" når man er i mobil modus? vanskelig å vite hvordan @media funker med js
+    // Du kan bruke window.innerWidth for å sjekke resoluton value og justere deretter, eller du kan toggle classes. Kan og bruke Media Queries til å endre "content" property i CSS.
+    // ---
+    showcasedProductContent.innerHTML = "";
+
     const productTitle = document.createElement("h2");
     productTitle.innerText = json[8].title;
     showcasedProductContent.appendChild(productTitle);
@@ -103,6 +100,8 @@ fetchshowcasedContent();
 
 async function fetchMostWatchedFilms() {
   try {
+    mostWatchedContainer.innerHTML = "";
+
     for (let i = 0; i < json.length; i++) {
       if (i === 4) {
         break;
@@ -125,11 +124,13 @@ async function fetchMostWatchedFilms() {
 fetchMostWatchedFilms();
 
 // Newly added films
-// vet ikke hva jeg har gjort her men det funka XD 4 nye filmer dukket opp, men finnes nok en bedre måte å gjøre det på;)
+
 async function fetchNewlyAddedFilms() {
   try {
-    for (let i = 2; i < json.length; i++) {
-      if (i === 6) {
+    newlyAddedContainer.innerHTML = "";
+
+    for (let i = 4; i < json.length; i++) {
+      if (i === 8) {
         break;
       }
 
