@@ -1,6 +1,5 @@
 import { baseApiUrl } from "./variables.js";
 import { endpointApiUrl } from "./variables.js";
-// import { loader } from "./variables.js";
 
 const listFilmsContainer = document.querySelector(".list-films-row");
 

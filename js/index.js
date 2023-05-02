@@ -1,5 +1,4 @@
 import { baseApiUrl, endpointApiUrl } from "./variables.js";
-// import { loader } from "./variables.js";
 // import { response } from "./variables.js";
 // import { json } from "./variables.js";
 

@@ -1,7 +1,5 @@
 import { baseApiUrl, endpointApiUrl } from "./variables.js";
 
-// import { loader } from "./variables.js";
-
 const productImageContainer = document.querySelector(".product-card-image");
 
 const queryString = document.location.search;
