@@ -1,9 +1,9 @@
 import { baseApiUrl, endpointApiUrl } from "./variables.js";
-// import { response } from "./variables.js";
-// import { json } from "./variables.js";
+import { getData } from "./variables.js";
+import { createMessage } from "./errorMessage.js";
 
-const response = await fetch(baseApiUrl + endpointApiUrl);
-const json = await response.json();
+const json = await getData(`${baseApiUrl}${endpointApiUrl}`);
+const errorMessage = createMessage("error");
 
 const sellingPointContainer = document.querySelector(".selling-point-card-image");
 const showcasedContainer = document.querySelector(".showcased-film-image");
@@ -26,11 +26,68 @@ async function fetchSellingpointImage() {
     sellingPointImage.className = "filmcover-large";
     sellingPointImageContainer.appendChild(sellingPointImage);
   } catch (error) {
-    console.log("error", error);
+    console.log("An error occured", error);
+    sellingPointContainer.innerHTML = errorMessage;
   }
 }
 
 fetchSellingpointImage();
+
+// Most watched films
+
+async function fetchMostWatchedFilms() {
+  try {
+    mostWatchedContainer.innerHTML = "";
+
+    for (let i = 0; i < json.length; i++) {
+      if (i === 4) {
+        break;
+      }
+
+      const filmCoverContainer = document.createElement("a");
+      filmCoverContainer.href = `product.html?id=${json[i].id}`;
+      filmCoverContainer.classList = "filmcover-hover";
+      mostWatchedContainer.appendChild(filmCoverContainer);
+
+      const filmCoverImage = document.createElement("img");
+      filmCoverImage.classList = "filmcover-small";
+      filmCoverImage.src = `${json[i].image}`;
+      filmCoverContainer.appendChild(filmCoverImage);
+    }
+  } catch (error) {
+    console.log("An error occured", error);
+    mostWatchedContainer.innerHTML = errorMessage;
+  }
+}
+fetchMostWatchedFilms();
+
+// Newly added films
+
+async function fetchNewlyAddedFilms() {
+  try {
+    newlyAddedContainer.innerHTML = "";
+
+    for (let i = 4; i < json.length; i++) {
+      if (i === 8) {
+        break;
+      }
+
+      const filmCoverContainer = document.createElement("a");
+      filmCoverContainer.href = `product.html?id=${json[i].id}`;
+      filmCoverContainer.classList = "filmcover-hover";
+      newlyAddedContainer.appendChild(filmCoverContainer);
+
+      const filmCoverImage = document.createElement("img");
+      filmCoverImage.classList = "filmcover-small";
+      filmCoverImage.src = `${json[i].image}`;
+      filmCoverContainer.appendChild(filmCoverImage);
+    }
+  } catch (error) {
+    console.log("An error occured", error);
+    newlyAddedContainer.innerHTML = errorMessage;
+  }
+}
+fetchNewlyAddedFilms();
 
 // Showcased Film image
 
@@ -47,7 +104,8 @@ async function fetchShowcasedImage() {
     showcasedFilmImage.className = "filmcover-large";
     showcasedFilmImageContainer.appendChild(showcasedFilmImage);
   } catch (error) {
-    console.log(error);
+    console.log("An error occured", error);
+    showcasedContainer.innerHTML = errorMessage;
   }
 }
 
@@ -57,11 +115,6 @@ fetchShowcasedImage();
 
 async function fetchshowcasedContent() {
   try {
-    //                                       <a href="checkout.html" class="cta cta-add">Add to cart</a>
-    //                                       <a href="product.html" class="cta cta-readmore">Read more</a>`;
-    // --- hvordan få til at knappen endrer seg fra "add to cart" til "read more" når man er i mobil modus? vanskelig å vite hvordan @media funker med js
-    // Du kan bruke window.innerWidth for å sjekke resoluton value og justere deretter, eller du kan toggle classes. Kan og bruke Media Queries til å endre "content" property i CSS.
-    // ---
     showcasedProductContent.innerHTML = "";
 
     const productTitle = document.createElement("h2");
@@ -89,62 +142,9 @@ async function fetchshowcasedContent() {
     addToCartCta.innerText = "Add to cart";
     showcasedProductContent.appendChild(addToCartCta);
   } catch (error) {
-    console.log(error);
+    console.log("An error occured", error);
+    showcasedProductContent.innerHTML = errorMessage;
   }
 }
 
 fetchshowcasedContent();
-
-// Most watched films
-
-async function fetchMostWatchedFilms() {
-  try {
-    mostWatchedContainer.innerHTML = "";
-
-    for (let i = 0; i < json.length; i++) {
-      if (i === 4) {
-        break;
-      }
-
-      const filmCoverContainer = document.createElement("a");
-      filmCoverContainer.href = `product.html?id=${json[i].id}`;
-      filmCoverContainer.classList = "filmcover-hover";
-      mostWatchedContainer.appendChild(filmCoverContainer);
-
-      const filmCoverImage = document.createElement("img");
-      filmCoverImage.classList = "filmcover-small";
-      filmCoverImage.src = `${json[i].image}`;
-      filmCoverContainer.appendChild(filmCoverImage);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
-fetchMostWatchedFilms();
-
-// Newly added films
-
-async function fetchNewlyAddedFilms() {
-  try {
-    newlyAddedContainer.innerHTML = "";
-
-    for (let i = 4; i < json.length; i++) {
-      if (i === 8) {
-        break;
-      }
-
-      const filmCoverContainer = document.createElement("a");
-      filmCoverContainer.href = `product.html?id=${json[i].id}`;
-      filmCoverContainer.classList = "filmcover-hover";
-      newlyAddedContainer.appendChild(filmCoverContainer);
-
-      const filmCoverImage = document.createElement("img");
-      filmCoverImage.classList = "filmcover-small";
-      filmCoverImage.src = `${json[i].image}`;
-      filmCoverContainer.appendChild(filmCoverImage);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
-fetchNewlyAddedFilms();

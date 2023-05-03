@@ -1,14 +1,16 @@
 import { baseApiUrl, endpointApiUrl } from "./variables.js";
+import { getData } from "./variables.js";
+import { createMessage } from "./errorMessage.js";
 
 const productImageContainer = document.querySelector(".product-card-image");
+const productContent = document.querySelector(".product-content-container");
+const errorMessage = createMessage("error");
 
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
 
-const url = `${baseApiUrl}${endpointApiUrl}/${id}`;
+const json = await getData(`${baseApiUrl}${endpointApiUrl}/${id}`);
 
 // Product image
 
@@ -16,28 +18,21 @@ async function fetchproductImage() {
   try {
     productImageContainer.innerHTML = "";
 
-    const response = await fetch(url);
-    const json = await response.json();
-
     const productImage = document.createElement("img");
     productImage.src = json.image;
     productImage.className = "filmcover-large";
     productImageContainer.appendChild(productImage);
   } catch (error) {
-    console.log("error");
+    console.log("An error occured", error);
+    productImageContainer.innerHTML = errorMessage;
   }
 }
 
 fetchproductImage();
 
-const productContent = document.querySelector(".product-content-container");
-
 async function fetchProductContent() {
   try {
     productContent.innerHTML = "";
-
-    const response = await fetch(url);
-    const json = await response.json();
 
     document.title = json.title;
 
@@ -46,7 +41,7 @@ async function fetchProductContent() {
     productTitle.innerText = json.title;
     productContent.appendChild(productTitle);
 
-    const productCategoryAndReleased = document.createElement("p");
+    const roductCategoryAndReleased = document.createElement("p");
     productCategoryAndReleased.classList = "film-category";
     productCategoryAndReleased.innerText = json.genre + ", " + json.released;
     productContent.appendChild(productCategoryAndReleased);
@@ -70,7 +65,8 @@ async function fetchProductContent() {
     addToCartCta.innerText = "Add to cart";
     productPriceContainer.appendChild(addToCartCta);
   } catch (error) {
-    console.log(error);
+    console.log("An error occured", error);
+    productContent.innerHTML = errorMessage;
   }
 }
 

@@ -173,6 +173,22 @@ a:hover {
   display: none;
 }
 
+/* ERROR_MESSAGE */
+.message {
+  border: 2px solid #a71515;
+  background-color: rgb(176, 176, 176);
+  color: black;
+  padding: 15px;
+  max-width: 500px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.error {
+  background-color: rgb(255, 255, 255);
+  color: #a71515;
+}
+
 /* BUTTONS */
 
 .cta {
@@ -288,7 +304,7 @@ img {
   margin-bottom: 80px;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 }
 
 .selling-point1-card {
