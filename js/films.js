@@ -13,11 +13,21 @@ async function fetchFilmsList() {
     const json = await getData(`${baseApiUrl}${endpointApiUrl}`);
 
     json.forEach(function (result) {
-      listFilmsContainer.innerHTML += `<a href="product.html?id=${result.id}" class="bold-on-hover">
-                                         <img class="filmcover-small"
-                                         style="background-image: url('${result.image}')"/>
-                                          <p class="film-title">${result.title}</p>
-                                       </a>`;
+      const listOfFilms = document.createElement("a");
+      listOfFilms.href = `product.html?id=${result.id}`;
+      listOfFilms.className = "bold-on-hover";
+      listFilmsContainer.appendChild(listOfFilms);
+
+      const listOfFilmsImage = document.createElement("img");
+      listOfFilmsImage.setAttribute("alt", `Filmcover of ${result.title}`);
+      listOfFilmsImage.src = result.image;
+      listOfFilmsImage.className = "filmcover-small";
+      listOfFilms.appendChild(listOfFilmsImage);
+
+      const listOfFilmsTitle = document.createElement("p");
+      listOfFilmsTitle.innerText = result.title;
+      listOfFilmsTitle.className = "film-title";
+      listOfFilms.appendChild(listOfFilmsTitle);
     });
   } catch (error) {
     console.log(error);

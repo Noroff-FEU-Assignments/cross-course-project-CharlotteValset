@@ -17,16 +17,20 @@ async function fetchSellingpointImage() {
   try {
     sellingPointContainer.innerHTML = "";
 
+    // De neste 9 linjene med kode er repeata ganske mye gjennom hele prosjektet egentlig. Kunne du kanskje omgjort dette til en factory funksjon som kan generere elementene for deg istedet for å kopiere de samme 9 linjene hver gang? ;)
     const sellingPointImageContainer = document.createElement("a");
     sellingPointImageContainer.href = `product.html?id=${json[0].id}`;
     sellingPointContainer.appendChild(sellingPointImageContainer);
 
     const sellingPointImage = document.createElement("img");
+    sellingPointImage.setAttribute("alt", `Filmcover of ${json[0].title}`);
     sellingPointImage.src = json[0].image;
     sellingPointImage.className = "filmcover-large";
     sellingPointImageContainer.appendChild(sellingPointImage);
   } catch (error) {
     console.log("An error occured", error);
+    // En ting som er lurt her er å ha med noe som "stopper" sida di når et problem oppstår. På den måten så får bruker bedre beskjed om noe går galt
+    // throw new Error(error);
     sellingPointContainer.innerHTML = errorMessage;
   }
 }
@@ -50,6 +54,7 @@ async function fetchMostWatchedFilms() {
       mostWatchedContainer.appendChild(filmCoverContainer);
 
       const filmCoverImage = document.createElement("img");
+      filmCoverImage.setAttribute("alt", `Filmcover of ${json[i].title}`);
       filmCoverImage.classList = "filmcover-small";
       filmCoverImage.src = `${json[i].image}`;
       filmCoverContainer.appendChild(filmCoverImage);
@@ -78,6 +83,7 @@ async function fetchNewlyAddedFilms() {
       newlyAddedContainer.appendChild(filmCoverContainer);
 
       const filmCoverImage = document.createElement("img");
+      filmCoverImage.setAttribute("alt", `Filmcover of ${json[i].title}`);
       filmCoverImage.classList = "filmcover-small";
       filmCoverImage.src = `${json[i].image}`;
       filmCoverContainer.appendChild(filmCoverImage);
@@ -100,6 +106,7 @@ async function fetchShowcasedImage() {
     showcasedContainer.appendChild(showcasedFilmImageContainer);
 
     const showcasedFilmImage = document.createElement("img");
+    showcasedFilmImage.setAttribute("alt", `Filmcover of ${json[8].title}`);
     showcasedFilmImage.src = json[8].image;
     showcasedFilmImage.className = "filmcover-large";
     showcasedFilmImageContainer.appendChild(showcasedFilmImage);
