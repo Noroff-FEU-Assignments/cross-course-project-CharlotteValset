@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  max-width: 1280px;
+  max-width: 1600px;
   margin: auto;
   font-family: var(--font-family);
   background-color: var(--white);
