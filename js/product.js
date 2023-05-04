@@ -35,7 +35,7 @@ async function fetchProductContent() {
   try {
     productContent.innerHTML = "";
 
-    document.title = json.title;
+    document.title = `SquareEyes | ${json.title}`;
 
     const productTitle = document.createElement("h1");
     productTitle.className = "film-title-product-desktop";
