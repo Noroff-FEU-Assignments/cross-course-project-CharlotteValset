@@ -1,109 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="desciption" content="Checkout page of SquareEyes, a website that lets you support small film-makers">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <title>SquareEyes | Checkout</title>
-        <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="desciption" content="Checkout page of SquareEyes, a website that lets you support small film-makers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>SquareEyes | Checkout</title>
+    <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
+  </head>
   <body>
-    <header  class="position">
-      <a href="index.html"><img src="images/square-eyes-logo.png" class="logo"  alt="Logo of SquareEyes"></a>
+    <header class="position">
+      <a href="index.html"><img src="images/square-eyes-logo.png" class="logo" alt="Logo of SquareEyes" /></a>
       <nav>
         <ul class="no-bullets menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href=films.html>Films</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="checkout.html"><i class="active-cart fa-solid fa-cart-shopping" title="Shopping cart"></i><span class="fa-sr-only">Shopping cart</span></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="films.html">Films</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="checkout.html"
+              ><i class="active-cart fa-solid fa-cart-shopping" title="Shopping cart"></i
+              ><span class="fa-sr-only">Shopping cart</span></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-        <a href="films.html" class="back-button"><i class="fa-solid fa-chevron-left"></i>BACK</a>
-        <h1 class="page-title_cart">Shopping cart</h1>
-                <div class="items-container highlight">
-                    <div>
-                        <div class="items-in-cart">
-                            <a href="product.html"><img src="images/kubo.jpeg" class="filmcover-cart" alt="Filmcover of Kubo and the two strings"></a>                            <div class="items-cart-text">
-                            <h2 class="two-line-heading">Kubo and the two strings</h2>
-                            <p class="price_cart">$ 5.95</p>
-                            <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
-                        </div>
-                        <!-- Why are there 2 </div> here?? If i take one away it messes up the layout.. -->
-                        </div>
-                        <div class="items-in-cart">
-                            <a href="product.html"><img src="images/black-adam.jpeg" class="filmcover-cart" alt="Filmcover of Black Adam"></a>
-                            <div class="items-cart-text">
-                                <h2 class="one-line-heading">Black Adam</h2>
-                                <p class="price_cart">$ 5.95</p>
-                                <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
-                            </div>
-                        </div>
-                        <div class="items-in-cart">
-                            <a href="product.html"><img src="images/hobbsandshaw.jpeg" class="filmcover-cart" alt="Filmcover of Hobbs and Shaw"></a>
-                            <div class="items-cart-text">
-                                <h2 class="one-line-heading">Hobbs and Shaw</h2>
-                                <p class="price_cart">$ 5.95</p>
-                                <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
-                            </div>
-                        </div>
-                        <p class="total-price">Total $ 17.85</p>
-                    </div> 
-                    <div class="checkout-content remove-highlight">
-                        <div class="signin">
-                            <p class="signin-text">Already have an account?</p>
-                            <a href="signin.html" class=signin-link>Sign in!</a>
-                        </div>
-                        <div class="checkout-form">
-                            <form action="form-success.php" method="POST">
-                                <h2 class="sub-heading_checkout">Create a new account</h2>
-                                    <label for="email">Email*</label>
-                                    <input type="email" name="email" id="email" required>
-                                    <label for="password">Create password*</label>
-                                    <p class="password-requirement">Must contain at least 8 characters and 1 number</p>
-                                    <input type="password" name="password" id="password" required>
-                                    <label for="confirm-password">Confirm password*</label>
-                                    <input type="password" name="confirm-password" id="confirm-password" required>
-                                    <div class="terms">
-                                        <input type="checkbox" name="checkbox" id="checkbox">
-                                        <label for="checkbox">I agree to terms and conditions</label>
-                                    </div>
-                                <h2 class="sub-heading_checkout">Payment details</h2>
-                                    <div class="payment-choice">
-                                        <input type="radio" name="payment" id="paypal" value="paypal" class="radio-button">
-                                     <label for="paypal"><i class="fa-brands fa-cc-paypal" title="Paypal payment"></i><span class="fa-sr-only">Paypal payment</span></label>
-                                    </div>
-                                    <div class="payment-choice">
-                                        <input type="radio" name="payment" id="visa-mc-amex" value="visa-mc-amex" class="radio-button">
-                                    <label for="visa-mc-amex">
-                                        <i class="fa-brands fa-cc-visa" title="Visa payment"></i><span class="fa-sr-only">Visa payment</span>
-                                        <i class="fa-brands fa-cc-mastercard" title="Mastercard payment"></i><span class="fa-sr-only">Mastercard payment</span>
-                                        <i class="fa-brands fa-cc-amex" title="Amex payment"></i><span class="fa-sr-only">Amex payment</span>
-                                    </label>
-                                    </div>
-                                    <label for="card-number">Card number*</label>
-                                    <input type="text" name="card-number" id="card-number" class="" required>
-                                    <label for="expiry-date">Expiry date*</label>
-                                    <input type="text" name="expiry-date" id="expiry-date" class="" required>
-                                    <label for="ccv-cvc">CCV/CVC*</label>
-                                    <input type="text" name="ccv-cvc" id="ccv-cvc" class="" required>
-                                <div class="buttons-cart">
-                                    <a href="empty-cart.html" class="cta cta-second">Empty cart</a>
-                                    <a href="checkout_success.html" class="cta pay-button">Pay</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+      <button onclick="history.back()" class="back-button"><i class="fa-solid fa-chevron-left"></i>BACK</button>
+      <h1 class="page-title_cart">Shopping cart</h1>
+      <div class="items-container highlight">
+        <div>
+          <div class="items-in-cart">
+            <a href="product.html"
+              ><img src="images/kubo.jpeg" class="filmcover-cart" alt="Filmcover of Kubo and the two strings"
+            /></a>
+            <div class="items-cart-text">
+              <h2 class="two-line-heading">Kubo and the two strings</h2>
+              <p class="price_cart">$ 5.95</p>
+              <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
+            </div>
+            <!-- Why are there 2 </div> here?? If i take one away it messes up the layout.. -->
+          </div>
+          <div class="items-in-cart">
+            <a href="product.html"
+              ><img src="images/black-adam.jpeg" class="filmcover-cart" alt="Filmcover of Black Adam"
+            /></a>
+            <div class="items-cart-text">
+              <h2 class="one-line-heading">Black Adam</h2>
+              <p class="price_cart">$ 5.95</p>
+              <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
+            </div>
+          </div>
+          <div class="items-in-cart">
+            <a href="product.html"
+              ><img src="images/hobbsandshaw.jpeg" class="filmcover-cart" alt="Filmcover of Hobbs and Shaw"
+            /></a>
+            <div class="items-cart-text">
+              <h2 class="one-line-heading">Hobbs and Shaw</h2>
+              <p class="price_cart">$ 5.95</p>
+              <p class="remove-button"><i class="fa-regular fa-circle-xmark"></i>Remove from cart</p>
+            </div>
+          </div>
+          <p class="total-price">Total $ 17.85</p>
+        </div>
+        <div class="checkout-content remove-highlight">
+          <div class="signin">
+            <p class="signin-text">Already have an account?</p>
+            <a href="signin.html" class="signin-link">Sign in!</a>
+          </div>
+          <div class="checkout-form">
+            <form action="form-success.php" method="POST">
+              <h2 class="sub-heading_checkout">Create a new account</h2>
+              <label for="email">Email*</label>
+              <input type="email" name="email" id="email" required />
+              <label for="password">Create password*</label>
+              <p class="password-requirement">Must contain at least 8 characters and 1 number</p>
+              <input type="password" name="password" id="password" required />
+              <label for="confirm-password">Confirm password*</label>
+              <input type="password" name="confirm-password" id="confirm-password" required />
+              <div class="terms">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox">I agree to terms and conditions</label>
+              </div>
+              <h2 class="sub-heading_checkout">Payment details</h2>
+              <div class="payment-choice">
+                <input type="radio" name="payment" id="paypal" value="paypal" class="radio-button" />
+                <label for="paypal"
+                  ><i class="fa-brands fa-cc-paypal" title="Paypal payment"></i
+                  ><span class="fa-sr-only">Paypal payment</span></label
+                >
+              </div>
+              <div class="payment-choice">
+                <input type="radio" name="payment" id="visa-mc-amex" value="visa-mc-amex" class="radio-button" />
+                <label for="visa-mc-amex">
+                  <i class="fa-brands fa-cc-visa" title="Visa payment"></i><span class="fa-sr-only">Visa payment</span>
+                  <i class="fa-brands fa-cc-mastercard" title="Mastercard payment"></i
+                  ><span class="fa-sr-only">Mastercard payment</span>
+                  <i class="fa-brands fa-cc-amex" title="Amex payment"></i><span class="fa-sr-only">Amex payment</span>
+                </label>
+              </div>
+              <label for="card-number">Card number*</label>
+              <input type="text" name="card-number" id="card-number" class="" required />
+              <label for="expiry-date">Expiry date*</label>
+              <input type="text" name="expiry-date" id="expiry-date" class="" required />
+              <label for="ccv-cvc">CCV/CVC*</label>
+              <input type="text" name="ccv-cvc" id="ccv-cvc" class="" required />
+              <div class="buttons-cart">
+                <a href="empty-cart.html" class="cta cta-second">Empty cart</a>
+                <a href="checkout_success.html" class="cta pay-button">Pay</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
-        <footer>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook" title="Facebook link icon"></i><span class="fa-sr-only">Facebook link icon</span></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" title="Instagram link icon"></i><span class="fa-sr-only">Instagram link icon</span></a>
-            <a href="https://twitter.com/"><i class="fa-brands fa-twitter" title="Twitter link icon"></i><span class="fa-sr-only">Twitter link icon</span></a>
-            <p>Copyright &copy; 2022 SquareEyes</p>
-          </footer>
+    <footer>
+      <a href="https://www.facebook.com/"
+        ><i class="fa-brands fa-facebook" title="Facebook link icon"></i
+        ><span class="fa-sr-only">Facebook link icon</span></a
+      >
+      <a href="https://www.instagram.com/"
+        ><i class="fa-brands fa-instagram" title="Instagram link icon"></i
+        ><span class="fa-sr-only">Instagram link icon</span></a
+      >
+      <a href="https://twitter.com/"
+        ><i class="fa-brands fa-twitter" title="Twitter link icon"></i
+        ><span class="fa-sr-only">Twitter link icon</span></a
+      >
+      <p>Copyright &copy; 2022 SquareEyes</p>
+    </footer>
   </body>
 </html>

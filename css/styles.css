@@ -176,7 +176,7 @@ a:hover {
 /* ERROR_MESSAGE */
 .message {
   border: 2px solid #a71515;
-  background-color: rgb(176, 176, 176);
+  background-color: #bfbfbf;
   color: black;
   padding: 15px;
   max-width: 500px;
@@ -185,7 +185,7 @@ a:hover {
 }
 
 .error {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   color: #a71515;
 }
 
@@ -254,9 +254,12 @@ a:hover {
 .back-button {
   display: block;
   text-decoration: none;
+  background-color: #fff;
+  border: none;
   font-size: 1.25rem;
   font-weight: 600;
   margin: 10px 0px 30px 130px;
+  padding: 10px;
 }
 
 .fa-chevron-left {
@@ -871,7 +874,7 @@ textarea {
 footer {
   text-align: center;
   color: #545454;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 

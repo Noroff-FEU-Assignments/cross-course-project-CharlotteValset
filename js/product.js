@@ -19,6 +19,7 @@ async function fetchproductImage() {
     productImageContainer.innerHTML = "";
 
     const productImage = document.createElement("img");
+    productImage.setAttribute("alt", `Filmcover of ${json.title}`);
     productImage.src = json.image;
     productImage.className = "filmcover-large";
     productImageContainer.appendChild(productImage);
@@ -41,7 +42,7 @@ async function fetchProductContent() {
     productTitle.innerText = json.title;
     productContent.appendChild(productTitle);
 
-    const roductCategoryAndReleased = document.createElement("p");
+    const productCategoryAndReleased = document.createElement("p");
     productCategoryAndReleased.classList = "film-category";
     productCategoryAndReleased.innerText = json.genre + ", " + json.released;
     productContent.appendChild(productCategoryAndReleased);

@@ -10,6 +10,6 @@ export async function getData(url) {
       return json;
     }
   } catch (error) {
-    console.log("error");
+    console.log("An error occured", error);
   }
 }
