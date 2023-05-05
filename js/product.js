@@ -12,8 +12,6 @@ const id = params.get("id");
 
 const json = await getData(`${baseApiUrl}${endpointApiUrl}/${id}`);
 
-// Product image
-
 async function fetchproductImage() {
   try {
     productImageContainer.innerHTML = "";
@@ -26,6 +24,7 @@ async function fetchproductImage() {
   } catch (error) {
     console.log("An error occured", error);
     productImageContainer.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 
@@ -38,6 +37,7 @@ async function fetchProductContent() {
     document.title = `SquareEyes | ${json.title}`;
 
     const productTitle = document.createElement("h1");
+    productTitle.setAttribute("id", "title-change");
     productTitle.className = "film-title-product-desktop";
     productTitle.innerText = json.title;
     productContent.appendChild(productTitle);
@@ -68,7 +68,25 @@ async function fetchProductContent() {
   } catch (error) {
     console.log("An error occured", error);
     productContent.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 
 fetchProductContent();
+
+const mediaQuery = window.matchMedia("(max-width: 799px)");
+const productTitleChange = document.getElementById("title-change");
+
+function titleChange(mediaQuery) {
+  if (mediaQuery.matches) {
+    productTitleChange.classList.add("film-title-product-mobile");
+    productTitleChange.classList.remove("film-title-product-desktop");
+    console.log("triggered!");
+  } else {
+    productTitleChange.classList.remove("film-title-product-mobile");
+    productTitleChange.classList.add("film-title-product-desktop");
+  }
+}
+
+mediaQuery.addListener(titleChange);
+titleChange(mediaQuery);

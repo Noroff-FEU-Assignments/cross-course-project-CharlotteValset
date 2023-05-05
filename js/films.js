@@ -32,6 +32,7 @@ async function fetchFilmsList() {
   } catch (error) {
     console.log(error);
     listFilmsContainer.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 fetchFilmsList();

@@ -11,13 +11,10 @@ const showcasedProductContent = document.querySelector(".showcased-film-content-
 const mostWatchedContainer = document.querySelector(".most-watched-container");
 const newlyAddedContainer = document.querySelector(".newly-added-container");
 
-// Sellingpoint Film image
-
 async function fetchSellingpointImage() {
   try {
     sellingPointContainer.innerHTML = "";
 
-    // De neste 9 linjene med kode er repeata ganske mye gjennom hele prosjektet egentlig. Kunne du kanskje omgjort dette til en factory funksjon som kan generere elementene for deg istedet for å kopiere de samme 9 linjene hver gang? ;)
     const sellingPointImageContainer = document.createElement("a");
     sellingPointImageContainer.href = `product.html?id=${json[0].id}`;
     sellingPointContainer.appendChild(sellingPointImageContainer);
@@ -29,15 +26,12 @@ async function fetchSellingpointImage() {
     sellingPointImageContainer.appendChild(sellingPointImage);
   } catch (error) {
     console.log("An error occured", error);
-    // En ting som er lurt her er å ha med noe som "stopper" sida di når et problem oppstår. På den måten så får bruker bedre beskjed om noe går galt
-    // throw new Error(error);
     sellingPointContainer.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 
 fetchSellingpointImage();
-
-// Most watched films
 
 async function fetchMostWatchedFilms() {
   try {
@@ -62,11 +56,10 @@ async function fetchMostWatchedFilms() {
   } catch (error) {
     console.log("An error occured", error);
     mostWatchedContainer.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 fetchMostWatchedFilms();
-
-// Newly added films
 
 async function fetchNewlyAddedFilms() {
   try {
@@ -91,11 +84,10 @@ async function fetchNewlyAddedFilms() {
   } catch (error) {
     console.log("An error occured", error);
     newlyAddedContainer.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 fetchNewlyAddedFilms();
-
-// Showcased Film image
 
 async function fetchShowcasedImage() {
   try {
@@ -113,12 +105,11 @@ async function fetchShowcasedImage() {
   } catch (error) {
     console.log("An error occured", error);
     showcasedContainer.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 
 fetchShowcasedImage();
-
-// Showcased content text)
 
 async function fetchshowcasedContent() {
   try {
@@ -151,6 +142,7 @@ async function fetchshowcasedContent() {
   } catch (error) {
     console.log("An error occured", error);
     showcasedProductContent.innerHTML = errorMessage;
+    throw new Error(error);
   }
 }
 
