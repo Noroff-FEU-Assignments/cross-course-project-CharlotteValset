@@ -81,7 +81,6 @@ function titleChange(mediaQuery) {
   if (mediaQuery.matches) {
     productTitleChange.classList.add("film-title-product-mobile");
     productTitleChange.classList.remove("film-title-product-desktop");
-    console.log("triggered!");
   } else {
     productTitleChange.classList.remove("film-title-product-mobile");
     productTitleChange.classList.add("film-title-product-desktop");

@@ -135,6 +135,7 @@ async function fetchshowcasedContent() {
     showcasedProductContent.appendChild(productPrice);
 
     const addToCartCta = document.createElement("a");
+    addToCartCta.setAttribute("id", "button-change");
     addToCartCta.classList = "cta";
     addToCartCta.href = "checkout.html";
     addToCartCta.innerText = "Add to cart";
@@ -147,3 +148,19 @@ async function fetchshowcasedContent() {
 }
 
 fetchshowcasedContent();
+
+const mediaQuery = window.matchMedia("(max-width: 799px)");
+const ctaButton = document.getElementById("button-change");
+
+function buttonChange(mediaQuery) {
+  if (mediaQuery.matches) {
+    ctaButton.innerText = "Read more";
+    ctaButton.href = `product.html?id=${json[8].id}`;
+  } else {
+    ctaButton.innerText = "Add to cart";
+    ctaButton.href = "checkout.html";
+  }
+}
+
+mediaQuery.addListener(buttonChange);
+buttonChange(mediaQuery);

@@ -11,5 +11,6 @@ export async function getData(url) {
     }
   } catch (error) {
     console.log("An error occured", error);
+    throw new Error(error);
   }
 }
