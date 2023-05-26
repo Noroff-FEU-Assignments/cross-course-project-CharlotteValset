@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>SquareEyes | Checkout</title>
+    <script src="./js/addToCart.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for https://charlottevalset.netlify.app/index.html -->
     <script>
@@ -111,14 +112,21 @@
                 </label>
               </div>
               <label for="card-number">Card number*</label>
-              <input type="text" name="card-number" id="card-number" class="" required />
-              <label for="expiry-date">Expiry date*</label>
+              <input
+                type="text"
+                name="card-number"
+                id="card-number"
+                placeholder="XXXX XXXX XXXX XXXX"
+                class=""
+                required
+              />
+              <label for="expiry-date">Expiry date (MM/YY)*</label>
               <input type="text" name="expiry-date" id="expiry-date" class="" required />
               <label for="ccv-cvc">CCV/CVC*</label>
               <input type="text" name="ccv-cvc" id="ccv-cvc" class="" required />
               <div class="buttons-cart">
                 <a href="empty-cart.html" class="cta cta-second">Empty cart</a>
-                <a href="checkout_success.html" class="cta pay-button">Pay</a>
+                <button class="cta pay-button">Pay</button>
               </div>
             </form>
           </div>

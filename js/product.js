@@ -62,7 +62,7 @@ async function fetchProductContent() {
 
     const addToCartCta = document.createElement("a");
     addToCartCta.href = "checkout.html";
-    addToCartCta.classList = "cta";
+    addToCartCta.classList = "cta add-to-cart";
     addToCartCta.innerText = "Add to cart";
     productPriceContainer.appendChild(addToCartCta);
   } catch (error) {
