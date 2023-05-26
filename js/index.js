@@ -17,6 +17,7 @@ async function fetchSellingpointImage() {
 
     const sellingPointImageContainer = document.createElement("a");
     sellingPointImageContainer.href = `product.html?id=${json[0].id}`;
+    sellingPointImageContainer.classList = "filmcover-hover";
     sellingPointContainer.appendChild(sellingPointImageContainer);
 
     const sellingPointImage = document.createElement("img");
@@ -95,6 +96,7 @@ async function fetchShowcasedImage() {
 
     const showcasedFilmImageContainer = document.createElement("a");
     showcasedFilmImageContainer.href = `product.html?id=${json[8].id}`;
+    showcasedFilmImageContainer.classList = "filmcover-hover";
     showcasedContainer.appendChild(showcasedFilmImageContainer);
 
     const showcasedFilmImage = document.createElement("img");
