@@ -33,6 +33,23 @@ html {
   background-color: #000;
 }
 
+.skip-nav-link {
+  position: absolute;
+  overflow: hidden;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-nav-link:focus {
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: auto;
+  background-color: #fff;
+}
+
 body {
   max-width: 1280px;
   margin: auto;
@@ -290,7 +307,7 @@ img {
 
 .filmcover-small {
   width: 200px;
-  height: 320px;
+  /* height: 320px; */
   background-size: cover;
 }
 
@@ -408,12 +425,13 @@ img {
 }
 
 .list-films-row {
-  max-width: 900px;
+  max-width: 960px;
   margin: 30px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 60px;
+  column-gap: 50px;
   text-align: center;
 }
 
@@ -1054,6 +1072,7 @@ footer {
 
   /* HOME - Selling point 1 */
   .selling-point1-wrapper {
+    height: 470px;
     flex-direction: column;
     margin-top: 61px;
     margin-bottom: 22px;
@@ -1088,7 +1107,7 @@ footer {
   /* HOME - Showcased film */
   .showcased-film-wrapper {
     flex-direction: column;
-    height: 345px;
+    height: 478px;
     margin-top: 64px;
     margin-bottom: 7px;
     padding-bottom: 60px;
@@ -1259,8 +1278,11 @@ footer {
 
   .cta-send {
     font-size: 1rem;
-    width: 150px;
+    width: 157px;
     height: 40px;
+    display: flex;
+    margin: 25px auto;
+    justify-content: center;
   }
 
   input[type="submit"] {
@@ -1307,8 +1329,8 @@ footer {
   }
 
   .remove-button {
-    width: 120px;
-    height: 14px;
+    width: 135px;
+    height: 25px;
     font-size: 0.75rem;
   }
 
@@ -1663,8 +1685,11 @@ footer {
 
   .cta-send {
     font-size: 1rem;
-    width: 150px;
+    width: 157px;
     height: 40px;
+    display: flex;
+    margin: 25px auto;
+    justify-content: center;
   }
 
   input[type="submit"] {
@@ -1705,8 +1730,8 @@ footer {
   }
 
   .remove-button {
-    width: 120px;
-    height: 14px;
+    width: 135px;
+    height: 25px;
     font-size: 0.75rem;
   }
 
@@ -1827,8 +1852,8 @@ footer {
   /* IMAGES */
 
   .filmcover-small {
-    width: 145px;
-    height: 232px;
+    width: 211px;
+    /* height: 232px; */
   }
 
   .filmcover-large {
@@ -1893,9 +1918,10 @@ footer {
   }
 
   .list-films-row {
-    max-width: 540px;
+    max-width: 790px;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 30px;
+    column-gap: 68px;
   }
 
   /* PRODUCT PAGE */
@@ -1955,8 +1981,11 @@ footer {
 
   .cta-send {
     font-size: 1rem;
-    width: 150px;
+    width: 157px;
     height: 40px;
+    display: flex;
+    margin: 25px auto;
+    justify-content: center;
   }
 
   input[type="submit"] {
@@ -1997,8 +2026,8 @@ footer {
   }
 
   .remove-button {
-    width: 120px;
-    height: 14px;
+    width: 135px;
+    height: 25px;
     font-size: 0.75rem;
   }
 

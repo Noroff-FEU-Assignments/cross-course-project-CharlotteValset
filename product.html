@@ -27,6 +27,7 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-nav-link">Skip to main content</a>
     <header class="position">
       <a href="index.html"><img src="images/square-eyes-logo.png" class="logo" alt="Logo of SquareEyes" /></a>
       <nav>
@@ -44,7 +45,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main">
       <button onclick="history.back()" class="back-button"><i class="fa-solid fa-chevron-left"></i>BACK</button>
       <div class="product-wrapper">
         <div class="product-card">
@@ -53,7 +54,7 @@
           </div>
           <div class="product-card-content">
             <div class="product-content-container">
-              <div class="loader" id="loader"></div>
+              <div class="loader" id="content-loader"></div>
             </div>
           </div>
         </div>
