@@ -82,7 +82,7 @@
             <a href="signin.html" class="signin-link">Sign in!</a>
           </div>
           <div class="checkout-form">
-            <form action="form-success.php" method="POST">
+            <form novalidate>
               <h2 class="sub-heading_checkout">Create a new account</h2>
               <label for="email">Email*</label>
               <input type="email" name="email" id="email" required />
@@ -120,7 +120,7 @@
               <input type="text" name="ccv-cvc" id="ccv-cvc" class="" required />
               <div class="buttons-cart">
                 <a href="empty-cart.html" class="cta cta-second">Empty cart</a>
-                <button class="cta pay-button">Pay</button>
+                <a href="checkout_success.html" class="cta pay-button">Pay</a>
               </div>
             </form>
           </div>
