@@ -16,12 +16,12 @@ async function fetchSellingpointImage() {
     sellingPointContainer.innerHTML = "";
 
     const sellingPointImageContainer = document.createElement("a");
-    sellingPointImageContainer.href = `product.html?id=${json[0].id}`;
+    sellingPointImageContainer.href = `product.html?id=${json[9].id}`;
     sellingPointContainer.appendChild(sellingPointImageContainer);
 
     const sellingPointImage = document.createElement("img");
-    sellingPointImage.setAttribute("alt", `Filmcover of ${json[0].title}`);
-    sellingPointImage.src = json[0].image;
+    sellingPointImage.setAttribute("alt", `Filmcover of ${json[9].name}`);
+    sellingPointImage.src = json[9].images[0].src;
     sellingPointImage.className = "filmcover-large";
     sellingPointImageContainer.appendChild(sellingPointImage);
   } catch (error) {
@@ -50,7 +50,7 @@ async function fetchMostWatchedFilms() {
       const filmCoverImage = document.createElement("img");
       filmCoverImage.setAttribute("alt", `Filmcover of ${json[i].title}`);
       filmCoverImage.classList = "filmcover-small";
-      filmCoverImage.src = `${json[i].image}`;
+      filmCoverImage.src = `${json[i].images[0].src}`;
       filmCoverContainer.appendChild(filmCoverImage);
     }
   } catch (error) {
@@ -78,7 +78,7 @@ async function fetchNewlyAddedFilms() {
       const filmCoverImage = document.createElement("img");
       filmCoverImage.setAttribute("alt", `Filmcover of ${json[i].title}`);
       filmCoverImage.classList = "filmcover-small";
-      filmCoverImage.src = `${json[i].image}`;
+      filmCoverImage.src = `${json[i].images[0].src}`;
       filmCoverContainer.appendChild(filmCoverImage);
     }
   } catch (error) {
@@ -94,12 +94,12 @@ async function fetchShowcasedImage() {
     showcasedContainer.innerHTML = "";
 
     const showcasedFilmImageContainer = document.createElement("a");
-    showcasedFilmImageContainer.href = `product.html?id=${json[8].id}`;
+    showcasedFilmImageContainer.href = `product.html?id=${json[7].name}`;
     showcasedContainer.appendChild(showcasedFilmImageContainer);
 
     const showcasedFilmImage = document.createElement("img");
-    showcasedFilmImage.setAttribute("alt", `Filmcover of ${json[8].title}`);
-    showcasedFilmImage.src = json[8].image;
+    showcasedFilmImage.setAttribute("alt", `Filmcover of ${json[7].name}`);
+    showcasedFilmImage.src = json[7].images[0].src;
     showcasedFilmImage.className = "filmcover-large";
     showcasedFilmImageContainer.appendChild(showcasedFilmImage);
   } catch (error) {
@@ -116,22 +116,25 @@ async function fetchshowcasedContent() {
     showcasedProductContent.innerHTML = "";
 
     const productTitle = document.createElement("h2");
-    productTitle.innerText = json[8].title;
+    productTitle.innerText = json[7].name;
     showcasedProductContent.appendChild(productTitle);
 
     const productCategoryAndReleased = document.createElement("p");
     productCategoryAndReleased.classList = "film-category_home";
-    productCategoryAndReleased.innerText = json[8].genre + ", " + json[8].released;
+    productCategoryAndReleased.innerText = json[7].categories[0].name + ", " + json[7].attributes[0].terms[0].name;
     showcasedProductContent.appendChild(productCategoryAndReleased);
 
     const productDescription = document.createElement("p");
     productDescription.classList = "film-description";
-    productDescription.innerText = json[8].description;
+    productDescription.innerText = json[7].description;
+
+    const modifiedDescription = productDescription.innerText.replace(/<p class="p1">|<\/p>/g, "");
+    productDescription.innerText = modifiedDescription;
     showcasedProductContent.appendChild(productDescription);
 
     const productPrice = document.createElement("p");
     productPrice.classList = "film-price_home";
-    productPrice.innerText = "€ " + json[8].price;
+    productPrice.innerText = "€ " + json[7].prices.regular_price / 100;
     showcasedProductContent.appendChild(productPrice);
 
     const addToCartCta = document.createElement("a");
@@ -155,7 +158,7 @@ const ctaButton = document.getElementById("button-change");
 function buttonChange(mediaQuery) {
   if (mediaQuery.matches) {
     ctaButton.innerText = "Read more";
-    ctaButton.href = `product.html?id=${json[8].id}`;
+    ctaButton.href = `product.html?id=${json[7].id}`;
   } else {
     ctaButton.innerText = "Add to cart";
     ctaButton.href = "checkout.html";

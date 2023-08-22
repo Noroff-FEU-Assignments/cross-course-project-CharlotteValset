@@ -17,8 +17,8 @@ async function fetchproductImage() {
     productImageContainer.innerHTML = "";
 
     const productImage = document.createElement("img");
-    productImage.setAttribute("alt", `Filmcover of ${json.title}`);
-    productImage.src = json.image;
+    productImage.setAttribute("alt", `Filmcover of ${json.name}`);
+    productImage.src = json.images[0].src;
     productImage.className = "filmcover-large";
     productImageContainer.appendChild(productImage);
   } catch (error) {
@@ -34,21 +34,23 @@ async function fetchProductContent() {
   try {
     productContent.innerHTML = "";
 
-    document.title = `SquareEyes | ${json.title}`;
+    document.title = `SquareEyes | ${json.name}`;
 
     const productTitle = document.createElement("h1");
     productTitle.setAttribute("id", "title-change");
     productTitle.className = "film-title-product-desktop";
-    productTitle.innerText = json.title;
+    productTitle.innerText = json.name;
     productContent.appendChild(productTitle);
 
     const productCategoryAndReleased = document.createElement("p");
     productCategoryAndReleased.classList = "film-category";
-    productCategoryAndReleased.innerText = json.genre + ", " + json.released;
+    productCategoryAndReleased.innerText = json.categories[0].name + ", " + json.attributes[0].terms[0].name;
     productContent.appendChild(productCategoryAndReleased);
 
     const productDescription = document.createElement("p");
     productDescription.innerText = json.description;
+    const modifiedDescription = productDescription.innerText.replace(/<p class="p1">|<\/p>/g, "");
+    productDescription.innerText = modifiedDescription;
     productContent.appendChild(productDescription);
 
     const productPriceContainer = document.createElement("div");
@@ -57,7 +59,7 @@ async function fetchProductContent() {
 
     const productPrice = document.createElement("p");
     productPrice.classList = "price-product";
-    productPrice.innerText = "€ " + json.price;
+    productPrice.innerText = "€ " + json.prices.regular_price / 100;
     productPriceContainer.appendChild(productPrice);
 
     const addToCartCta = document.createElement("a");

@@ -1,5 +1,5 @@
-export const baseApiUrl = "https://api.noroff.dev/api/v1";
-export const endpointApiUrl = "/square-eyes";
+export const baseApiUrl = "https://cors.noroff.dev/cms-ca.charlottevalset.no/wp-json/wc/store";
+export const endpointApiUrl = "/products";
 
 export async function getData(url) {
   try {

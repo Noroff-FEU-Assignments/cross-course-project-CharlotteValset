@@ -19,13 +19,13 @@ async function fetchFilmsList() {
       listFilmsContainer.appendChild(listOfFilms);
 
       const listOfFilmsImage = document.createElement("img");
-      listOfFilmsImage.setAttribute("alt", `Filmcover of ${result.title}`);
-      listOfFilmsImage.src = result.image;
+      listOfFilmsImage.setAttribute("alt", `Filmcover of ${result.name}`);
+      listOfFilmsImage.src = result.images[0].src;
       listOfFilmsImage.className = "filmcover-small";
       listOfFilms.appendChild(listOfFilmsImage);
 
       const listOfFilmsTitle = document.createElement("p");
-      listOfFilmsTitle.innerText = result.title;
+      listOfFilmsTitle.innerText = result.name;
       listOfFilmsTitle.className = "film-title";
       listOfFilms.appendChild(listOfFilmsTitle);
     });

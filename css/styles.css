@@ -307,7 +307,7 @@ img {
 
 .filmcover-small {
   width: 200px;
-  /* height: 320px; */
+  height: 320px;
   background-size: cover;
 }
 
