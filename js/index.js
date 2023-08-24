@@ -6,8 +6,8 @@ const json = await getData(`${baseApiUrl}${endpointApiUrl}`);
 const errorMessage = createMessage("error");
 
 const sellingPointContainer = document.querySelector(".selling-point-card-image");
-const showcasedContainer = document.querySelector(".showcased-film-image");
-const showcasedProductContent = document.querySelector(".showcased-film-content-container");
+const featuredContainer = document.querySelector(".showcased-film-image");
+const featuredProductContent = document.querySelector(".showcased-film-content-container");
 const mostWatchedContainer = document.querySelector(".most-watched-container");
 const newlyAddedContainer = document.querySelector(".newly-added-container");
 
@@ -48,7 +48,7 @@ async function fetchMostWatchedFilms() {
       mostWatchedContainer.appendChild(filmCoverContainer);
 
       const filmCoverImage = document.createElement("img");
-      filmCoverImage.setAttribute("alt", `Filmcover of ${json[i].title}`);
+      filmCoverImage.setAttribute("alt", `Filmcover of ${json[i].name}`);
       filmCoverImage.classList = "filmcover-small";
       filmCoverImage.src = `${json[i].images[0].src}`;
       filmCoverContainer.appendChild(filmCoverImage);
@@ -89,81 +89,106 @@ async function fetchNewlyAddedFilms() {
 }
 fetchNewlyAddedFilms();
 
-async function fetchShowcasedImage() {
+const featuredProductEndpoint =
+  "https://cms-ca.charlottevalset.no/wp-json/wc/v3/products?featured=true&consumer_key=ck_06a07cba217df9d85f383985aadd6e9d04a7c9f2&consumer_secret=cs_08b46fe3523fb2a2710c93031e636eceed3c88d7";
+
+async function fetchFeaturedProduct() {
   try {
-    showcasedContainer.innerHTML = "";
-
-    const showcasedFilmImageContainer = document.createElement("a");
-    showcasedFilmImageContainer.href = `product.html?id=${json[7].name}`;
-    showcasedContainer.appendChild(showcasedFilmImageContainer);
-
-    const showcasedFilmImage = document.createElement("img");
-    showcasedFilmImage.setAttribute("alt", `Filmcover of ${json[7].name}`);
-    showcasedFilmImage.src = json[7].images[0].src;
-    showcasedFilmImage.className = "filmcover-large";
-    showcasedFilmImageContainer.appendChild(showcasedFilmImage);
+    const response = await fetch(featuredProductEndpoint);
+    const data = await response.json();
+    return data[0];
   } catch (error) {
-    console.log("An error occured", error);
-    showcasedContainer.innerHTML = errorMessage;
-    throw new Error(error);
+    console.error("Error fetching featured product:", error);
   }
 }
 
-fetchShowcasedImage();
+const featuredProduct = await fetchFeaturedProduct();
 
-async function fetchshowcasedContent() {
-  try {
-    showcasedProductContent.innerHTML = "";
+async function displayFeaturedProductImage() {
+  featuredContainer.innerHTML = "";
 
-    const productTitle = document.createElement("h2");
-    productTitle.innerText = json[7].name;
-    showcasedProductContent.appendChild(productTitle);
+  if (featuredProduct) {
+    try {
+      const featuredFilmImageContainer = document.createElement("a");
+      featuredFilmImageContainer.href = `product.html?id=${featuredProduct.id}`;
+      featuredContainer.appendChild(featuredFilmImageContainer);
 
-    const productCategoryAndReleased = document.createElement("p");
-    productCategoryAndReleased.classList = "film-category_home";
-    productCategoryAndReleased.innerText = json[7].categories[0].name + ", " + json[7].attributes[0].terms[0].name;
-    showcasedProductContent.appendChild(productCategoryAndReleased);
-
-    const productDescription = document.createElement("p");
-    productDescription.classList = "film-description";
-    productDescription.innerText = json[7].description;
-
-    const modifiedDescription = productDescription.innerText.replace(/<p class="p1">|<\/p>/g, "");
-    productDescription.innerText = modifiedDescription;
-    showcasedProductContent.appendChild(productDescription);
-
-    const productPrice = document.createElement("p");
-    productPrice.classList = "film-price_home";
-    productPrice.innerText = "€ " + json[7].prices.regular_price / 100;
-    showcasedProductContent.appendChild(productPrice);
-
-    const addToCartCta = document.createElement("a");
-    addToCartCta.setAttribute("id", "button-change");
-    addToCartCta.classList = "cta";
-    addToCartCta.href = "checkout.html";
-    addToCartCta.innerText = "Add to cart";
-    showcasedProductContent.appendChild(addToCartCta);
-  } catch (error) {
-    console.log("An error occured", error);
-    showcasedProductContent.innerHTML = errorMessage;
-    throw new Error(error);
+      const featuredProductImage = document.createElement("img");
+      featuredProductImage.setAttribute("alt", `Filmcover of ${featuredProduct.name}`);
+      featuredProductImage.classList = "filmcover-large";
+      featuredProductImage.src = `${featuredProduct.images[0].src}`;
+      featuredFilmImageContainer.appendChild(featuredProductImage);
+    } catch (error) {
+      console.log("An error occured", error);
+      featuredContainer.innerHTML = errorMessage;
+      throw new Error(error);
+    }
   }
 }
 
-fetchshowcasedContent();
+displayFeaturedProductImage();
+
+async function displayFeaturedProductContent() {
+  featuredProductContent.innerHTML = "";
+
+  if (featuredProduct) {
+    try {
+      const productTitle = document.createElement("h2");
+      productTitle.innerText = "FEATURED PRODUCT";
+      productTitle.classList = "featured-product";
+      featuredProductContent.appendChild(productTitle);
+
+      const productName = document.createElement("h3");
+      productName.innerText = featuredProduct.name;
+      featuredProductContent.appendChild(productName);
+
+      const productCategoryAndReleased = document.createElement("p");
+      productCategoryAndReleased.classList = "film-category_home";
+      productCategoryAndReleased.innerText =
+        featuredProduct.categories[0].name + ", " + featuredProduct.attributes[0].options[0];
+      featuredProductContent.appendChild(productCategoryAndReleased);
+
+      const productDescription = document.createElement("p");
+      productDescription.classList = "film-description";
+      productDescription.innerText = featuredProduct.description;
+      featuredProductContent.appendChild(productDescription);
+
+      const modifiedDescription = productDescription.innerText.replace(/<p class="p1">|<\/p>/g, "");
+      productDescription.innerText = modifiedDescription;
+      featuredProductContent.appendChild(productDescription);
+
+      const productPrice = document.createElement("p");
+      productPrice.classList = "film-price_home";
+      productPrice.innerText = "€ " + featuredProduct.price;
+      featuredProductContent.appendChild(productPrice);
+
+      const addToCartCta = document.createElement("a");
+      addToCartCta.setAttribute("id", "button-change");
+      addToCartCta.classList = "cta";
+      addToCartCta.href = "checkout.html";
+      addToCartCta.innerText = "Add to cart";
+      featuredProductContent.appendChild(addToCartCta);
+    } catch (error) {
+      console.log("An error occurred", error);
+      featuredProductContent.innerHTML = errorMessage;
+      throw new Error(error);
+    }
+  }
+}
+
+displayFeaturedProductContent();
 
 const mediaQuery = window.matchMedia("(max-width: 799px)");
-const ctaButton = document.getElementById("button-change");
 
 function buttonChange(mediaQuery) {
+  const ctaButton = document.getElementById("button-change");
   if (mediaQuery.matches) {
     ctaButton.innerText = "Read more";
-    ctaButton.href = `product.html?id=${json[7].id}`;
+    ctaButton.href = `product.html?id=${featuredProduct.id}`;
   } else {
     ctaButton.innerText = "Add to cart";
     ctaButton.href = "checkout.html";
   }
 }
 
-mediaQuery.addListener(buttonChange);
-buttonChange(mediaQuery);
+mediaQuery.addEventListener("change", buttonChange);
