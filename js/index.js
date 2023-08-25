@@ -1,4 +1,5 @@
 import { baseApiUrl, endpointApiUrl } from "./variables.js";
+import { featuredProductEndpoint } from "./variables.js";
 import { getData } from "./variables.js";
 import { createMessage } from "./errorMessage.js";
 
@@ -88,9 +89,6 @@ async function fetchNewlyAddedFilms() {
   }
 }
 fetchNewlyAddedFilms();
-
-const featuredProductEndpoint =
-  "https://cms-ca.charlottevalset.no/wp-json/wc/v3/products?featured=true&consumer_key=ck_06a07cba217df9d85f383985aadd6e9d04a7c9f2&consumer_secret=cs_08b46fe3523fb2a2710c93031e636eceed3c88d7";
 
 async function fetchFeaturedProduct() {
   try {
