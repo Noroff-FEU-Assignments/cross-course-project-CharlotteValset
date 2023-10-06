@@ -24,7 +24,7 @@ SquareEyes is a cross-course project that I worked on during my first year of Fr
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone https://github.com/Noroff-FEU-Assignments/cross-course-project-CharlotteValset.git
 ```
 
 2. Install the dependencies:
