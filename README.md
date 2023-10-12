@@ -2,7 +2,7 @@
 
 ![image](images/squareEyes.png)
 
-[SquareEyes](https://charlottevalset.netlify.app/) is a fictional filmstreaming website that I worked on during my first year of Front-End Development at Noroff.
+[SquareEyes](https://cv-square-eyes.netlify.app/) is a fictional filmstreaming website that I worked on during my first year of Front-End Development at Noroff.
 
 ## Description
 
